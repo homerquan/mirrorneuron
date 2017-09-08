@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="io.convospot"
+		module="engine$sources_2.11"
+		revision="0.2.0"
+		conf="runtime"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160914210715"/>
+	<dependencies>
+		<module organisation="io.spray" name="spray-client_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095400" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="71">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3699" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-client_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-client_2.11/1.3.2/spray-client_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-client_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3911" time="518" location="/Users/homer/.ivy2/cache/io.spray/spray-client_2.11/srcs/spray-client_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-client_2.11/1.3.2/spray-client_2.11-1.3.2-sources.jar"/>
+					</artifact>
+					<artifact name="spray-client_2.11" type="jar" ext="jar" status="successful" details="" size="43774" time="379" location="/Users/homer/.ivy2/cache/io.spray/spray-client_2.11/jars/spray-client_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-client_2.11/1.3.2/spray-client_2.11-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-httpx_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095400" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="78">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4637" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-httpx_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-httpx_2.11/1.3.2/spray-httpx_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-httpx_2.11" type="jar" ext="jar" status="successful" details="" size="434142" time="577" location="/Users/homer/.ivy2/cache/io.spray/spray-httpx_2.11/jars/spray-httpx_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-httpx_2.11/1.3.2/spray-httpx_2.11-1.3.2.jar"/>
+					</artifact>
+					<artifact name="spray-httpx_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="45139" time="650" location="/Users/homer/.ivy2/cache/io.spray/spray-httpx_2.11/srcs/spray-httpx_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-httpx_2.11/1.3.2/spray-httpx_2.11-1.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jvnet.mimepull" name="mimepull">
+			<revision name="1.9.4" status="release" pubdate="20131112054900" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://mimepull.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="79">
+				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<metadata-artifact status="no" details="" size="3953" time="0" location="/Users/homer/.ivy2/cache/org.jvnet.mimepull/mimepull/ivy-1.9.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/jvnet/mimepull/mimepull/1.9.4/mimepull-1.9.4.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.9.4" rev-constraint-default="1.9.4" rev-constraint-dynamic="1.9.4" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="mimepull" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="67771" time="595" location="/Users/homer/.ivy2/cache/org.jvnet.mimepull/mimepull/srcs/mimepull-1.9.4-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/jvnet/mimepull/mimepull/1.9.4/mimepull-1.9.4-sources.jar"/>
+					</artifact>
+					<artifact name="mimepull" type="jar" ext="jar" status="no" details="" size="63134" time="0" location="/Users/homer/.ivy2/cache/org.jvnet.mimepull/mimepull/jars/mimepull-1.9.4.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/jvnet/mimepull/mimepull/1.9.4/mimepull-1.9.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-can_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095100" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="72">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3549" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-can_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-can_2.11/1.3.2/spray-can_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-can_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="84245" time="646" location="/Users/homer/.ivy2/cache/io.spray/spray-can_2.11/srcs/spray-can_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-can_2.11/1.3.2/spray-can_2.11-1.3.2-sources.jar"/>
+					</artifact>
+					<artifact name="spray-can_2.11" type="jar" ext="jar" status="successful" details="" size="718337" time="570" location="/Users/homer/.ivy2/cache/io.spray/spray-can_2.11/jars/spray-can_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-can_2.11/1.3.2/spray-can_2.11-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-io_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="73">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3310" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-io_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-io_2.11/1.3.2/spray-io_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-io_2.11" type="jar" ext="jar" status="successful" details="" size="186190" time="702" location="/Users/homer/.ivy2/cache/io.spray/spray-io_2.11/jars/spray-io_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-io_2.11/1.3.2/spray-io_2.11-1.3.2.jar"/>
+					</artifact>
+					<artifact name="spray-io_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="20488" time="489" location="/Users/homer/.ivy2/cache/io.spray/spray-io_2.11/srcs/spray-io_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-io_2.11/1.3.2/spray-io_2.11-1.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-http_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095300" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="75">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3291" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-http_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-http_2.11/1.3.2/spray-http_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-http_2.11" type="jar" ext="jar" status="successful" details="" size="1488411" time="668" location="/Users/homer/.ivy2/cache/io.spray/spray-http_2.11/jars/spray-http_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-http_2.11/1.3.2/spray-http_2.11-1.3.2.jar"/>
+					</artifact>
+					<artifact name="spray-http_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="98841" time="700" location="/Users/homer/.ivy2/cache/io.spray/spray-http_2.11/srcs/spray-http_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-http_2.11/1.3.2/spray-http_2.11-1.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-scala_2.11">
+			<revision name="1.1.6" status="release" pubdate="20140422074200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://parboiled.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="76">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3096" time="0" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-scala_2.11/ivy-1.1.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.1.6" rev-constraint-default="1.1.6" rev-constraint-dynamic="1.1.6" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="parboiled-scala_2.11" type="jar" ext="jar" status="successful" details="" size="234239" time="519" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-scala_2.11/jars/parboiled-scala_2.11-1.1.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6.jar"/>
+					</artifact>
+					<artifact name="parboiled-scala_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="28671" time="540" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-scala_2.11/srcs/parboiled-scala_2.11-1.1.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/parboiled/parboiled-scala_2.11/1.1.6/parboiled-scala_2.11-1.1.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-core">
+			<revision name="1.1.6" status="release" pubdate="20130822113221" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://parboiled.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="77">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2792" time="0" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-core/ivy-1.1.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.1.6" rev-constraint-default="1.1.6" rev-constraint-dynamic="1.1.6" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="parboiled-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="166648" time="805" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-core/srcs/parboiled-core-1.1.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6-sources.jar"/>
+					</artifact>
+					<artifact name="parboiled-core" type="jar" ext="jar" status="successful" details="" size="187091" time="546" location="/Users/homer/.ivy2/cache/org.parboiled/parboiled-core/jars/parboiled-core-1.1.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-util_2.11">
+			<revision name="1.3.2" status="release" pubdate="20141008095200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="74">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3278" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-util_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-util_2.11/1.3.2/spray-util_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-util_2.11" type="jar" ext="jar" status="successful" details="" size="128191" time="453" location="/Users/homer/.ivy2/cache/io.spray/spray-util_2.11/jars/spray-util_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-util_2.11/1.3.2/spray-util_2.11-1.3.2.jar"/>
+					</artifact>
+					<artifact name="spray-util_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="29874" time="494" location="/Users/homer/.ivy2/cache/io.spray/spray-util_2.11/srcs/spray-util_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-util_2.11/1.3.2/spray-util_2.11-1.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-json_2.11">
+			<revision name="1.3.2" status="release" pubdate="20150506100100" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spray/spray-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="70">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3083" time="0" location="/Users/homer/.ivy2/cache/io.spray/spray-json_2.11/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/spray/spray-json_2.11/1.3.2/spray-json_2.11-1.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="spray-json_2.11" type="jar" ext="jar" status="successful" details="" size="286389" time="498" location="/Users/homer/.ivy2/cache/io.spray/spray-json_2.11/jars/spray-json_2.11-1.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-json_2.11/1.3.2/spray-json_2.11-1.3.2.jar"/>
+					</artifact>
+					<artifact name="spray-json_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="22871" time="563" location="/Users/homer/.ivy2/cache/io.spray/spray-json_2.11/srcs/spray-json_2.11-1.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/spray/spray-json_2.11/1.3.2/spray-json_2.11-1.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.specs2" name="specs2-core_2.11">
+			<revision name="3.8" status="release" pubdate="20160502171707" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="61">
+				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="3406" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-core_2.11/ivy-3.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/specs2/specs2-core_2.11/3.8/specs2-core_2.11-3.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.8" rev-constraint-default="3.8" rev-constraint-dynamic="3.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="specs2-core_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="103693" time="1796" location="/Users/homer/.ivy2/cache/org.specs2/specs2-core_2.11/srcs/specs2-core_2.11-3.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-core_2.11/3.8/specs2-core_2.11-3.8-sources.jar"/>
+					</artifact>
+					<artifact name="specs2-core_2.11" type="jar" ext="jar" status="no" details="" size="2099272" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-core_2.11/jars/specs2-core_2.11-3.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-core_2.11/3.8/specs2-core_2.11-3.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.specs2" name="specs2-matcher_2.11">
+			<revision name="3.8" status="release" pubdate="20160502171708" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="62">
+				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="2796" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-matcher_2.11/ivy-3.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/specs2/specs2-matcher_2.11/3.8/specs2-matcher_2.11-3.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.8" rev-constraint-default="3.8" rev-constraint-dynamic="3.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="specs2-matcher_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="60134" time="578" location="/Users/homer/.ivy2/cache/org.specs2/specs2-matcher_2.11/srcs/specs2-matcher_2.11-3.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-matcher_2.11/3.8/specs2-matcher_2.11-3.8-sources.jar"/>
+					</artifact>
+					<artifact name="specs2-matcher_2.11" type="jar" ext="jar" status="no" details="" size="2990593" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-matcher_2.11/jars/specs2-matcher_2.11-3.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-matcher_2.11/3.8/specs2-matcher_2.11-3.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.specs2" name="specs2-common_2.11">
+			<revision name="3.8" status="release" pubdate="20160502171826" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="63">
+				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="3834" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-common_2.11/ivy-3.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/specs2/specs2-common_2.11/3.8/specs2-common_2.11-3.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.8" rev-constraint-default="3.8" rev-constraint-dynamic="3.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="specs2-common_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="140280" time="626" location="/Users/homer/.ivy2/cache/org.specs2/specs2-common_2.11/srcs/specs2-common_2.11-3.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-common_2.11/3.8/specs2-common_2.11-3.8-sources.jar"/>
+					</artifact>
+					<artifact name="specs2-common_2.11" type="jar" ext="jar" status="no" details="" size="2388603" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-common_2.11/jars/specs2-common_2.11-3.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-common_2.11/3.8/specs2-common_2.11-3.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
+			<revision name="1.0.5" status="release" pubdate="20150724230253" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="69">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="3137" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scala-xml_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="109244" time="711" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.5-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar"/>
+					</artifact>
+					<artifact name="scala-xml_2.11" type="jar" ext="jar" status="successful" details="" size="671138" time="759" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/jars/scala-xml_2.11-1.0.5.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11">
+			<revision name="1.0.4" status="release" pubdate="20150430100700" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="68">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2929" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scala-parser-combinators_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="42276" time="557" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/srcs/scala-parser-combinators_2.11-1.0.4-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar"/>
+					</artifact>
+					<artifact name="scala-parser-combinators_2.11" type="jar" ext="jar" status="successful" details="" size="423753" time="544" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/jars/scala-parser-combinators_2.11-1.0.4.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.specs2" name="specs2-codata_2.11">
+			<revision name="3.8" status="release" pubdate="20160502171427" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://specs2.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="64">
+				<license name="MIT-style" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="3091" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-codata_2.11/ivy-3.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/specs2/specs2-codata_2.11/3.8/specs2-codata_2.11-3.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.8" rev-constraint-default="3.8" rev-constraint-dynamic="3.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="specs2-codata_2.11" type="jar" ext="jar" status="no" details="" size="1241346" time="0" location="/Users/homer/.ivy2/cache/org.specs2/specs2-codata_2.11/jars/specs2-codata_2.11-3.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-codata_2.11/3.8/specs2-codata_2.11-3.8.jar"/>
+					</artifact>
+					<artifact name="specs2-codata_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="59839" time="497" location="/Users/homer/.ivy2/cache/org.specs2/specs2-codata_2.11/srcs/specs2-codata_2.11-3.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/specs2/specs2-codata_2.11/3.8/specs2-codata_2.11-3.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-concurrent_2.11">
+			<revision name="7.2.0" status="release" pubdate="20151205110944" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="67">
+				<license name="BSD-style" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2949" time="0" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-concurrent_2.11/ivy-7.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalaz/scalaz-concurrent_2.11/7.2.0/scalaz-concurrent_2.11-7.2.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="7.2.0" rev-constraint-default="7.2.0" rev-constraint-dynamic="7.2.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scalaz-concurrent_2.11" type="jar" ext="jar" status="successful" details="" size="326469" time="527" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-concurrent_2.11/jars/scalaz-concurrent_2.11-7.2.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-concurrent_2.11/7.2.0/scalaz-concurrent_2.11-7.2.0.jar"/>
+					</artifact>
+					<artifact name="scalaz-concurrent_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="20372" time="587" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-concurrent_2.11/srcs/scalaz-concurrent_2.11-7.2.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-concurrent_2.11/7.2.0/scalaz-concurrent_2.11-7.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-effect_2.11">
+			<revision name="7.2.0" status="release" pubdate="20151205110944" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="66">
+				<license name="BSD-style" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2790" time="0" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-effect_2.11/ivy-7.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalaz/scalaz-effect_2.11/7.2.0/scalaz-effect_2.11-7.2.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="7.2.0" rev-constraint-default="7.2.0" rev-constraint-dynamic="7.2.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scalaz-effect_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="21328" time="530" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-effect_2.11/srcs/scalaz-effect_2.11-7.2.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-effect_2.11/7.2.0/scalaz-effect_2.11-7.2.0-sources.jar"/>
+					</artifact>
+					<artifact name="scalaz-effect_2.11" type="jar" ext="jar" status="successful" details="" size="403109" time="537" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-effect_2.11/jars/scalaz-effect_2.11-7.2.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-effect_2.11/7.2.0/scalaz-effect_2.11-7.2.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-core_2.11">
+			<revision name="7.2.0" status="release" pubdate="20151204213558" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="65">
+				<license name="BSD-style" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2639" time="0" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-core_2.11/ivy-7.2.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.0/scalaz-core_2.11-7.2.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="7.2.0" rev-constraint-default="7.2.0" rev-constraint-dynamic="7.2.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scalaz-core_2.11" type="jar" ext="jar" status="successful" details="" size="11460171" time="1845" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-core_2.11/jars/scalaz-core_2.11-7.2.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.0/scalaz-core_2.11-7.2.0.jar"/>
+					</artifact>
+					<artifact name="scalaz-core_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="352234" time="1276" location="/Users/homer/.ivy2/cache/org.scalaz/scalaz-core_2.11/srcs/scalaz-core_2.11-7.2.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.0/scalaz-core_2.11-7.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.scala-logging" name="scala-logging_2.11">
+			<revision name="3.4.0" status="release" pubdate="20160415180921" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/scala-logging" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="58">
+				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3349" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.11/ivy-3.4.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/scala-logging/scala-logging_2.11/3.4.0/scala-logging_2.11-3.4.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.4.0" rev-constraint-default="3.4.0" rev-constraint-dynamic="3.4.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scala-logging_2.11" type="jar" ext="jar" status="no" details="" size="36227" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.11/jars/scala-logging_2.11-3.4.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/scala-logging/scala-logging_2.11/3.4.0/scala-logging_2.11-3.4.0.jar"/>
+					</artifact>
+					<artifact name="scala-logging_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="8524" time="509" location="/Users/homer/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.11/srcs/scala-logging_2.11-3.4.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/scala-logging/scala-logging_2.11/3.4.0/scala-logging_2.11-3.4.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.21" status="release" pubdate="20160404150802" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="60">
+				<metadata-artifact status="no" details="" size="5109" time="0" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.21.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="55663" time="628" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.21-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21-sources.jar"/>
+					</artifact>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41071" time="0" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.21.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.11.8" status="release" pubdate="20160308231602" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="59">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2825" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.2.0" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="562895" time="801" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8-sources.jar"/>
+					</artifact>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="4573750" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.flink" name="flink-core">
+			<revision name="1.0.3" status="release" pubdate="20160506103720" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+				<metadata-artifact status="no" details="" size="13371" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-core/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/flink/flink-core/1.0.3/flink-core-1.0.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="flink-core" type="jar" ext="jar" status="no" details="" size="3245652" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-core/jars/flink-core-1.0.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-core/1.0.3/flink-core-1.0.3.jar"/>
+					</artifact>
+					<artifact name="flink-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="763331" time="1968" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-core/srcs/flink-core-1.0.3-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-core/1.0.3/flink-core-1.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.flink" name="flink-shaded-hadoop2">
+			<revision name="1.0.3" status="release" pubdate="20160506103618" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="26">
+				<metadata-artifact status="no" details="" size="18319" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-shaded-hadoop2/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/flink/flink-shaded-hadoop2/1.0.3/flink-shaded-hadoop2-1.0.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="flink-shaded-hadoop2" type="jar" ext="jar" status="no" details="" size="18321510" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-shaded-hadoop2/jars/flink-shaded-hadoop2-1.0.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-shaded-hadoop2/1.0.3/flink-shaded-hadoop2-1.0.3.jar"/>
+					</artifact>
+					<artifact name="flink-shaded-hadoop2" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="7004" time="497" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-shaded-hadoop2/srcs/flink-shaded-hadoop2-1.0.3-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-shaded-hadoop2/1.0.3/flink-shaded-hadoop2-1.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.inject" name="guice">
+			<revision name="3.0" status="release" pubdate="20110325141945" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="52">
+				<metadata-artifact status="no" details="" size="4123" time="0" location="/Users/homer/.ivy2/cache/com.google.inject/guice/ivy-3.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/google/inject/guice/3.0/guice-3.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.0" rev-constraint-default="3.0" rev-constraint-dynamic="3.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="guice" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="339281" time="1063" location="/Users/homer/.ivy2/cache/com.google.inject/guice/srcs/guice-3.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/google/inject/guice/3.0/guice-3.0-sources.jar"/>
+					</artifact>
+					<artifact name="guice" type="jar" ext="jar" status="no" details="" size="710492" time="0" location="/Users/homer/.ivy2/cache/com.google.inject/guice/jars/guice-3.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/google/inject/guice/3.0/guice-3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.sonatype.sisu.inject" name="cglib">
+			<revision name="2.2.1-v20090111" status="release" pubdate="20110104081243" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://sourceforge.net/projects/cglib/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="55">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3926" time="0" location="/Users/homer/.ivy2/cache/org.sonatype.sisu.inject/cglib/ivy-2.2.1-v20090111.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/sonatype/sisu/inject/cglib/2.2.1-v20090111/cglib-2.2.1-v20090111.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.2.1-v20090111" rev-constraint-default="2.2.1-v20090111" rev-constraint-dynamic="2.2.1-v20090111" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="cglib" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="175554" time="696" location="/Users/homer/.ivy2/cache/org.sonatype.sisu.inject/cglib/srcs/cglib-2.2.1-v20090111-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/sonatype/sisu/inject/cglib/2.2.1-v20090111/cglib-2.2.1-v20090111-sources.jar"/>
+					</artifact>
+					<artifact name="cglib" type="jar" ext="jar" status="no" details="" size="278864" time="0" location="/Users/homer/.ivy2/cache/org.sonatype.sisu.inject/cglib/jars/cglib-2.2.1-v20090111.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/sonatype/sisu/inject/cglib/2.2.1-v20090111/cglib-2.2.1-v20090111.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="asm" name="asm">
+			<revision name="3.1" status="release" pubdate="20080831074505" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="56">
+				<metadata-artifact status="no" details="" size="2926" time="0" location="/Users/homer/.ivy2/cache/asm/asm/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/asm/asm/3.1/asm-3.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="43033" time="0" location="/Users/homer/.ivy2/cache/asm/asm/jars/asm-3.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/asm/asm/3.1/asm-3.1.jar"/>
+					</artifact>
+					<artifact name="asm" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="108730" time="1001" location="/Users/homer/.ivy2/cache/asm/asm/srcs/asm-3.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/asm/asm/3.1/asm-3.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="aopalliance" name="aopalliance">
+			<revision name="1.0" status="release" pubdate="20080831074510" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://aopalliance.sourceforge.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="54">
+				<license name="Public Domain"/>
+				<metadata-artifact status="no" details="" size="2417" time="0" location="/Users/homer/.ivy2/cache/aopalliance/aopalliance/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="aopalliance" type="jar" ext="jar" status="no" details="" size="4467" time="0" location="/Users/homer/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+					</artifact>
+					<artifact name="aopalliance" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="21188" time="533" location="/Users/homer/.ivy2/cache/aopalliance/aopalliance/srcs/aopalliance-1.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.xml.bind" name="jaxb-api">
+			<revision name="2.2.2" status="release" pubdate="20101212224445" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://jaxb.dev.java.net/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="49">
+				<license name="CDDL 1.1" url="https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
+				<license name="GPL2 w/ CPE" url="https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
+				<metadata-artifact status="no" details="" size="2997" time="0" location="/Users/homer/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.2.2" rev-constraint-default="2.2.2" rev-constraint-dynamic="2.2.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jaxb-api" type="jar" ext="jar" status="no" details="" size="105134" time="0" location="/Users/homer/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar"/>
+					</artifact>
+					<artifact name="jaxb-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="182496" time="690" location="/Users/homer/.ivy2/cache/javax.xml.bind/jaxb-api/srcs/jaxb-api-2.2.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.activation" name="activation">
+			<revision name="1.1" status="release" pubdate="20080831074538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/javabeans/jaf/index.jsp" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="51">
+				<license name="Common Development and Distribution License (CDDL) v1.0" url="https://glassfish.dev.java.net/public/CDDLv1.0.html"/>
+				<metadata-artifact status="no" details="" size="2844" time="0" location="/Users/homer/.ivy2/cache/javax.activation/activation/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/activation/activation/1.1/activation-1.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="activation" type="jar" ext="jar" status="no" details="" size="62983" time="0" location="/Users/homer/.ivy2/cache/javax.activation/activation/jars/activation-1.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/activation/activation/1.1/activation-1.1.jar"/>
+					</artifact>
+					<artifact name="activation" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="63338" time="481" location="/Users/homer/.ivy2/cache/javax.activation/activation/srcs/activation-1.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/activation/activation/1.1/activation-1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.xml.stream" name="stax-api">
+			<revision name="1.0-2" status="release" pubdate="20080831074450" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="50">
+				<metadata-artifact status="no" details="" size="2319" time="0" location="/Users/homer/.ivy2/cache/javax.xml.stream/stax-api/ivy-1.0-2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0-2" rev-constraint-default="1.0-2" rev-constraint-dynamic="1.0-2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="stax-api" type="jar" ext="jar" status="no" details="" size="23346" time="0" location="/Users/homer/.ivy2/cache/javax.xml.stream/stax-api/jars/stax-api-1.0-2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar"/>
+					</artifact>
+					<artifact name="stax-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="42699" time="549" location="/Users/homer/.ivy2/cache/javax.xml.stream/stax-api/srcs/stax-api-1.0-2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-daemon" name="commons-daemon">
+			<revision name="1.0.13" status="release" pubdate="20130207002231" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/daemon/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="48">
+				<metadata-artifact status="no" details="" size="7359" time="0" location="/Users/homer/.ivy2/cache/commons-daemon/commons-daemon/ivy-1.0.13.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-daemon/commons-daemon/1.0.13/commons-daemon-1.0.13.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.13" rev-constraint-default="1.0.13" rev-constraint-dynamic="1.0.13" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-daemon" type="jar" ext="jar" status="no" details="" size="24239" time="0" location="/Users/homer/.ivy2/cache/commons-daemon/commons-daemon/jars/commons-daemon-1.0.13.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-daemon/commons-daemon/1.0.13/commons-daemon-1.0.13.jar"/>
+					</artifact>
+					<artifact name="commons-daemon" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="23192" time="779" location="/Users/homer/.ivy2/cache/commons-daemon/commons-daemon/srcs/commons-daemon-1.0.13-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-daemon/commons-daemon/1.0.13/commons-daemon-1.0.13-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-beanutils" name="commons-beanutils-bean-collections">
+			<revision name="1.8.3" status="release" pubdate="20100324131328" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/beanutils/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="47">
+				<metadata-artifact status="no" details="" size="2844" time="0" location="/Users/homer/.ivy2/cache/commons-beanutils/commons-beanutils-bean-collections/ivy-1.8.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-beanutils/commons-beanutils-bean-collections/1.8.3/commons-beanutils-bean-collections-1.8.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.8.3" rev-constraint-default="1.8.3" rev-constraint-dynamic="1.8.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-beanutils-bean-collections" type="jar" ext="jar" status="no" details="" size="26574" time="0" location="/Users/homer/.ivy2/cache/commons-beanutils/commons-beanutils-bean-collections/jars/commons-beanutils-bean-collections-1.8.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-beanutils/commons-beanutils-bean-collections/1.8.3/commons-beanutils-bean-collections-1.8.3.jar"/>
+					</artifact>
+					<artifact name="commons-beanutils-bean-collections" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.zookeeper" name="zookeeper">
+			<revision name="3.4.6" status="release" pubdate="20140223121800" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="44">
+				<metadata-artifact status="no" details="" size="4352" time="0" location="/Users/homer/.ivy2/cache/org.apache.zookeeper/zookeeper/ivy-3.4.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.4.6" rev-constraint-default="3.4.6" rev-constraint-dynamic="3.4.6" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="zookeeper" type="jar" ext="jar" status="no" details="" size="792964" time="0" location="/Users/homer/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar"/>
+					</artifact>
+					<artifact name="zookeeper" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="554612" time="1081" location="/Users/homer/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.4.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jcraft" name="jsch">
+			<revision name="0.1.42" status="release" pubdate="20090806142939" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="43">
+				<license name="BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2611" time="0" location="/Users/homer/.ivy2/cache/com.jcraft/jsch/ivy-0.1.42.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/jcraft/jsch/0.1.42/jsch-0.1.42.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="0.1.42" rev-constraint-default="0.1.42" rev-constraint-dynamic="0.1.42" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jsch" type="jar" ext="jar" status="no" details="" size="185746" time="0" location="/Users/homer/.ivy2/cache/com.jcraft/jsch/jars/jsch-0.1.42.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/jcraft/jsch/0.1.42/jsch-0.1.42.jar"/>
+					</artifact>
+					<artifact name="jsch" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="211244" time="906" location="/Users/homer/.ivy2/cache/com.jcraft/jsch/srcs/jsch-0.1.42-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/jcraft/jsch/0.1.42/jsch-0.1.42-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-configuration" name="commons-configuration">
+			<revision name="1.7" status="release" pubdate="20110904151716" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/configuration/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="40">
+				<metadata-artifact status="no" details="" size="10232" time="0" location="/Users/homer/.ivy2/cache/commons-configuration/commons-configuration/ivy-1.7.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-configuration/commons-configuration/1.7/commons-configuration-1.7.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.7" rev-constraint-default="1.7" rev-constraint-dynamic="1.7" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-configuration" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="375976" time="934" location="/Users/homer/.ivy2/cache/commons-configuration/commons-configuration/srcs/commons-configuration-1.7-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-configuration/commons-configuration/1.7/commons-configuration-1.7-sources.jar"/>
+					</artifact>
+					<artifact name="commons-configuration" type="jar" ext="jar" status="no" details="" size="350332" time="0" location="/Users/homer/.ivy2/cache/commons-configuration/commons-configuration/jars/commons-configuration-1.7.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-configuration/commons-configuration/1.7/commons-configuration-1.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-digester" name="commons-digester">
+			<revision name="1.8.1" status="release" pubdate="20090103114824" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/digester/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="41">
+				<metadata-artifact status="no" details="" size="5299" time="0" location="/Users/homer/.ivy2/cache/commons-digester/commons-digester/ivy-1.8.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.8.1" rev-constraint-default="1.8.1" rev-constraint-dynamic="1.8.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-digester" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="207836" time="1256" location="/Users/homer/.ivy2/cache/commons-digester/commons-digester/srcs/commons-digester-1.8.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1-sources.jar"/>
+					</artifact>
+					<artifact name="commons-digester" type="jar" ext="jar" status="no" details="" size="146108" time="0" location="/Users/homer/.ivy2/cache/commons-digester/commons-digester/jars/commons-digester-1.8.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-lang" name="commons-lang">
+			<revision name="2.6" status="release" pubdate="20110116172147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="39">
+				<metadata-artifact status="no" details="" size="6522" time="0" location="/Users/homer/.ivy2/cache/commons-lang/commons-lang/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-lang/commons-lang/2.6/commons-lang-2.6.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-lang" type="jar" ext="jar" status="no" details="" size="284220" time="0" location="/Users/homer/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-lang/commons-lang/2.6/commons-lang-2.6.jar"/>
+					</artifact>
+					<artifact name="commons-lang" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="372982" time="735" location="/Users/homer/.ivy2/cache/commons-lang/commons-lang/srcs/commons-lang-2.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jamesmurty.utils" name="java-xmlbuilder">
+			<revision name="0.4" status="release" pubdate="20101026210303" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/java-xmlbuilder/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="38">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3011" time="0" location="/Users/homer/.ivy2/cache/com.jamesmurty.utils/java-xmlbuilder/ivy-0.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/jamesmurty/utils/java-xmlbuilder/0.4/java-xmlbuilder-0.4.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="0.4" rev-constraint-default="0.4" rev-constraint-dynamic="0.4" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="java-xmlbuilder" type="jar" ext="jar" status="no" details="" size="18490" time="0" location="/Users/homer/.ivy2/cache/com.jamesmurty.utils/java-xmlbuilder/jars/java-xmlbuilder-0.4.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/jamesmurty/utils/java-xmlbuilder/0.4/java-xmlbuilder-0.4.jar"/>
+					</artifact>
+					<artifact name="java-xmlbuilder" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="19546" time="461" location="/Users/homer/.ivy2/cache/com.jamesmurty.utils/java-xmlbuilder/srcs/java-xmlbuilder-0.4-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/jamesmurty/utils/java-xmlbuilder/0.4/java-xmlbuilder-0.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-logging" name="commons-logging">
+			<revision name="1.1.3" status="release" pubdate="20130516160523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="37">
+				<metadata-artifact status="no" details="" size="10235" time="0" location="/Users/homer/.ivy2/cache/commons-logging/commons-logging/ivy-1.1.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="62050" time="0" location="/Users/homer/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar"/>
+					</artifact>
+					<artifact name="commons-logging" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="73915" time="652" location="/Users/homer/.ivy2/cache/commons-logging/commons-logging/srcs/commons-logging-1.1.3-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-el" name="commons-el">
+			<revision name="1.0" status="release" pubdate="20080831074512" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jakarta.apache.org/commons/el/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
+				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3051" time="0" location="/Users/homer/.ivy2/cache/commons-el/commons-el/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-el/commons-el/1.0/commons-el-1.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-el" type="jar" ext="jar" status="no" details="" size="112341" time="0" location="/Users/homer/.ivy2/cache/commons-el/commons-el/jars/commons-el-1.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-el/commons-el/1.0/commons-el-1.0.jar"/>
+					</artifact>
+					<artifact name="commons-el" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="139567" time="567" location="/Users/homer/.ivy2/cache/commons-el/commons-el/srcs/commons-el-1.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-el/commons-el/1.0/commons-el-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.sun.jersey" name="jersey-core">
+			<revision name="1.9" status="release" pubdate="20110902071653" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="36">
+				<metadata-artifact status="no" details="" size="5039" time="0" location="/Users/homer/.ivy2/cache/com.sun.jersey/jersey-core/ivy-1.9.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/sun/jersey/jersey-core/1.9/jersey-core-1.9.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.9" rev-constraint-default="1.9" rev-constraint-dynamic="1.9" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jersey-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="431251" time="1245" location="/Users/homer/.ivy2/cache/com.sun.jersey/jersey-core/srcs/jersey-core-1.9-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/sun/jersey/jersey-core/1.9/jersey-core-1.9-sources.jar"/>
+					</artifact>
+					<artifact name="jersey-core" type="jar" ext="jar" status="successful" details="" size="458739" time="517" location="/Users/homer/.ivy2/cache/com.sun.jersey/jersey-core/jars/jersey-core-1.9.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/sun/jersey/jersey-core/1.9/jersey-core-1.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mortbay.jetty" name="jetty-util">
+			<revision name="6.1.26" status="release" pubdate="20101110163809" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="35">
+				<metadata-artifact status="no" details="" size="6563" time="0" location="/Users/homer/.ivy2/cache/org.mortbay.jetty/jetty-util/ivy-6.1.26.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="6.1.26" rev-constraint-default="6.1.26" rev-constraint-dynamic="6.1.26" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jetty-util" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="123338" time="574" location="/Users/homer/.ivy2/cache/org.mortbay.jetty/jetty-util/srcs/jetty-util-6.1.26-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26-sources.jar"/>
+					</artifact>
+					<artifact name="jetty-util" type="jar" ext="jar" status="no" details="" size="177131" time="0" location="/Users/homer/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.26.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-collections" name="commons-collections">
+			<revision name="3.2.1" status="release" pubdate="20080831074528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="33">
+				<metadata-artifact status="no" details="" size="4716" time="0" location="/Users/homer/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.2.1" rev-constraint-default="3.2.1" rev-constraint-dynamic="3.2.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-collections" type="jar" ext="jar" status="no" details="" size="575389" time="0" location="/Users/homer/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
+					</artifact>
+					<artifact name="commons-collections" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="641582" time="730" location="/Users/homer/.ivy2/cache/commons-collections/commons-collections/srcs/commons-collections-3.2.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-net" name="commons-net">
+			<revision name="3.1" status="release" pubdate="20120214134228" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/net/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="32">
+				<metadata-artifact status="no" details="" size="7947" time="0" location="/Users/homer/.ivy2/cache/commons-net/commons-net/ivy-3.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-net/commons-net/3.1/commons-net-3.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-net" type="jar" ext="jar" status="no" details="" size="273370" time="0" location="/Users/homer/.ivy2/cache/commons-net/commons-net/jars/commons-net-3.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-net/commons-net/3.1/commons-net-3.1.jar"/>
+					</artifact>
+					<artifact name="commons-net" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="406713" time="874" location="/Users/homer/.ivy2/cache/commons-net/commons-net/srcs/commons-net-3.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-net/commons-net/3.1/commons-net-3.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.4" status="release" pubdate="20090809171603" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="30">
+				<metadata-artifact status="no" details="" size="5116" time="0" location="/Users/homer/.ivy2/cache/commons-codec/commons-codec/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-codec/commons-codec/1.4/commons-codec-1.4.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-codec" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="81359" time="777" location="/Users/homer/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.4-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar"/>
+					</artifact>
+					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="58160" time="0" location="/Users/homer/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-codec/commons-codec/1.4/commons-codec-1.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xmlenc" name="xmlenc">
+			<revision name="0.52" status="release" pubdate="20061123212444" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xmlenc.sourceforge.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="29">
+				<license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2459" time="0" location="/Users/homer/.ivy2/cache/xmlenc/xmlenc/ivy-0.52.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/xmlenc/xmlenc/0.52/xmlenc-0.52.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="0.52" rev-constraint-default="0.52" rev-constraint-dynamic="0.52" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="xmlenc" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+					<artifact name="xmlenc" type="jar" ext="jar" status="no" details="" size="15010" time="0" location="/Users/homer/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/xmlenc/xmlenc/0.52/xmlenc-0.52.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-math3">
+			<revision name="3.5" status="release" pubdate="20150414083900" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-math/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="28">
+				<metadata-artifact status="no" details="" size="11080" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.5.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-math3/3.5/commons-math3-3.5.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-math3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2325609" time="950" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-math3/srcs/commons-math3-3.5-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-math3/3.5/commons-math3-3.5-sources.jar"/>
+					</artifact>
+					<artifact name="commons-math3" type="jar" ext="jar" status="no" details="" size="2038489" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.5.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-math3/3.5/commons-math3-3.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-cli" name="commons-cli">
+			<revision name="1.2" status="release" pubdate="20090319160835" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/cli/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="27">
+				<metadata-artifact status="no" details="" size="4582" time="0" location="/Users/homer/.ivy2/cache/commons-cli/commons-cli/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-cli/commons-cli/1.2/commons-cli-1.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-cli" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="48726" time="544" location="/Users/homer/.ivy2/cache/commons-cli/commons-cli/srcs/commons-cli-1.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-cli/commons-cli/1.2/commons-cli-1.2-sources.jar"/>
+					</artifact>
+					<artifact name="commons-cli" type="jar" ext="jar" status="no" details="" size="41123" time="0" location="/Users/homer/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-cli/commons-cli/1.2/commons-cli-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.avro" name="avro">
+			<revision name="1.7.6" status="release" pubdate="20140110164100" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://avro.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="22">
+				<metadata-artifact status="no" details="" size="10994" time="0" location="/Users/homer/.ivy2/cache/org.apache.avro/avro/ivy-1.7.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/avro/avro/1.7.6/avro-1.7.6.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.7.6" rev-constraint-default="1.7.6" rev-constraint-dynamic="1.7.6" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="avro" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="250056" time="1183" location="/Users/homer/.ivy2/cache/org.apache.avro/avro/srcs/avro-1.7.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/avro/avro/1.7.6/avro-1.7.6-sources.jar"/>
+					</artifact>
+					<artifact name="avro" type="jar" ext="jar" status="successful" details="" size="425587" time="510" location="/Users/homer/.ivy2/cache/org.apache.avro/avro/jars/avro-1.7.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/avro/avro/1.7.6/avro-1.7.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-compress">
+			<revision name="1.4.1" status="release" pubdate="20120522005724" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/compress/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="45">
+				<metadata-artifact status="no" details="" size="8026" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.4.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.4.1" rev-constraint-default="1.4.1" rev-constraint-dynamic="1.4.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-compress" type="jar" ext="jar" status="no" details="" size="241367" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar"/>
+					</artifact>
+					<artifact name="commons-compress" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="264972" time="1274" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-compress/srcs/commons-compress-1.4.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.tukaani" name="xz">
+			<revision name="1.0" status="release" pubdate="20111022054446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tukaani.org/xz/java.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="46">
+				<license name="Public Domain"/>
+				<metadata-artifact status="no" details="" size="2403" time="0" location="/Users/homer/.ivy2/cache/org.tukaani/xz/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/tukaani/xz/1.0/xz-1.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="xz" type="jar" ext="jar" status="no" details="" size="94672" time="0" location="/Users/homer/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/tukaani/xz/1.0/xz-1.0.jar"/>
+					</artifact>
+					<artifact name="xz" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="119146" time="729" location="/Users/homer/.ivy2/cache/org.tukaani/xz/srcs/xz-1.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/tukaani/xz/1.0/xz-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.xerial.snappy" name="snappy-java">
+			<revision name="1.0.5" status="release" pubdate="20130516213557" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/xerial/snappy-java/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="42">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3994" time="0" location="/Users/homer/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.0.5.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.5" rev-constraint-default="1.0.5" rev-constraint-dynamic="1.0.5" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="snappy-java" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="28089" time="546" location="/Users/homer/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.0.5-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5-sources.jar"/>
+					</artifact>
+					<artifact name="snappy-java" type="jar" ext="jar" status="successful" details="" size="1251514" time="622" location="/Users/homer/.ivy2/cache/org.xerial.snappy/snappy-java/jars/snappy-java-1.0.5.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/xerial/snappy/snappy-java/1.0.5/snappy-java-1.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.thoughtworks.paranamer" name="paranamer">
+			<revision name="2.3" status="release" pubdate="20101019091430" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="25">
+				<metadata-artifact status="no" details="" size="3423" time="0" location="/Users/homer/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.3" rev-constraint-default="2.3" rev-constraint-dynamic="2.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="paranamer" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="26753" time="554" location="/Users/homer/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.3-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3-sources.jar"/>
+					</artifact>
+					<artifact name="paranamer" type="jar" ext="jar" status="no" details="" size="29555" time="0" location="/Users/homer/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.inject" name="javax.inject">
+			<revision name="1" status="release" pubdate="20091013193500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="53">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2506" time="0" location="/Users/homer/.ivy2/cache/javax.inject/javax.inject/ivy-1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/inject/javax.inject/1/javax.inject-1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="javax.inject" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10928" time="489" location="/Users/homer/.ivy2/cache/javax.inject/javax.inject/srcs/javax.inject-1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
+					</artifact>
+					<artifact name="javax.inject" type="jar" ext="jar" status="no" details="" size="2497" time="0" location="/Users/homer/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-mapper-asl">
+			<revision name="1.9.13" status="release" pubdate="20130714230750" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="24">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2787" time="0" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/ivy-1.9.13.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.9.13" rev-constraint-default="1.9.13" rev-constraint-dynamic="1.9.13" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jackson-mapper-asl" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="548251" time="876" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/srcs/jackson-mapper-asl-1.9.13-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar"/>
+					</artifact>
+					<artifact name="jackson-mapper-asl" type="jar" ext="jar" status="no" details="" size="780664" time="0" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.13.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
+			<revision name="1.9.13" status="release" pubdate="20130714230730" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="23">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2564" time="0" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/ivy-1.9.13.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.9.13" rev-constraint-default="1.9.13" rev-constraint-dynamic="1.9.13" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232248" time="0" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.13.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar"/>
+					</artifact>
+					<artifact name="jackson-core-asl" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="240367" time="1277" location="/Users/homer/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/srcs/jackson-core-asl-1.9.13-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.esotericsoftware.kryo" name="kryo">
+			<revision name="2.24.0" status="release" pubdate="20140504090400" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/EsotericSoftware/kryo" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="19">
+				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3502" time="0" location="/Users/homer/.ivy2/cache/com.esotericsoftware.kryo/kryo/ivy-2.24.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.24.0" rev-constraint-default="2.24.0" rev-constraint-dynamic="2.24.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="kryo" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="126718" time="898" location="/Users/homer/.ivy2/cache/com.esotericsoftware.kryo/kryo/srcs/kryo-2.24.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0-sources.jar"/>
+					</artifact>
+					<artifact name="kryo" type="jar" ext="jar" status="successful" details="" size="339283" time="528" location="/Users/homer/.ivy2/cache/com.esotericsoftware.kryo/kryo/jars/kryo-2.24.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.objenesis" name="objenesis">
+			<revision name="2.1" status="release" pubdate="20131010172537" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="21">
+				<metadata-artifact status="no" details="" size="3259" time="0" location="/Users/homer/.ivy2/cache/org.objenesis/objenesis/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/objenesis/objenesis/2.1/objenesis-2.1.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="objenesis" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="44014" time="607" location="/Users/homer/.ivy2/cache/org.objenesis/objenesis/srcs/objenesis-2.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar"/>
+					</artifact>
+					<artifact name="objenesis" type="jar" ext="jar" status="no" details="" size="41755" time="0" location="/Users/homer/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-2.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/objenesis/objenesis/2.1/objenesis-2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.esotericsoftware.minlog" name="minlog">
+			<revision name="1.2" status="release" pubdate="20120531082649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/minlog/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="20">
+				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2665" time="0" location="/Users/homer/.ivy2/cache/com.esotericsoftware.minlog/minlog/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="minlog" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2458" time="462" location="/Users/homer/.ivy2/cache/com.esotericsoftware.minlog/minlog/srcs/minlog-1.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2-sources.jar"/>
+					</artifact>
+					<artifact name="minlog" type="jar" ext="jar" status="no" details="" size="4965" time="0" location="/Users/homer/.ivy2/cache/com.esotericsoftware.minlog/minlog/jars/minlog-1.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.flink" name="flink-annotations">
+			<revision name="1.0.3" status="release" pubdate="20160506103559" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+				<metadata-artifact status="no" details="" size="12237" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-annotations/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/flink/flink-annotations/1.0.3/flink-annotations-1.0.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="flink-annotations" type="jar" ext="jar" status="no" details="" size="11025" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-annotations/jars/flink-annotations-1.0.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-annotations/1.0.3/flink-annotations-1.0.3.jar"/>
+					</artifact>
+					<artifact name="flink-annotations" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="8264" time="523" location="/Users/homer/.ivy2/cache/org.apache.flink/flink-annotations/srcs/flink-annotations-1.0.3-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/flink-annotations/1.0.3/flink-annotations-1.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.flink" name="force-shading">
+			<revision name="1.0.3" status="release" pubdate="20160506103548" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+				<metadata-artifact status="no" details="" size="3236" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/force-shading/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/flink/force-shading/1.0.3/force-shading-1.0.3.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="force-shading" type="jar" ext="jar" status="no" details="" size="7161" time="0" location="/Users/homer/.ivy2/cache/org.apache.flink/force-shading/jars/force-shading-1.0.3.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/flink/force-shading/1.0.3/force-shading-1.0.3.jar"/>
+					</artifact>
+					<artifact name="force-shading" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-log4j12">
+			<revision name="1.7.7" status="release" pubdate="20140404071300" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="16">
+				<metadata-artifact status="no" details="" size="4569" time="0" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-log4j12/ivy-1.7.7.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/slf4j/slf4j-log4j12/1.7.7/slf4j-log4j12-1.7.7.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.7.7" rev-constraint-default="1.7.7" rev-constraint-dynamic="1.7.7" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="slf4j-log4j12" type="jar" ext="jar" status="no" details="" size="8870" time="0" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.7.7.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/slf4j/slf4j-log4j12/1.7.7/slf4j-log4j12-1.7.7.jar"/>
+					</artifact>
+					<artifact name="slf4j-log4j12" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10350" time="487" location="/Users/homer/.ivy2/cache/org.slf4j/slf4j-log4j12/srcs/slf4j-log4j12-1.7.7-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/slf4j/slf4j-log4j12/1.7.7/slf4j-log4j12-1.7.7-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="log4j" name="log4j">
+			<revision name="1.2.17" status="release" pubdate="20120526054339" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="17">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3670" time="0" location="/Users/homer/.ivy2/cache/log4j/log4j/ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.2.17" rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="log4j" type="jar" ext="jar" status="successful" details="" size="489884" time="519" location="/Users/homer/.ivy2/cache/log4j/log4j/jars/log4j-1.2.17.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+					</artifact>
+					<artifact name="log4j" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="481200" time="761" location="/Users/homer/.ivy2/cache/log4j/log4j/srcs/log4j-1.2.17-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.3.2" status="release" pubdate="20140406082100" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="15">
+				<metadata-artifact status="no" details="" size="10554" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="470961" time="707" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.3.2-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-sources.jar"/>
+					</artifact>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="412739" time="0" location="/Users/homer/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.3.2.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-contrib_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092804" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4168" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-contrib_2.11/2.4.8/akka-contrib_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-contrib_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="21232" time="547" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/srcs/akka-contrib_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-contrib_2.11/2.4.8/akka-contrib_2.11-2.4.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-contrib_2.11" type="jar" ext="jar" status="no" details="" size="257715" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/jars/akka-contrib_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-contrib_2.11/2.4.8/akka-contrib_2.11-2.4.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-persistence_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092329" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="11">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4007" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-persistence_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-persistence_2.11/2.4.8/akka-persistence_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-persistence_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="114138" time="592" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-persistence_2.11/srcs/akka-persistence_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-persistence_2.11/2.4.8/akka-persistence_2.11-2.4.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-persistence_2.11" type="jar" ext="jar" status="no" details="" size="1033474" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-persistence_2.11/jars/akka-persistence_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-persistence_2.11/2.4.8/akka-persistence_2.11-2.4.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-io" name="commons-io">
+			<revision name="2.4" status="release" pubdate="20120612182203" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="31">
+				<metadata-artifact status="no" details="" size="8589" time="0" location="/Users/homer/.ivy2/cache/commons-io/commons-io/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/commons-io/commons-io/2.4/commons-io-2.4.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="commons-io" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="246635" time="660" location="/Users/homer/.ivy2/cache/commons-io/commons-io/srcs/commons-io-2.4-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-io/commons-io/2.4/commons-io-2.4-sources.jar"/>
+					</artifact>
+					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="185140" time="0" location="/Users/homer/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.4.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-cluster-tools_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092920" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="10">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3060" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster-tools_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster-tools_2.11/2.4.8/akka-cluster-tools_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-cluster-tools_2.11" type="jar" ext="jar" status="no" details="" size="679838" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster-tools_2.11/jars/akka-cluster-tools_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster-tools_2.11/2.4.8/akka-cluster-tools_2.11-2.4.8.jar"/>
+					</artifact>
+					<artifact name="akka-cluster-tools_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="61367" time="742" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster-tools_2.11/srcs/akka-cluster-tools_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster-tools_2.11/2.4.8/akka-cluster-tools_2.11-2.4.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-cluster_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092756" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="9">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3306" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster_2.11/2.4.8/akka-cluster_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-cluster_2.11" type="jar" ext="jar" status="no" details="" size="1113629" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster_2.11/jars/akka-cluster_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster_2.11/2.4.8/akka-cluster_2.11-2.4.8.jar"/>
+					</artifact>
+					<artifact name="akka-cluster_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="125551" time="588" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-cluster_2.11/srcs/akka-cluster_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-cluster_2.11/2.4.8/akka-cluster_2.11-2.4.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-remote_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092601" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3952" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-remote_2.11/2.4.8/akka-remote_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-remote_2.11" type="jar" ext="jar" status="no" details="" size="1453201" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/jars/akka-remote_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-remote_2.11/2.4.8/akka-remote_2.11-2.4.8.jar"/>
+					</artifact>
+					<artifact name="akka-remote_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="155587" time="618" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/srcs/akka-remote_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-remote_2.11/2.4.8/akka-remote_2.11-2.4.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.uncommons.maths" name="uncommons-maths">
+			<revision name="1.2.2a" status="release" pubdate="20110408095605" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maths.uncommons.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2876" time="0" location="/Users/homer/.ivy2/cache/org.uncommons.maths/uncommons-maths/ivy-1.2.2a.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.2.2a" rev-constraint-default="1.2.2a" rev-constraint-dynamic="1.2.2a" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="uncommons-maths" type="jar" ext="jar" status="no" details="" size="49019" time="0" location="/Users/homer/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.jar"/>
+					</artifact>
+					<artifact name="uncommons-maths" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="61093" time="708" location="/Users/homer/.ivy2/cache/org.uncommons.maths/uncommons-maths/srcs/uncommons-maths-1.2.2a-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.10.6.Final" status="release" pubdate="20160629084528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="7197" time="0" location="/Users/homer/.ivy2/cache/io.netty/netty/ivy-3.10.6.Final.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="3.10.6.Final" rev-constraint-default="3.10.6.Final" rev-constraint-dynamic="3.10.6.Final" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="netty" type="jar" ext="jar" status="successful" details="" size="1292696" time="647" location="/Users/homer/.ivy2/cache/io.netty/netty/jars/netty-3.10.6.Final.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.jar"/>
+					</artifact>
+					<artifact name="netty" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1132389" time="1749" location="/Users/homer/.ivy2/cache/io.netty/netty/srcs/netty-3.10.6.Final-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/io/netty/netty/3.10.6.Final/netty-3.10.6.Final-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.servlet" name="servlet-api">
+			<revision name="2.5" status="release" pubdate="20080831074538" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="34">
+				<metadata-artifact status="no" details="" size="2320" time="0" location="/Users/homer/.ivy2/cache/javax.servlet/servlet-api/ivy-2.5.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/servlet/servlet-api/2.5/servlet-api-2.5.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.5" rev-constraint-default="2.5" rev-constraint-dynamic="2.5" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="servlet-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="158114" time="720" location="/Users/homer/.ivy2/cache/javax.servlet/servlet-api/srcs/servlet-api-2.5-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
+					</artifact>
+					<artifact name="servlet-api" type="jar" ext="jar" status="no" details="" size="105112" time="0" location="/Users/homer/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.5.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-protobuf_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708091843" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2664" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-protobuf_2.11/2.4.8/akka-protobuf_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-protobuf_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="275261" time="1235" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.11/srcs/akka-protobuf_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-protobuf_2.11/2.4.8/akka-protobuf_2.11-2.4.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-protobuf_2.11" type="jar" ext="jar" status="no" details="" size="484425" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.11/jars/akka-protobuf_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-protobuf_2.11/2.4.8/akka-protobuf_2.11-2.4.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-testkit_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708092036" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="12">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3543" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-testkit_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-testkit_2.11/2.4.8/akka-testkit_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-testkit_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="31748" time="583" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-testkit_2.11/srcs/akka-testkit_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-testkit_2.11/2.4.8/akka-testkit_2.11-2.4.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-testkit_2.11" type="jar" ext="jar" status="no" details="" size="267275" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-testkit_2.11/jars/akka-testkit_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-testkit_2.11/2.4.8/akka-testkit_2.11-2.4.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
+			<revision name="2.4.8" status="release" pubdate="20160708091834" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2956" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/ivy-2.4.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/akka/akka-actor_2.11/2.4.8/akka-actor_2.11-2.4.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.4.8" rev-constraint-default="2.4.8" rev-constraint-dynamic="2.4.8" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="akka-actor_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="389760" time="1386" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/srcs/akka-actor_2.11-2.4.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-actor_2.11/2.4.8/akka-actor_2.11-2.4.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-actor_2.11" type="jar" ext="jar" status="no" details="" size="3235063" time="0" location="/Users/homer/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/akka/akka-actor_2.11/2.4.8/akka-actor_2.11-2.4.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.11">
+			<revision name="0.7.0" status="release" pubdate="20150831195044" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="3036" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/ivy-0.7.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="0.7.0" rev-constraint-default="0.7.0" rev-constraint-dynamic="0.7.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="scala-java8-compat_2.11" type="jar" ext="jar" status="successful" details="" size="582358" time="554" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/jars/scala-java8-compat_2.11-0.7.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0.jar"/>
+					</artifact>
+					<artifact name="scala-java8-compat_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="12469" time="486" location="/Users/homer/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/srcs/scala-java8-compat_2.11-0.7.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.3.0" status="release" pubdate="20150508114600" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2875" time="0" location="/Users/homer/.ivy2/cache/com.typesafe/config/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/typesafe/config/1.3.0/config-1.3.0.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="config" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="167084" time="718" location="/Users/homer/.ivy2/cache/com.typesafe/config/srcs/config-1.3.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/config/1.3.0/config-1.3.0-sources.jar"/>
+					</artifact>
+					<artifact name="config" type="jar" ext="jar" status="successful" details="" size="277782" time="515" location="/Users/homer/.ivy2/cache/com.typesafe/config/jars/config-1.3.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/typesafe/config/1.3.0/config-1.3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.11.8" status="release" pubdate="20160308231604" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2653" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.pom"/>
+				<caller organisation="io.convospot" name="engine$sources_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.2.0" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5744974" time="0" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar"/>
+					</artifact>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="911686" time="760" location="/Users/homer/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
