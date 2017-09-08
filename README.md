@@ -1,3 +1,7 @@
+# Rumination
+
+A real-time decision engine
+
 Readme:
 
 Run CEP:
