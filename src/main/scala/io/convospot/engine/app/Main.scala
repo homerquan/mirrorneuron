@@ -1,31 +1,47 @@
+/*
+Launch point of convospot engine
+@author homer kwan
+*/
+
 package io.convospot.engine.app
 
-import akka.actor.Props
 import com.typesafe.scalalogging.LazyLogging
 import io.convospot.engine.config.Config
 import scala.util.Properties.{javaVersion, javaVmName, versionString}
+import java.io.File
 
-
-/**
-  * Launch point of convospot engine
-  *
-  * @author homer quan
-  *
-  *         It starts two pipeline:
-  * 1. Event stream processing
-  * 2. Command RPC processing
-  */
-object Main extends App with LazyLogging {
+private[convospot] object Main extends App with LazyLogging {
 
   override def main(args: Array[String]) {
-    printWelcome()
-    //    //CEP
-    //    EventGraph.start()
-    //    //RPC
-    //    CommandGraph.start()
-  }
 
-  //TODO: close gracefully (close actors first)
+    case class Input(restoreFile: File = new File("."), verbose: Boolean = false, debug: Boolean = false)
+
+    printWelcome()
+
+    val parser = new scopt.OptionParser[Input]("engine") {
+
+      opt[File]('r', "restore").valueName("<file>").
+        action((x, c) => c.copy(restoreFile = x)).
+        text("restore from previous data")
+
+      opt[Unit]('v', "verbose").action((_, c) =>
+        c.copy(verbose = true)).text("show verbose")
+
+      opt[Unit]("debug").hidden().action((_, c) =>
+        c.copy(debug = true)).text("enable debug")
+
+      help("help").text("prints this usage text")
+    }
+
+    // parser.parse returns Option[C]
+    parser.parse(args, Input()) match {
+      case Some(config) =>
+      // do stuff
+
+      case None =>
+      // arguments are bad, error message will have been displayed
+    }
+  }
 
   private def echo(msg: String) {
     Console println msg
@@ -42,7 +58,7 @@ object Main extends App with LazyLogging {
                                                                                             /____/
 """)
     val welcomeMsg = "Using Scala %s (%s, Java %s) ".format(
-     versionString, javaVmName, javaVersion)
+      versionString, javaVmName, javaVersion)
     echo(welcomeMsg)
     logger.debug("Settings: " + Config.apply().toString)
   }

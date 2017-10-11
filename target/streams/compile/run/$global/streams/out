@@ -1,5 +1,5 @@
 [0m[[0mdebug[0m] [0mjavaOptions: List()[0m
-[0m[[0minfo[0m] [0mRunning io.convospot.engine.app.Main [0m
+[0m[[0minfo[0m] [0mRunning io.convospot.engine.app.Main --help[0m
 [0m[[0minfo[0m] [0m                         _                                                                            _[0m
 [0m[[0minfo[0m] [0m              ____ ___  (_)_____________  _________  ___  __  ___________  ____     ___  ____  ____ _(_)___  ___[0m
 [0m[[0minfo[0m] [0m             / __ `__ \/ / ___/ ___/ __ \/ ___/ __ \/ _ \/ / / / ___/ __ \/ __ \   / _ \/ __ \/ __ `/ / __ \/ _ \[0m
@@ -7,5 +7,10 @@
 [0m[[0minfo[0m] [0m           /_/ /_/ /_/_/_/  /_/   \____/_/  /_/ /_/\___/\__,_/_/   \____/_/ /_/   \___/_/ /_/\__, /_/_/ /_/\___/[0m
 [0m[[0minfo[0m] [0m                                                                                            /____/[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mUsing Scala version 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_144) [0m
-[0m[[0minfo[0m] [0m12:07:34.529 [main] DEBUG io.convospot.engine.app.Main$ - Settings: Config(SimpleConfigObject({"akka":{"loglevel":"DEBUG","persistence":{"journal":{"plugin":"cassandra-journal"},"snapshot-store":{"plugin":"cassandra-snapshot-store"}}},"amqp":{"addresses":[{"host":"localhost","port":5672}],"heartbeat":"30s","password":"guest","recovery-interval":"5s","timeout":"infinite","username":"guest","virtual-host":"/"},"command_amqp":{"host":"localhost","password":"guest","username":"guest"},"eta_redis":{"host":"52.2.179.246","port":6379},"redis":{"host":"localhost","port":6379}}))[0m
+[0m[[0minfo[0m] [0mUsing Scala version 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_152-ea) [0m
+[0m[[0minfo[0m] [0m18:18:48.915 [main] DEBUG io.convospot.engine.app.Main$ - Settings: Config(SimpleConfigObject({"akka":{"loglevel":"DEBUG","persistence":{"journal":{"plugin":"cassandra-journal"},"snapshot-store":{"plugin":"cassandra-snapshot-store"}}},"amqp":{"addresses":[{"host":"localhost","port":5672}],"heartbeat":"30s","password":"guest","recovery-interval":"5s","timeout":"infinite","username":"guest","virtual-host":"/"},"command_amqp":{"host":"localhost","password":"guest","username":"guest"},"eta_redis":{"host":"52.2.179.246","port":6379},"redis":{"host":"localhost","port":6379}}))[0m
+[0m[[0minfo[0m] [0mUsage: engine [options][0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m  -r, --restore <file>  restore from previous data[0m
+[0m[[0minfo[0m] [0m  -v, --verbose         show verbose[0m
+[0m[[0minfo[0m] [0m  --help                prints this usage text[0m

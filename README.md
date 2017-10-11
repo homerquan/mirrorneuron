@@ -1,4 +1,4 @@
-# Rumination
+# Mirrorneuron Engine
 
 A real-time decision engine
 
@@ -10,7 +10,15 @@ sbt run
 Test CEP:
 sbt test
 
+Package into a jar (include deps):
+sbt assembly
+
 Branches:
 
 stage_release -> dev build
 prod_release -> rc build
+
+## Reference
+
+AKKA Docs: https://doc.akka.io/docs/akka/2.5.6/scala/
+Scala CLI opt parser: https://github.com/scopt/scopt
