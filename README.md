@@ -13,6 +13,9 @@ sbt test
 Package into a jar (include deps):
 sbt assembly
 
+Run an interactive console(REPL):
+sbt "run -c"
+
 Branches:
 
 stage_release -> dev build

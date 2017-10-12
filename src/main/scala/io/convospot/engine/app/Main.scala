@@ -14,15 +14,22 @@ private[convospot] object Main extends App with LazyLogging {
 
   override def main(args: Array[String]) {
 
-    case class Input(restoreFile: File = new File("."), verbose: Boolean = false, debug: Boolean = false)
+    case class Input(restoreFile: File = new File("."), profile: File = new File("."), verbose: Boolean = false, debug: Boolean = false, console: Boolean = false)
 
     printWelcome()
 
     val parser = new scopt.OptionParser[Input]("engine") {
 
+      opt[File]('p', "profile").valueName("<file>").
+        action((x, c) => c.copy(profile = x)).
+        text("load a profile")
+
       opt[File]('r', "restore").valueName("<file>").
         action((x, c) => c.copy(restoreFile = x)).
         text("restore from previous data")
+
+      opt[Unit]('c', "console").action((_, c) =>
+        c.copy(console = true)).text("interactive console mode")
 
       opt[Unit]('v', "verbose").action((_, c) =>
         c.copy(verbose = true)).text("show verbose")
@@ -35,8 +42,11 @@ private[convospot] object Main extends App with LazyLogging {
 
     // parser.parse returns Option[C]
     parser.parse(args, Input()) match {
-      case Some(config) =>
-      // do stuff
+      case Some(config) => {
+        if (config.console) {
+          echo("console mode")
+        }
+      }
 
       case None =>
       // arguments are bad, error message will have been displayed
