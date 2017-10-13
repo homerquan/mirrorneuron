@@ -7,8 +7,11 @@ package io.convospot.engine.app
 
 import com.typesafe.scalalogging.LazyLogging
 import io.convospot.engine.config.Config
+
 import scala.util.Properties.{javaVersion, javaVmName, versionString}
 import java.io.File
+
+import io.convospot.engine.console.Launcher
 
 private[convospot] object Main extends App with LazyLogging {
 
@@ -44,7 +47,7 @@ private[convospot] object Main extends App with LazyLogging {
     parser.parse(args, Input()) match {
       case Some(config) => {
         if (config.console) {
-          echo("console mode")
+          Launcher.start()
         }
       }
 

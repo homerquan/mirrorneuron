@@ -16,6 +16,9 @@ sbt assembly
 Run an interactive console(REPL):
 sbt "run -c"
 
+* telnet localhost 1981
+* telnet localhost 1982
+
 Branches:
 
 stage_release -> dev build
