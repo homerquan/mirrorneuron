@@ -7,7 +7,8 @@ package io.convospot.engine.app
 
 import com.typesafe.scalalogging.LazyLogging
 import io.convospot.engine.config.Config
-
+import scala.concurrent.Await
+import scala.concurrent.duration._
 import scala.util.Properties.{javaVersion, javaVmName, versionString}
 import java.io.File
 
@@ -53,6 +54,13 @@ private[convospot] object Main extends App with LazyLogging {
 
       case None =>
       // arguments are bad, error message will have been displayed
+    }
+
+    try {
+      Thread.sleep(10000)
+    } catch {
+      // the actor wasn't stopped within 5 seconds
+      case e: akka.pattern.AskTimeoutException =>
     }
   }
 

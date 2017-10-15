@@ -32,7 +32,7 @@ private[convospot] object Launcher {
     ports foreach { port =>
 
       // Override the configuration of the port
-      val config = Config.conf
+      val config = Config.parse("akka.remote.netty.tcp.port=" + port)
 
       // Create an Akka system
       val system = ActorSystem("ClusterSystem", config)
