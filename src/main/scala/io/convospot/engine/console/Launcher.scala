@@ -5,7 +5,9 @@ import akka.cluster.sharding.{ClusterSharding, ClusterShardingSettings}
 import akka.pattern.ask
 import akka.persistence.journal.leveldb.{SharedLeveldbJournal, SharedLeveldbStore}
 import akka.util.Timeout
+import io.convospot.engine.actors.conversation.RoomActor
 import io.convospot.engine.config.Config
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 
@@ -55,11 +57,11 @@ private[convospot] object Launcher {
         * Room shard region
         */
       val roomRegion = ClusterSharding(system).start(
-        typeName = Room.shardName,
-        entityProps = Room.props(),
+        typeName = RoomActor.shardName,
+        entityProps = RoomActor.props(),
         settings = ClusterShardingSettings(system),
-        extractEntityId = Room.idExtractor,
-        extractShardId = Room.shardResolver)
+        extractEntityId = RoomActor.idExtractor,
+        extractShardId = RoomActor.shardResolver)
 
       /**
         * Front Service with fancy year-like tcp-port

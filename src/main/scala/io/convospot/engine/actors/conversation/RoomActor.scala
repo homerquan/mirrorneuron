@@ -1,17 +1,17 @@
-package io.convospot.engine.console
+package io.convospot.engine.actors.conversation
 
 import akka.actor._
+import akka.cluster.sharding.ShardRegion
 
 import scala.collection.immutable
-import akka.cluster.sharding.ShardRegion
 
 /**
   * Chat room
   * Demonstrates akka.actor.FSM solution
   */
-class Room extends FSM[Room.State, Room.Data] with ActorLogging {
+class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
-  import Room._
+  import RoomActor._
 
   /**
     * Initial state and data
@@ -29,7 +29,7 @@ class Room extends FSM[Room.State, Room.Data] with ActorLogging {
       * Subscribe Visitor.
       */
     case Event(msg@Command.Subscribe(_, _), _) =>
-      sender ! Visitor.Message.Out(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
+      sender ! VisitorActor.Message.Out(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
       goto(State.Active) using Data.Active(msg.id, immutable.HashMap(sender -> msg.name))
 
   }
@@ -45,9 +45,9 @@ class Room extends FSM[Room.State, Room.Data] with ActorLogging {
       */
     case Event(msg@Command.Subscribe(_, _), stateData: Data.Active) =>
       for ((visitor: ActorRef, name: String) <- stateData.visitors) {
-        visitor ! Visitor.Message.Out(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
+        visitor ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
       }
-      sender ! Visitor.Message.Out(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
+      sender ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
       stay using stateData.copy(
         visitors = stateData.visitors + (sender -> msg.name)
       )
@@ -59,7 +59,7 @@ class Room extends FSM[Room.State, Room.Data] with ActorLogging {
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            visitor ! Visitor.Message.Out(s"[$senderName] $message")
+            visitor ! VisitorActor.Message.Out(s"[$senderName] $message")
           }
         case None =>
       }
@@ -72,7 +72,7 @@ class Room extends FSM[Room.State, Room.Data] with ActorLogging {
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            visitor ! Visitor.Message.Out(s"ROOM[${stateData.id}] Visitor $senderName left room.")
+            visitor ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] Visitor $senderName left room.")
           }
         case None =>
       }
@@ -95,9 +95,9 @@ class Room extends FSM[Room.State, Room.Data] with ActorLogging {
 
 }
 
-object Room {
+object RoomActor {
 
-  def props() = Props(new Room())
+  def props() = Props(new RoomActor())
 
   /**
     * Number of shards

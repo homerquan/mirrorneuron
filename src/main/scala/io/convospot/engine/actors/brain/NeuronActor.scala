@@ -1,4 +1,4 @@
-package io.convospot.engine.actors
+package io.convospot.engine.actors.brain
 
 /**
   * The neuron actor

@@ -1,19 +1,19 @@
-package io.convospot.engine.console
+package io.convospot.engine.actors.conversation
 
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
+import akka.cluster.sharding.ClusterSharding
 import akka.io.Tcp
 import akka.util.ByteString
-import akka.cluster.sharding.ClusterSharding
 
 /**
   * Visitor. One for each socket connection.
   * Demonstrates context.become FSM solution
   */
-class Visitor(connection: ActorRef) extends Actor with ActorLogging {
+class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
 
-  import Visitor._
+  import VisitorActor._
 
-  val roomRegion = ClusterSharding(context.system).shardRegion(Room.shardName)
+  val roomRegion = ClusterSharding(context.system).shardRegion(RoomActor.shardName)
 
   /**
     * Visitor name
@@ -45,7 +45,7 @@ class Visitor(connection: ActorRef) extends Actor with ActorLogging {
     case Tcp.Received(data) =>
       val message = decode(data)
       room = message
-      roomRegion ! Room.Command.Subscribe(room, name)
+      roomRegion ! RoomActor.Command.Subscribe(room, name)
       sender ! nr
       context.become(inRoomState)
   }
@@ -56,21 +56,21 @@ class Visitor(connection: ActorRef) extends Actor with ActorLogging {
   def inRoomState: Receive = {
     case Tcp.Received(data) =>
       val message = decode(data)
-      roomRegion ! Room.Command.Message(room, message)
+      roomRegion ! RoomActor.Command.Message(room, message)
       sender ! nr
-    case Visitor.Message.Out(message) =>
+    case VisitorActor.Message.Out(message) =>
       connection ! encode(message)
     case Tcp.PeerClosed =>
-      roomRegion ! Room.Command.Leave(room)
+      roomRegion ! RoomActor.Command.Leave(room)
       context stop self
     case x => log.info(s"Visitor Unhandled: $x")
   }
 
 }
 
-object Visitor {
+object VisitorActor {
 
-  def props(connection: ActorRef) = Props(new Visitor(connection))
+  def props(connection: ActorRef) = Props(new VisitorActor(connection))
 
   /**
     * Decode incoming data

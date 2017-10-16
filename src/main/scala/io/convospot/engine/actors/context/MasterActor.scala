@@ -1,7 +1,8 @@
-package io.convospot.engine.actors
+package io.convospot.engine.actors.context
 
 import akka.actor.SupervisorStrategy.{Restart, Resume}
 import akka.actor._
+
 import scala.concurrent.duration._
 
 

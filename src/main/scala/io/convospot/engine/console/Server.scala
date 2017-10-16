@@ -5,6 +5,7 @@ import java.net.InetSocketAddress
 import akka.actor.{Actor, ActorLogging, Props}
 import akka.io.Tcp._
 import akka.io._
+import io.convospot.engine.actors.conversation.VisitorActor
 
 /**
   * Main TCP socket server
@@ -30,8 +31,8 @@ class Server(address: String, port: Int) extends Actor with ActorLogging {
 
     case c@Connected(remote, local) =>
       log.info("New incoming connection on org.example.chat.Server")
-      val visitor = context.actorOf(Visitor.props(sender))
-      visitor ! Visitor.Message.Greeting
+      val visitor = context.actorOf(VisitorActor.props(sender))
+      visitor ! VisitorActor.Message.Greeting
       sender ! Register(visitor)
 
   }
