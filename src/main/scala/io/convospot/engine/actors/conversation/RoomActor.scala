@@ -1,10 +1,14 @@
 package io.convospot.engine.actors.conversation
 
 import akka.actor._
+import akka.pattern.ask
+import akka.util.Timeout
+import scala.concurrent.Await
+import scala.concurrent.Future
+import scala.concurrent.duration._
 import akka.cluster.sharding.ShardRegion
-
 import scala.collection.immutable
-
+import io.convospot.engine.actors.brain._
 /**
   * Chat room
   * Demonstrates akka.actor.FSM solution
@@ -12,6 +16,9 @@ import scala.collection.immutable
 class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
   import RoomActor._
+
+  // TODO: demo only
+  val observer = context.actorOf(Props[PolicyActor],"sample_policy_actor")
 
   /**
     * Initial state and data
@@ -59,6 +66,12 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
+            //TODO: Demo AI here
+            implicit val timeout = Timeout(5 seconds)
+            val future = observer ? AskNameMessage
+            val result = Await.result(future, timeout.duration).asInstanceOf[String]
+
+            visitor ! VisitorActor.Message.Out(s"[A.I.] $result")
             visitor ! VisitorActor.Message.Out(s"[$senderName] $message")
           }
         case None =>

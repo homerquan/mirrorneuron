@@ -8,8 +8,7 @@ import scala.concurrent.duration._
 
 /**
   * The master actor
-  * 1. set context for each client (multi-tenancy)
-  * 2. routing events
+  * set context for each client (multi-tenancy)
   */
 
 private[convospot] class MasterActor() extends Actor with ActorLogging {
