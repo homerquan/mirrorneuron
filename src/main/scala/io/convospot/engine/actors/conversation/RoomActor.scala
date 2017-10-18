@@ -46,7 +46,6 @@ class      RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogg
     * @return
     */
   when(State.Active) {
-
     /**
       * Subscribe new Visitor and notify subscribed Visitors.
       */
@@ -68,14 +67,14 @@ class      RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogg
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
             //TODO: Demo AI here
             implicit val timeout = Timeout(5 seconds)
-            val future = observer ? PolicyActor.Message.Generic(message)
+            val future = observer ? PolicyActor.Message.Generic(message, sourceRole)
             val result = Await.result(future, timeout.duration).asInstanceOf[RoomActor.Message.FromAI]
             if (sourceRole == "HELPER") {
-              sender ! UserActor.Message.Generic(s"[A.I.] ${result.toHelper} ", "AI")
-              visitor ! UserActor.Message.Generic(s"[A.I.] ${result.toVisitor} ", "AI")
+              sender ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
+              visitor ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
             } else {
-              visitor ! UserActor.Message.Generic(s"[A.I.] ${result.toHelper} ", "AI")
-              sender ! UserActor.Message.Generic(s"[A.I.] ${result.toVisitor} ", "AI")
+              visitor ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
+              sender ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
             }
             // visitor ! VisitorActor.Message.Direct(s"[$senderName] $message")
           }
