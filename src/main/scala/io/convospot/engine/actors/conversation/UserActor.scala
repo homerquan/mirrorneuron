@@ -6,12 +6,12 @@ import akka.io.Tcp
 import akka.util.ByteString
 
 /**
-  * Visitor. One for each socket connection.
+  * Visitor. One for each connection.
   * Demonstrates context.become FSM solution
   */
-class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
+class UserActor(connection: ActorRef, role:String = "VISITOR") extends Actor with ActorLogging {
 
-  import VisitorActor._
+  import UserActor._
 
   val roomRegion = ClusterSharding(context.system).shardRegion(RoomActor.shardName)
 
@@ -30,7 +30,7 @@ class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
     */
   def receive = {
     case Message.Greeting =>
-      connection ! encode("Welcome! Enter your name:")
+      connection ! encode("Welcome as "+role+"! Enter your name:")
     case Tcp.Received(data) =>
       val message = decode(data)
       name = message
@@ -45,7 +45,7 @@ class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
     case Tcp.Received(data) =>
       val message = decode(data)
       room = message
-      roomRegion ! RoomActor.Command.Subscribe(room, name)
+      roomRegion ! RoomActor.Command.Subscribe(room, name, role)
       sender ! nr
       context.become(inRoomState)
   }
@@ -56,9 +56,11 @@ class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
   def inRoomState: Receive = {
     case Tcp.Received(data) =>
       val message = decode(data)
-      roomRegion ! RoomActor.Command.Message(room, message)
+      roomRegion ! RoomActor.Command.Message(room, message, role)
       sender ! nr
-    case VisitorActor.Message.Out(message) =>
+    case UserActor.Message.Direct(message) =>
+      connection ! encode(message)
+    case UserActor.Message.Generic(message,source) =>
       connection ! encode(message)
     case Tcp.PeerClosed =>
       roomRegion ! RoomActor.Command.Leave(room)
@@ -68,9 +70,9 @@ class VisitorActor(connection: ActorRef) extends Actor with ActorLogging {
 
 }
 
-object VisitorActor {
+object UserActor {
 
-  def props(connection: ActorRef) = Props(new VisitorActor(connection))
+  def props(connection: ActorRef, role: String) = Props(new UserActor(connection, role))
 
   /**
     * Decode incoming data
@@ -110,7 +112,9 @@ object VisitorActor {
       *
       * @param message
       */
-    final case class Out(message: String)
+    final case class Direct(message: String)
+
+    final case class Generic(message: String, source: String)
 
   }
 

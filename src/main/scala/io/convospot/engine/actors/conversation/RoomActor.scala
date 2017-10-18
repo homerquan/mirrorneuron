@@ -13,7 +13,7 @@ import io.convospot.engine.actors.brain._
   * Chat room
   * Demonstrates akka.actor.FSM solution
   */
-class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
+class      RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
   import RoomActor._
 
@@ -35,8 +35,8 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       * Setup Room id.
       * Subscribe Visitor.
       */
-    case Event(msg@Command.Subscribe(_, _), _) =>
-      sender ! VisitorActor.Message.Out(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
+    case Event(msg@Command.Subscribe(_, _, _), _) =>
+      sender ! UserActor.Message.Direct(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
       goto(State.Active) using Data.Active(msg.id, immutable.HashMap(sender -> msg.name))
 
   }
@@ -50,11 +50,11 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
     /**
       * Subscribe new Visitor and notify subscribed Visitors.
       */
-    case Event(msg@Command.Subscribe(_, _), stateData: Data.Active) =>
+    case Event(msg@Command.Subscribe(_, _, _), stateData: Data.Active) =>
       for ((visitor: ActorRef, name: String) <- stateData.visitors) {
-        visitor ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
+        visitor ! UserActor.Message.Direct(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
       }
-      sender ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
+      sender ! UserActor.Message.Direct(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
       stay using stateData.copy(
         visitors = stateData.visitors + (sender -> msg.name)
       )
@@ -62,17 +62,22 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
     /**
       * Broadcast received message.
       */
-    case Event(msg@Command.Message(_, message), stateData: Data.Active) =>
+    case Event(msg@Command.Message(_, message, sourceRole), stateData: Data.Active) =>
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
             //TODO: Demo AI here
             implicit val timeout = Timeout(5 seconds)
-            val future = observer ? AskNameMessage
-            val result = Await.result(future, timeout.duration).asInstanceOf[String]
-
-            visitor ! VisitorActor.Message.Out(s"[A.I.] $result")
-            visitor ! VisitorActor.Message.Out(s"[$senderName] $message")
+            val future = observer ? PolicyActor.Message.Generic(message)
+            val result = Await.result(future, timeout.duration).asInstanceOf[RoomActor.Message.FromAI]
+            if (sourceRole == "HELPER") {
+              sender ! UserActor.Message.Generic(s"[A.I.] ${result.toHelper} ", "AI")
+              visitor ! UserActor.Message.Generic(s"[A.I.] ${result.toVisitor} ", "AI")
+            } else {
+              visitor ! UserActor.Message.Generic(s"[A.I.] ${result.toHelper} ", "AI")
+              sender ! UserActor.Message.Generic(s"[A.I.] ${result.toVisitor} ", "AI")
+            }
+            // visitor ! VisitorActor.Message.Direct(s"[$senderName] $message")
           }
         case None =>
       }
@@ -85,7 +90,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            visitor ! VisitorActor.Message.Out(s"ROOM[${stateData.id}] Visitor $senderName left room.")
+            visitor ! UserActor.Message.Direct(s"ROOM[${stateData.id}] Visitor $senderName left room.")
           }
         case None =>
       }
@@ -153,6 +158,12 @@ object RoomActor {
     def id: String
   }
 
+  object Message {
+
+    final case class FromAI(toVisitor: String, toHelper: String)
+
+  }
+
   object Command {
 
     /**
@@ -161,7 +172,7 @@ object RoomActor {
       * @param id Room id
       * @param name Visitor name
       */
-    final case class Subscribe(id: String, name: String) extends Command
+    final case class Subscribe(id: String, name: String, role: String) extends Command
 
     /**
       * Leave Room
@@ -176,7 +187,7 @@ object RoomActor {
       * @param id Room id
       * @param message Chat message
       */
-    final case class Message(id: String, message: String) extends Command
+    final case class Message(id: String, message: String, sourceRole: String) extends Command
 
   }
 
