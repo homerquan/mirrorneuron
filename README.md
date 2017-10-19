@@ -10,6 +10,8 @@ sbt run
 Test CEP:
 sbt test
 
+
+
 Package into a jar (include deps):
 sbt assembly
 
@@ -23,6 +25,11 @@ Branches:
 
 stage_release -> dev build
 prod_release -> rc build
+
+## Requirement
+
+Redis: ``docker run --name convospot-redis -d redis``
+
 
 ## Reference
 

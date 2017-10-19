@@ -13,12 +13,14 @@ import io.convospot.engine.actors.brain._
   * Chat room
   * Demonstrates akka.actor.FSM solution
   */
-class      RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
+class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
   import RoomActor._
 
   // TODO: demo only
   val observer = context.actorOf(Props[PolicyActor],"sample_policy_actor")
+
+  var conversation = ""  //TODO: demo a very simple context -- only last sentences
 
   /**
     * Initial state and data
@@ -66,13 +68,14 @@ class      RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogg
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
             //TODO: Demo AI here
-            implicit val timeout = Timeout(5 seconds)
-            val future = observer ? PolicyActor.Message.Generic(message, sourceRole)
+            implicit val timeout = Timeout(15 seconds)
+            val future = observer ? PolicyActor.Message.InFromRoom(message, sourceRole, conversation)
             val result = Await.result(future, timeout.duration).asInstanceOf[RoomActor.Message.FromAI]
             if (sourceRole == "HELPER") {
               sender ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
               visitor ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
             } else {
+              conversation = result.toHelper
               visitor ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
               sender ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
             }
