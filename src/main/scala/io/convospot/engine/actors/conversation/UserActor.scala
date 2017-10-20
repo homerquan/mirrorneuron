@@ -4,6 +4,7 @@ import akka.actor.{Actor, ActorLogging, ActorRef, Props}
 import akka.cluster.sharding.ClusterSharding
 import akka.io.Tcp
 import akka.util.ByteString
+import io.convospot.engine.actors.common.Messages
 
 /**
   * Visitor. One for each connection.
@@ -58,10 +59,12 @@ class UserActor(connection: ActorRef, role:String = "VISITOR") extends Actor wit
       val message = decode(data)
       roomRegion ! RoomActor.Command.Message(room, message, role)
       sender ! nr
-    case UserActor.Message.Direct(message) =>
+    case UserActor.Message.Output(message) =>
       connection ! encode(message)
-    case UserActor.Message.Generic(message,source) =>
-      connection ! encode(message)
+    case Messages.Utterance(text:String,from:String, to:String) =>
+      connection ! encode(s"[${from}]"+text)
+    case Messages.Acknowledge(text:String) =>
+      connection ! encode(s"[${text}]")
     case Tcp.PeerClosed =>
       roomRegion ! RoomActor.Command.Leave(room)
       context stop self
@@ -112,9 +115,7 @@ object UserActor {
       *
       * @param message
       */
-    final case class Direct(message: String)
-
-    final case class Generic(message: String, source: String)
+    final case class Output(message: String)
 
   }
 

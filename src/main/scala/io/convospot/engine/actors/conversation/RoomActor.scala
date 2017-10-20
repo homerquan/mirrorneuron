@@ -9,6 +9,8 @@ import scala.concurrent.duration._
 import akka.cluster.sharding.ShardRegion
 import scala.collection.immutable
 import io.convospot.engine.actors.brain._
+import io.convospot.engine.actors.common.Messages
+
 /**
   * Chat room
   * Demonstrates akka.actor.FSM solution
@@ -38,7 +40,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       * Subscribe Visitor.
       */
     case Event(msg@Command.Subscribe(_, _, _), _) =>
-      sender ! UserActor.Message.Direct(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
+      sender ! UserActor.Message.Output(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
       goto(State.Active) using Data.Active(msg.id, immutable.HashMap(sender -> msg.name))
 
   }
@@ -53,9 +55,9 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       */
     case Event(msg@Command.Subscribe(_, _, _), stateData: Data.Active) =>
       for ((visitor: ActorRef, name: String) <- stateData.visitors) {
-        visitor ! UserActor.Message.Direct(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
+        visitor ! UserActor.Message.Output(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
       }
-      sender ! UserActor.Message.Direct(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
+      sender ! UserActor.Message.Output(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
       stay using stateData.copy(
         visitors = stateData.visitors + (sender -> msg.name)
       )
@@ -70,16 +72,16 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
             //TODO: Demo AI here
             implicit val timeout = Timeout(15 seconds)
             val future = observer ? PolicyActor.Message.InFromRoom(message, sourceRole, conversation)
-            val result = Await.result(future, timeout.duration).asInstanceOf[RoomActor.Message.FromAI]
+            val result = Await.result(future, timeout.duration).asInstanceOf[Messages.OutputAI]
             if (sourceRole == "HELPER") {
-              sender ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
-              visitor ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
+              sender ! result.toHelper
+              visitor ! result.toVisitor
             } else {
-              conversation = result.toHelper
-              visitor ! UserActor.Message.Generic(s"${result.toHelper} ", "AI")
-              sender ! UserActor.Message.Generic(s"${result.toVisitor} ", "AI")
+              if(result.toVisitor.isInstanceOf[Messages.Utterance])
+                conversation = result.toVisitor.asInstanceOf[Messages.Utterance].text
+              visitor ! result.toHelper
+              sender ! result.toVisitor
             }
-            // visitor ! VisitorActor.Message.Direct(s"[$senderName] $message")
           }
         case None =>
       }
@@ -92,7 +94,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
       stateData.visitors.get(sender) match {
         case Some(senderName) =>
           for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            visitor ! UserActor.Message.Direct(s"ROOM[${stateData.id}] Visitor $senderName left room.")
+            visitor ! UserActor.Message.Output(s"ROOM[${stateData.id}] Visitor $senderName left room.")
           }
         case None =>
       }
@@ -161,8 +163,6 @@ object RoomActor {
   }
 
   object Message {
-
-    final case class FromAI(toVisitor: String, toHelper: String)
 
   }
 
