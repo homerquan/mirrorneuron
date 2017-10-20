@@ -77,8 +77,8 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
               sender ! result.toHelper
               visitor ! result.toVisitor
             } else {
-              if(result.toVisitor.isInstanceOf[Messages.Utterance])
-                conversation = result.toVisitor.asInstanceOf[Messages.Utterance].text
+              //TODO: improve conversation
+              conversation = message
               visitor ! result.toHelper
               sender ! result.toVisitor
             }
