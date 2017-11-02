@@ -20,9 +20,9 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
   import RoomActor._
 
   // TODO: demo only
-  val observer = context.actorOf(Props[PolicyActor],"sample_policy_actor")
+  val observer = context.actorOf(Props[PolicyActor], "sample_policy_actor")
 
-  var conversation = ""  //TODO: demo a very simple context -- only last sentences
+  var conversation = "" //TODO: demo a very simple context -- only last sentences
 
   /**
     * Initial state and data
@@ -31,6 +31,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
   /**
     * State "Initial" handler
+    *
     * @return
     */
   when(State.Initial) {
@@ -47,6 +48,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
 
   /**
     * State "Active" handler
+    *
     * @return
     */
   when(State.Active) {
@@ -157,6 +159,7 @@ object RoomActor {
   sealed trait Command {
     /**
       * Destination Room Id
+      *
       * @return
       */
     def id: String
@@ -171,7 +174,7 @@ object RoomActor {
     /**
       * Subscribe
       *
-      * @param id Room id
+      * @param id   Room id
       * @param name Visitor name
       */
     final case class Subscribe(id: String, name: String, role: String) extends Command
@@ -186,7 +189,7 @@ object RoomActor {
     /**
       * Chat Message
       *
-      * @param id Room id
+      * @param id      Room id
       * @param message Chat message
       */
     final case class Message(id: String, message: String, sourceRole: String) extends Command
@@ -208,7 +211,7 @@ object RoomActor {
     /**
       * Active State
       *
-      * @param id Room Id
+      * @param id       Room Id
       * @param visitors Subscribed visitors
       */
     final case class Active(

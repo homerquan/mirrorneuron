@@ -6,14 +6,14 @@ import akka.util.Timeout
 import scala.concurrent.duration._
 import io.convospot.engine.actors.conversation.RoomActor
 import io.convospot.engine.actors.common.Messages
-
 import scala.concurrent.Await
 
 case object AskNameMessage
 
-class PolicyActor extends Actor {
+private[convospot] class PolicyActor extends Actor with ActorLogging{
 
   val languageActor = context.actorOf(Props[LanguageActor], "sample_language_actor")
+  val knowledgeActor = context.actorOf(Props[KnowledgeActor], "sample_knowledge_actor")
 
   def receive = {
     case AskNameMessage => // respond to the "ask" request
@@ -24,6 +24,14 @@ class PolicyActor extends Actor {
         implicit val timeout = Timeout(15 seconds)
         val future = languageActor ? LanguageActor.Message.Ask(message)
         val result = Await.result(future, timeout.duration)
+        val future2 = knowledgeActor ? KnowledgeActor.Message.Ask(message)
+        val result2 = Await.result(future2, timeout.duration)
+
+        // wait human to select within a timeout
+
+        log.debug(result2.asInstanceOf[String])
+        if (result2.isInstanceOf[String])
+          sender ! Messages.OutputAI(Messages.Acknowledge("AI Response:"+message), Messages.Utterance(result2.asInstanceOf[String],"AI","VISITOR"))
         if (result.isInstanceOf[Messages.Utterance])
           sender ! Messages.OutputAI(Messages.Acknowledge("AI Response:"+message), result.asInstanceOf[Messages.Utterance])
         if (result.isInstanceOf[Messages.Acknowledge])

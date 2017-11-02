@@ -9,6 +9,7 @@ import io.convospot.engine.actors.common.Messages
 /**
   * Visitor. One for each connection.
   * Demonstrates context.become FSM solution
+  * context is representing the observed behavior
   */
 class UserActor(connection: ActorRef, role:String = "VISITOR") extends Actor with ActorLogging {
 

@@ -4,7 +4,7 @@ organization := "io.convospot"
 
 version := "0.2.0"
 
-scalaVersion := "2.12.3"
+scalaVersion := "2.11.11"
 
 fork := true
 
@@ -14,18 +14,25 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.6",
-  "com.typesafe.akka" % "akka-contrib_2.12" % "2.5.6",
-  "com.typesafe.akka" % "akka-testkit_2.12" % "2.5.6",
+  "com.typesafe.akka" %% "akka-contrib" % "2.5.6",
+  "com.typesafe.akka" %% "akka-testkit" % "2.5.6",
   "com.typesafe.akka" %% "akka-cluster" % "2.5.6",
   "com.typesafe.akka" %% "akka-cluster-sharding" % "2.5.6",
+  "io.spray" %% "spray-json" % "1.3.1",
+  "io.spray" %% "spray-client" % "1.3.1",
+  "io.spray" %% "spray-httpx" % "1.3.1",
+  "io.spray" %% "spray-routing" % "1.3.1",
+  "com.softwaremill.sttp" %% "core" % "1.0.2",
   "org.iq80.leveldb" % "leveldb" % "0.9",
   "org.scalaz" %% "scalaz-core" % "7.2.15",
+  "org.specs2" %% "specs2-core" % "4.0.0" % "test",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2",
   "org.slf4j" % "slf4j-api" % "1.7.25",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.25",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.github.scopt" %% "scopt" % "3.7.0",
-  "org.specs2" % "specs2-core_2.12" % "4.0.0"
+  "net.debasishg" %% "redisclient" % "3.4",
+  "org.specs2" %% "specs2-core" % "4.0.0"
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
