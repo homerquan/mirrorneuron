@@ -10,11 +10,14 @@ class KnowledgeActor extends Actor with ActorLogging{
   val redis=RedisConnector.getRedis
   val redisPool= RedisConnector.getPool
   //demo only
-  val kb = redis.hget("demo","knowledge").get
+  var kb = redis.hget("demo","knowledge").get
   def receive = {
     case KnowledgeActor.Message.Ask(message: String) =>
         //ask Machine Comprehension api
+        kb = redis.hget("demo","knowledge").get
         sender ! getAnswer(kb,message)
+    case KnowledgeActor.Message.Learn(message: String) =>
+        redis.hset("demo","knowledge",kb+"\n"+message)
     case _ => println("that was unexpected")
   }
 
@@ -45,7 +48,7 @@ object KnowledgeActor {
   object Message {
 
     final case class Ask(message: String)
-    final case class Learn(conversation: String, reply: String)
+    final case class Learn(reply: String)
 
   }
 

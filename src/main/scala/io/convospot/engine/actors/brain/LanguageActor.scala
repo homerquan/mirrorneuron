@@ -20,6 +20,10 @@ class LanguageActor extends Actor with ActorLogging {
         sender ! Messages.Utterance(reply, "AI", "VISITOR") //Know nothing is a Acknowledge not utterrance
     case LanguageActor.Message.Learn(conversation: String, reply: String) =>
       context become active(memory += (conversation -> reply))
+      //Add this sentence into knowledge
+      if(reply.length>20) {
+        context.actorSelection("../sample_knowledge_actor")!KnowledgeActor.Message.Learn(reply)
+      }
     case _ => println("that was unexpected")
   }
 
