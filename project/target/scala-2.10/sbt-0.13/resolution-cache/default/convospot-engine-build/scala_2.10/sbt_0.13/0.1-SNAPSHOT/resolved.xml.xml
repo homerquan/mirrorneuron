@@ -4,7 +4,7 @@
 		module="convospot-engine-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171011174054"
+		publication="20171106204447"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

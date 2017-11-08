@@ -18,36 +18,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [info] Resolving org.scalastyle#scalastyle-sbt-plugin;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalastyle#scalastyle-sbt-plugin;1.0.0 {compile=[default(compile)]}
-[info] Resolving org.scalastyle#scalastyle-sbt-plugin;1.0.0 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scalastyle#scalastyle-sbt-plugin;1.0.0 {compile=[default(compile)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.scalastyle#scalastyle-sbt-plugin;1.0.0
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.scalastyle#scalastyle-sbt-plugin;1.0.0
-[debug] 		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scalastyle#scalastyle-sbt-plugin;1.0.0
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom
-[debug] 	public: found md file for org.scalastyle#scalastyle-sbt-plugin;1.0.0
-[debug] 		=> https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom (1.0.0)
-[debug] downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.pom
-[debug] 	[SUCCESSFUL ] org.scalastyle#scalastyle-sbt-plugin;1.0.0!scalastyle-sbt-plugin.pom(pom.original) (152ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] 		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] 		tried /Users/homer/.sbt/preloaded/org.scalastyle/scalastyle-sbt-plugin/1.0.0/jars/scalastyle-sbt-plugin.jar
-[debug] 		tried file:////Users/homer/.sbt/preloaded/org/scalastyle/scalastyle-sbt-plugin/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] 		tried https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-sbt-plugin/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] CLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-sbt-plugin/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] 	found org.scalastyle#scalastyle-sbt-plugin;1.0.0 in public
+[debug] sbt-chain: module revision found in cache: org.scalastyle#scalastyle-sbt-plugin;1.0.0
+[debug] 	found org.scalastyle#scalastyle-sbt-plugin;1.0.0 in sbt-chain
 [debug] == resolving dependencies default#convospot-engine-build;0.1-SNAPSHOT->org.scalastyle#scalastyle-sbt-plugin;1.0.0 [compile->runtime]
 [debug] == resolving dependencies default#convospot-engine-build;0.1-SNAPSHOT->org.scalastyle#scalastyle-sbt-plugin;1.0.0 [compile->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
@@ -61,31 +33,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [info] Resolving org.scalastyle#scalastyle_2.10;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalastyle#scalastyle_2.10;1.0.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.scalastyle#scalastyle_2.10;1.0.0 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scalastyle#scalastyle_2.10;1.0.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.scalastyle#scalastyle_2.10;1.0.0
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.scalastyle#scalastyle_2.10;1.0.0
-[debug] 		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle_2.10/1.0.0/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scalastyle#scalastyle_2.10;1.0.0
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom
-[debug] 	public: found md file for org.scalastyle#scalastyle_2.10;1.0.0
-[debug] 		=> https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom (1.0.0)
-[debug] downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.pom
-[debug] 	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;1.0.0!scalastyle_2.10.pom(pom.original) (143ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/jars/scalastyle_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/jars/scalastyle_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/jars/scalastyle_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/jars/scalastyle_2.10.jar
-[debug] 		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle_2.10/1.0.0/jars/scalastyle_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar
-[debug] 	found org.scalastyle#scalastyle_2.10;1.0.0 in public
+[debug] sbt-chain: module revision found in cache: org.scalastyle#scalastyle_2.10;1.0.0
+[debug] 	found org.scalastyle#scalastyle_2.10;1.0.0 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scalastyle#scalastyle-sbt-plugin;1.0.0->org.scalastyle#scalastyle_2.10;1.0.0 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -123,31 +72,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [info] Resolving org.scalariform#scalariform_2.10;0.2.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.2.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.scalariform#scalariform_2.10;0.2.0 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.2.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.scalariform#scalariform_2.10;0.2.0
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.scalariform#scalariform_2.10;0.2.0
-[debug] 		tried /Users/homer/.ivy2/local/org.scalariform/scalariform_2.10/0.2.0/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scalariform#scalariform_2.10;0.2.0
-[debug] 		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom
-[debug] 	public: found md file for org.scalariform#scalariform_2.10;0.2.0
-[debug] 		=> https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom (0.2.0)
-[debug] downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.pom
-[debug] 	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.2.0!scalariform_2.10.pom(pom.original) (144ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/jars/scalariform_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/jars/scalariform_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/jars/scalariform_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/jars/scalariform_2.10.jar
-[debug] 		tried /Users/homer/.ivy2/local/org.scalariform/scalariform_2.10/0.2.0/jars/scalariform_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar
-[debug] 	found org.scalariform#scalariform_2.10;0.2.0 in public
+[debug] sbt-chain: module revision found in cache: org.scalariform#scalariform_2.10;0.2.0
+[debug] 	found org.scalariform#scalariform_2.10;0.2.0 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;1.0.0->org.scalariform#scalariform_2.10;0.2.0 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -8839,26 +8765,11 @@
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[info] downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0.jar
-[info] 	[SUCCESSFUL ] org.scalastyle#scalastyle-sbt-plugin;1.0.0!scalastyle-sbt-plugin.jar (256ms)
+[debug] 	[NOT REQUIRED] org.scalastyle#scalastyle-sbt-plugin;1.0.0!scalastyle-sbt-plugin.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.14.5!sbt-assembly.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar
-[info] downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0.jar
-[info] 	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;1.0.0!scalastyle_2.10.jar (307ms)
+[debug] 	[NOT REQUIRED] org.scalastyle#scalastyle_2.10;1.0.0!scalastyle_2.10.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar
-[info] downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0.jar
-[info] 	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.2.0!scalariform_2.10.jar (340ms)
+[debug] 	[NOT REQUIRED] org.scalariform#scalariform_2.10;0.2.0!scalariform_2.10.jar
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.10;3.0.1!scalactic_2.10.jar(bundle)
 [debug] 	[NOT REQUIRED] org.pantsbuild#jarjar;1.6.4!jarjar.jar
@@ -8931,7 +8842,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 6434ms :: artifacts dl 937ms
+[debug] :: resolution report :: resolve 1268ms :: artifacts dl 33ms
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT compile produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-compile.xml
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT runtime produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-runtime.xml
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT test produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-test.xml
@@ -8945,5 +8856,5 @@
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT docs produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-docs.xml
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT pom produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-pom.xml
 [debug] 	report for default#convospot-engine-build;0.1-SNAPSHOT scala-tool produced in /Users/homer/Projects/convospot-engine/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-convospot-engine-build-scala-tool.xml
-[debug] 	resolve done (6434ms resolve - 937ms download)
+[debug] 	resolve done (1268ms resolve - 33ms download)
 [info] Done updating.
