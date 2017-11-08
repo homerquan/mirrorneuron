@@ -21,8 +21,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6[0m
-[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/scalapb-runtime_2.11/0.6.6/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom (0.6.6)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6!scalapb-runtime_2.11.pom(pom.original) (143ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/scalapb-runtime_2.11/0.6.6/jars/scalapb-runtime_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar[0m
+[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -45,8 +58,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.trueaccord.lenses#lenses_2.11;0.4.12 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.trueaccord.lenses#lenses_2.11;0.4.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.trueaccord.lenses#lenses_2.11;0.4.12[0m
-[0m[[0mdebug[0m] [0m	found com.trueaccord.lenses#lenses_2.11;0.4.12 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.trueaccord.lenses#lenses_2.11;0.4.12 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.trueaccord.lenses#lenses_2.11;0.4.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.lenses/lenses_2.11/0.4.12/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.trueaccord.lenses#lenses_2.11;0.4.12[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.trueaccord.lenses#lenses_2.11;0.4.12[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom (0.4.12)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.trueaccord.lenses#lenses_2.11;0.4.12!lenses_2.11.pom(pom.original) (136ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.lenses/lenses_2.11/0.4.12/jars/lenses_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar[0m
+[0m[[0mdebug[0m] [0m	found com.trueaccord.lenses#lenses_2.11;0.4.12 in public[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6->com.trueaccord.lenses#lenses_2.11;0.4.12 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -72,8 +98,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse_2.11;0.4.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lihaoyi#fastparse_2.11;0.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse_2.11;0.4.4[0m
-[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse_2.11;0.4.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse_2.11;0.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.lihaoyi#fastparse_2.11;0.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/fastparse_2.11/0.4.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.lihaoyi#fastparse_2.11;0.4.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.lihaoyi#fastparse_2.11;0.4.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom (0.4.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse_2.11;0.4.4!fastparse_2.11.pom(pom.original) (145ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/fastparse_2.11/0.4.4/jars/fastparse_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse_2.11;0.4.4 in public[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
@@ -123,8 +162,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse-utils_2.11;0.4.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lihaoyi#fastparse-utils_2.11;0.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse-utils_2.11;0.4.4[0m
-[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse-utils_2.11;0.4.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse-utils_2.11;0.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.lihaoyi#fastparse-utils_2.11;0.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/fastparse-utils_2.11/0.4.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.lihaoyi#fastparse-utils_2.11;0.4.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.lihaoyi#fastparse-utils_2.11;0.4.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom (0.4.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse-utils_2.11;0.4.4!fastparse-utils_2.11.pom(pom.original) (138ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/fastparse-utils_2.11/0.4.4/jars/fastparse-utils_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse-utils_2.11;0.4.4 in public[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
@@ -183,8 +235,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#sourcecode_2.11;0.1.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lihaoyi#sourcecode_2.11;0.1.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#sourcecode_2.11;0.1.4[0m
-[0m[[0mdebug[0m] [0m	found com.lihaoyi#sourcecode_2.11;0.1.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.lihaoyi#sourcecode_2.11;0.1.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.lihaoyi#sourcecode_2.11;0.1.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/sourcecode_2.11/0.1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.lihaoyi#sourcecode_2.11;0.1.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.lihaoyi#sourcecode_2.11;0.1.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom (0.1.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.lihaoyi#sourcecode_2.11;0.1.4!sourcecode_2.11.pom(pom.original) (143ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.lihaoyi/sourcecode_2.11/0.1.4/bundles/sourcecode_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.lihaoyi#sourcecode_2.11;0.1.4 in public[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-reflect;2.11.11 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
@@ -2199,8 +2264,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-netty;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-netty;1.6.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-netty;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-netty;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-netty;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-netty;1.6.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-netty/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-netty;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-netty;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-netty;1.6.1!grpc-netty.pom(pom.original) (149ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-netty/1.6.1/jars/grpc-netty.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-netty;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->io.grpc#grpc-netty;1.6.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->io.grpc#grpc-netty;1.6.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-netty;1.6.1->io.grpc#grpc-core;1.6.1 [compile->master(compile)][0m
@@ -2208,16 +2286,42 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-core;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-core;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-core;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-core;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-core;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-core;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-core/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-core;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-core;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-core;1.6.1!grpc-core.pom(pom.original) (133ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-core/1.6.1/jars/grpc-core.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-core;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-netty;1.6.1->io.grpc#grpc-core;1.6.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-core;1.6.1->io.grpc#grpc-context;1.6.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-context;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-context;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-context;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-context;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-context;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-context;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-context/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-context;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-context;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-context;1.6.1!grpc-context.pom(pom.original) (134ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-context/1.6.1/jars/grpc-context.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-context;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-core;1.6.1->io.grpc#grpc-context;1.6.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-core;1.6.1->com.google.guava#guava;19.0 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.google.guava#guava;19.0 ...[0m
@@ -2268,8 +2372,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.opencensus#opencensus-api;0.5.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.opencensus#opencensus-api;0.5.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.opencensus#opencensus-api;0.5.1[0m
-[0m[[0mdebug[0m] [0m	found io.opencensus#opencensus-api;0.5.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.opencensus#opencensus-api;0.5.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.opencensus#opencensus-api;0.5.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.opencensus/opencensus-api/0.5.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.opencensus#opencensus-api;0.5.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.opencensus#opencensus-api;0.5.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom (0.5.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.opencensus#opencensus-api;0.5.1!opencensus-api.pom(pom.original) (140ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.opencensus/opencensus-api/0.5.1/jars/opencensus-api.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.opencensus#opencensus-api;0.5.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-core;1.6.1->io.opencensus#opencensus-api;0.5.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.opencensus#opencensus-api;0.5.1->com.google.errorprone#error_prone_annotations;2.0.11 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.opencensus#opencensus-api;0.5.1->com.google.errorprone#error_prone_annotations;2.0.19 [compile->master(compile)][0m
@@ -2322,56 +2439,189 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-codec-http2;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-codec-http2;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-codec-http2;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-http2;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-codec-http2;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-codec-http2;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-http2/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-codec-http2;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-codec-http2;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-http2;4.1.14.Final!netty-codec-http2.pom(pom.original) (138ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-parent/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-parent;4.1.14.Final!netty-parent.pom(pom.original) (210ms)[0m
+[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;9 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;9 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;9[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-parent/4.1.14.Final/jars/netty-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.sbt/preloaded/io.netty/netty-parent/4.1.14.Final/jars/netty-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/homer/.sbt/preloaded/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/releases/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/io/netty/netty-parent/4.1.14.Final/netty-parent-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-http2/4.1.14.Final/jars/netty-codec-http2.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-http2;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-netty;1.6.1->io.netty#netty-codec-http2;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-http2;4.1.14.Final->io.netty#netty-codec-http;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-codec-http;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-codec-http;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-codec-http;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-http;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-codec-http;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-codec-http;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-http/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-codec-http;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-codec-http;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-http;4.1.14.Final!netty-codec-http.pom(pom.original) (135ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-http/4.1.14.Final/jars/netty-codec-http.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-http;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-http2;4.1.14.Final->io.netty#netty-codec-http;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-http;4.1.14.Final->io.netty#netty-codec;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-codec;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-codec;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-codec;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-codec;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-codec;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-codec;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-codec;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-codec;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec;4.1.14.Final!netty-codec.pom(pom.original) (140ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec/4.1.14.Final/jars/netty-codec.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-codec;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-http;4.1.14.Final->io.netty#netty-codec;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec;4.1.14.Final->io.netty#netty-transport;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-transport;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-transport;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-transport;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-transport;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-transport;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-transport;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-transport/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-transport;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-transport;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-transport;4.1.14.Final!netty-transport.pom(pom.original) (142ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-transport/4.1.14.Final/jars/netty-transport.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-transport;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec;4.1.14.Final->io.netty#netty-transport;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-transport;4.1.14.Final->io.netty#netty-buffer;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-buffer;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-buffer;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-buffer;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-buffer;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-buffer;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-buffer;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-buffer/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-buffer;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-buffer;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-buffer;4.1.14.Final!netty-buffer.pom(pom.original) (143ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-buffer/4.1.14.Final/jars/netty-buffer.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-buffer;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-transport;4.1.14.Final->io.netty#netty-buffer;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-buffer;4.1.14.Final->io.netty#netty-common;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-common;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-common;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-common;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-common;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-common;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-common;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-common/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-common;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-common;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-common;4.1.14.Final!netty-common.pom(pom.original) (136ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-common/4.1.14.Final/jars/netty-common.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-common;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-buffer;4.1.14.Final->io.netty#netty-common;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-transport;4.1.14.Final->io.netty#netty-resolver;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.11 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-resolver;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-resolver;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-resolver;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-resolver;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-resolver;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-resolver;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-resolver/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-resolver;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-resolver;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-resolver;4.1.14.Final!netty-resolver.pom(pom.original) (137ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-resolver/4.1.14.Final/jars/netty-resolver.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-resolver;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-transport;4.1.14.Final->io.netty#netty-resolver;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-resolver;4.1.14.Final->io.netty#netty-common;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-resolver;4.1.14.Final->io.netty#netty-common;4.1.14.Final [compile->compile(*)][0m
@@ -2380,8 +2630,24 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-handler;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-handler;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-handler;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-handler;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-handler;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-handler;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-handler/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-handler;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-handler;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-handler;4.1.14.Final!netty-handler.pom(pom.original) (139ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-handler/4.1.14.Final/jars/netty-handler.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-handler;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-http2;4.1.14.Final->io.netty#netty-handler;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-handler;4.1.14.Final->io.netty#netty-buffer;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-handler;4.1.14.Final->io.netty#netty-buffer;4.1.14.Final [compile->compile(*)][0m
@@ -2418,8 +2684,24 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-handler-proxy;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-handler-proxy;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-handler-proxy;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-handler-proxy;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-handler-proxy;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-handler-proxy;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-handler-proxy/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-handler-proxy;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-handler-proxy;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-handler-proxy;4.1.14.Final!netty-handler-proxy.pom(pom.original) (145ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-handler-proxy/4.1.14.Final/jars/netty-handler-proxy.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-handler-proxy;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-netty;1.6.1->io.netty#netty-handler-proxy;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-handler-proxy;4.1.14.Final->io.netty#netty-transport;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-handler-proxy;4.1.14.Final->io.netty#netty-transport;4.1.14.Final [compile->compile(*)][0m
@@ -2428,8 +2710,24 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.netty#netty-codec-socks;4.1.14.Final ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-codec-socks;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-codec-socks;4.1.14.Final[0m
-[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-socks;4.1.14.Final in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-codec-socks;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.netty#netty-codec-socks;4.1.14.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-socks/4.1.14.Final/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.netty#netty-codec-socks;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.netty#netty-codec-socks;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom (4.1.14.Final)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-socks;4.1.14.Final!netty-codec-socks.pom(pom.original) (138ms)[0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty-parent;4.1.14.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty-parent;4.1.14.Final {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty-parent;4.1.14.Final[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.netty/netty-codec-socks/4.1.14.Final/jars/netty-codec-socks.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty-codec-socks;4.1.14.Final in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-handler-proxy;4.1.14.Final->io.netty#netty-codec-socks;4.1.14.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-socks;4.1.14.Final->io.netty#netty-codec;4.1.14.Final [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.netty#netty-codec-socks;4.1.14.Final->io.netty#netty-codec;4.1.14.Final [compile->compile(*)][0m
@@ -2457,8 +2755,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6[0m
-[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/scalapb-runtime-grpc_2.11/0.6.6/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom (0.6.6)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6!scalapb-runtime-grpc_2.11.pom(pom.original) (147ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/scalapb-runtime-grpc_2.11/0.6.6/jars/scalapb-runtime-grpc_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar[0m
+[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.convospot#engine_2.11;0.2.0->com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -2488,8 +2799,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-stub;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-stub;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-stub;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-stub;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-stub;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-stub;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-stub/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-stub;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-stub;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-stub;1.6.1!grpc-stub.pom(pom.original) (133ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-stub/1.6.1/jars/grpc-stub.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-stub;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6->io.grpc#grpc-stub;1.6.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-stub;1.6.1->io.grpc#grpc-core;1.6.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.11 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -2512,8 +2836,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-protobuf;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-protobuf;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-protobuf;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-protobuf;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-protobuf;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-protobuf;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-protobuf/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-protobuf;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-protobuf;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-protobuf;1.6.1!grpc-protobuf.pom(pom.original) (138ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-protobuf/1.6.1/jars/grpc-protobuf.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-protobuf;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6->io.grpc#grpc-protobuf;1.6.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-protobuf;1.6.1->io.grpc#grpc-core;1.6.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-protobuf;1.6.1->io.grpc#grpc-core;1.6.1 [compile->compile(*)][0m
@@ -2543,8 +2880,45 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-java-util;3.3.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.protobuf#protobuf-java-util;3.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google.protobuf#protobuf-java-util;3.3.1[0m
-[0m[[0mdebug[0m] [0m	found com.google.protobuf#protobuf-java-util;3.3.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-java-util;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google.protobuf#protobuf-java-util;3.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.google.protobuf/protobuf-java-util/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.google.protobuf#protobuf-java-util;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.google.protobuf#protobuf-java-util;3.3.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom (3.3.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-java-util;3.3.1!protobuf-java-util.pom(pom.original) (136ms)[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-parent;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.protobuf#protobuf-parent;3.3.1 {}[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-parent;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google.protobuf#protobuf-parent;3.3.1 {}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom (3.3.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-parent;3.3.1!protobuf-parent.pom(pom.original) (143ms)[0m
+[0m[[0minfo[0m] [0mResolving com.google#google;1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google#google;1 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google#google;1[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.sbt/preloaded/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/homer/.sbt/preloaded/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/releases/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.google.protobuf/protobuf-java-util/3.3.1/bundles/protobuf-java-util.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	found com.google.protobuf#protobuf-java-util;3.3.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-protobuf;1.6.1->com.google.protobuf#protobuf-java-util;3.3.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.protobuf#protobuf-java-util;3.3.1->com.google.protobuf#protobuf-java;3.3.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.google.protobuf#protobuf-java-util;3.3.1->com.google.protobuf#protobuf-java;3.4.0 [compile->master(compile)][0m
@@ -2593,8 +2967,21 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.11 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.11 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving io.grpc#grpc-protobuf-lite;1.6.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.grpc#grpc-protobuf-lite;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.grpc#grpc-protobuf-lite;1.6.1[0m
-[0m[[0mdebug[0m] [0m	found io.grpc#grpc-protobuf-lite;1.6.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving io.grpc#grpc-protobuf-lite;1.6.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.grpc#grpc-protobuf-lite;1.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-protobuf-lite/1.6.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.grpc#grpc-protobuf-lite;1.6.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for io.grpc#grpc-protobuf-lite;1.6.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom (1.6.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-protobuf-lite;1.6.1!grpc-protobuf-lite.pom(pom.original) (140ms)[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/io.grpc/grpc-protobuf-lite/1.6.1/jars/grpc-protobuf-lite.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	found io.grpc#grpc-protobuf-lite;1.6.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-protobuf;1.6.1->io.grpc#grpc-protobuf-lite;1.6.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.protobuf#protobuf-lite;3.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies io.grpc#grpc-protobuf-lite;1.6.1->io.grpc#grpc-core;1.6.1 [compile->master(compile)][0m
@@ -16307,7 +16694,12 @@
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.11!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6!scalapb-runtime_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime_2.11/0.6.6/scalapb-runtime_2.11-0.6.6.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#scalapb-runtime_2.11;0.6.6!scalapb-runtime_2.11.jar (1361ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.5.6!akka-actor_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-contrib_2.11;2.5.6!akka-contrib_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.5.6!akka-testkit_2.11.jar[0m
@@ -16327,13 +16719,43 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-classic;1.2.3!logback-classic.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.github.scopt#scopt_2.11;3.7.0!scopt_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.debasishg#redisclient_2.11;3.4!redisclient_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-netty;1.6.1!grpc-netty.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6!scalapb-runtime-grpc_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.lenses#lenses_2.11;0.4.12!lenses_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#fastparse_2.11;0.4.4!fastparse_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-netty/1.6.1/grpc-netty-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-netty;1.6.1!grpc-netty.jar (154ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/scalapb-runtime-grpc_2.11/0.6.6/scalapb-runtime-grpc_2.11-0.6.6.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#scalapb-runtime-grpc_2.11;0.6.6!scalapb-runtime-grpc_2.11.jar (136ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/lenses/lenses_2.11/0.4.12/lenses_2.11-0.4.12.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.lenses#lenses_2.11;0.4.12!lenses_2.11.jar (148ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.4.4/fastparse_2.11-0.4.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse_2.11;0.4.4!fastparse_2.11.jar (185ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.4.0!protobuf-java.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#fastparse-utils_2.11;0.4.4!fastparse-utils_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#sourcecode_2.11;0.1.4!sourcecode_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.4.4/fastparse-utils_2.11-0.4.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse-utils_2.11;0.4.4!fastparse-utils_2.11.jar (151ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.11/0.1.4/sourcecode_2.11-0.1.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.lihaoyi#sourcecode_2.11;0.1.4!sourcecode_2.11.jar(bundle) (162ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.3.1!config.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.11;0.7.0!scala-java8-compat_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.11;2.5.6!akka-remote_2.11.jar[0m
@@ -16378,33 +16800,118 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.6!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-pool#commons-pool;1.6!commons-pool.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-core;1.6.1!grpc-core.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-codec-http2;4.1.14.Final!netty-codec-http2.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-handler-proxy;4.1.14.Final!netty-handler-proxy.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-context;1.6.1!grpc-context.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-core/1.6.1/grpc-core-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-core;1.6.1!grpc-core.jar (195ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.14.Final/netty-codec-http2-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-http2;4.1.14.Final!netty-codec-http2.jar (182ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.14.Final/netty-handler-proxy-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-handler-proxy;4.1.14.Final!netty-handler-proxy.jar (140ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-context/1.6.1/grpc-context-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-context;1.6.1!grpc-context.jar (143ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.guava#guava;19.0!guava.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.errorprone#error_prone_annotations;2.0.19!error_prone_annotations.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.instrumentation#instrumentation-api;0.4.3!instrumentation-api.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.opencensus#opencensus-api;0.5.1!opencensus-api.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-codec-http;4.1.14.Final!netty-codec-http.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-handler;4.1.14.Final!netty-handler.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-codec;4.1.14.Final!netty-codec.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-transport;4.1.14.Final!netty-transport.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-buffer;4.1.14.Final!netty-buffer.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-resolver;4.1.14.Final!netty-resolver.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-common;4.1.14.Final!netty-common.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-codec-socks;4.1.14.Final!netty-codec-socks.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-stub;1.6.1!grpc-stub.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-protobuf;1.6.1!grpc-protobuf.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java-util;3.3.1!protobuf-java-util.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/opencensus/opencensus-api/0.5.1/opencensus-api-0.5.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.opencensus#opencensus-api;0.5.1!opencensus-api.jar (142ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.14.Final/netty-codec-http-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-http;4.1.14.Final!netty-codec-http.jar (196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.14.Final/netty-handler-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-handler;4.1.14.Final!netty-handler.jar (184ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.14.Final/netty-codec-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec;4.1.14.Final!netty-codec.jar (179ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.14.Final/netty-transport-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-transport;4.1.14.Final!netty-transport.jar (183ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.14.Final/netty-buffer-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-buffer;4.1.14.Final!netty-buffer.jar (163ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.14.Final/netty-resolver-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-resolver;4.1.14.Final!netty-resolver.jar (141ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-common/4.1.14.Final/netty-common-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-common;4.1.14.Final!netty-common.jar (187ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.14.Final/netty-codec-socks-4.1.14.Final.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty-codec-socks;4.1.14.Final!netty-codec-socks.jar (144ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.6.1/grpc-stub-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-stub;1.6.1!grpc-stub.jar (147ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.6.1/grpc-protobuf-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-protobuf;1.6.1!grpc-protobuf.jar (151ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.3.1/protobuf-java-util-3.3.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-java-util;3.3.1!protobuf-java-util.jar(bundle) (151ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.api.grpc#proto-google-common-protos;0.1.9!proto-google-common-protos.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.grpc#grpc-protobuf-lite;1.6.1!grpc-protobuf-lite.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.6.1/grpc-protobuf-lite-1.6.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.grpc#grpc-protobuf-lite;1.6.1!grpc-protobuf-lite.jar (143ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.code.gson#gson;2.7!gson.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.11!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.5!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.3!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2587ms :: artifacts dl 25ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 8687ms :: artifacts dl 5111ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 compile produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 runtime produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 test produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-test.xml[0m
@@ -16419,7 +16926,7 @@
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 docs produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 pom produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 scala-tool produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2587ms resolve - 25ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (8687ms resolve - 5111ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mFound version conflict(s) in library dependencies; some are suspected to be binary incompatible:[0m
 [0m[[33mwarn[0m] [0m[0m
