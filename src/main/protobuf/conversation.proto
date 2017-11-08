@@ -21,3 +21,6 @@ message HelloRequest {
 message HelloResponse {
   string message = 1;
 }
+
+// TODO: add join, leave, say, hear, getMembers, forceClose, getStatus?
+// say {message: string, type: String, from: <party>, to: <party>, middle: <party>, ts: Long, action: string, nlp: JSON, extra: JSON}

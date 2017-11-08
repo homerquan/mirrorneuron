@@ -4,7 +4,6 @@ import java.util.logging.Logger
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import io.grpc.Server
-import io.convospot.engine.grpc.conversation
 
 class GrpcServer(server: Server) {
 
