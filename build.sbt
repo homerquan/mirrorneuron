@@ -23,7 +23,6 @@ libraryDependencies ++= Seq(
   "io.spray" %% "spray-httpx" % "1.3.1",
   "io.spray" %% "spray-routing" % "1.3.1",
   "com.softwaremill.sttp" %% "core" % "1.0.2",
-  "io.grpc" % "grpc-all" % "1.7.0",
   "org.iq80.leveldb" % "leveldb" % "0.9",
   "org.scalaz" %% "scalaz-core" % "7.2.15",
   "org.specs2" %% "specs2-core" % "4.0.0" % "test",
@@ -33,9 +32,15 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.github.scopt" %% "scopt" % "3.7.0",
   "net.debasishg" %% "redisclient" % "3.4",
-  "org.specs2" %% "specs2-core" % "4.0.0"
+  "org.specs2" %% "specs2-core" % "4.0.0",
+  "io.grpc" % "grpc-netty" % com.trueaccord.scalapb.compiler.Version.grpcJavaVersion,
+  "com.trueaccord.scalapb" %% "scalapb-runtime-grpc" % com.trueaccord.scalapb.compiler.Version.scalapbVersion
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
 mainClass in Compile := Some("io.convospot.engine.app.Main")
+
+PB.targets in Compile := Seq(
+  scalapb.gen() -> (sourceManaged in Compile).value
+)

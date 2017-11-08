@@ -4,7 +4,7 @@
 		module="convospot-engine-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171106204447"
+		publication="20171107233426"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
@@ -44,5 +44,7 @@
 		</dependency>
 		<dependency org="org.scalastyle" name="scalastyle-sbt-plugin" rev="1.0.0" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 		<dependency org="com.eed3si9n" name="sbt-assembly" rev="0.14.5" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
+		<dependency org="com.thesamet" name="sbt-protoc" rev="0.99.12" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
+		<dependency org="com.trueaccord.scalapb" name="compilerplugin_2.10" rev="0.6.6" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

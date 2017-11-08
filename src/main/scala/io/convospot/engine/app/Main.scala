@@ -11,8 +11,8 @@ import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.util.Properties.{javaVersion, javaVmName, versionString}
 import java.io.File
-
-import io.convospot.engine.console.Launcher
+import io.convospot.engine.console.ConsoleLauncher
+import io.convospot.engine.grpc.GrpcLauncher
 
 private[convospot] object Main extends App with LazyLogging {
 
@@ -44,14 +44,15 @@ private[convospot] object Main extends App with LazyLogging {
       help("help").text("prints this usage text")
     }
 
+    GrpcLauncher.start()
+
     // parser.parse returns Option[C]
     parser.parse(args, Input()) match {
       case Some(config) => {
         if (config.console) {
-          Launcher.start()
+          ConsoleLauncher.start()
         }
       }
-
       case None =>
       // arguments are bad, error message will have been displayed
     }
@@ -59,8 +60,8 @@ private[convospot] object Main extends App with LazyLogging {
     try {
       Thread.sleep(10000)
     } catch {
-      // the actor wasn't stopped within 5 seconds
       case e: akka.pattern.AskTimeoutException =>
+        logger.error("The actor wasn't stopped within 10 seconds: "+e)
     }
   }
 
