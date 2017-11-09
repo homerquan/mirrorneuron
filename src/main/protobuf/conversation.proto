@@ -6,22 +6,45 @@ option java_multiple_files = true;
 option java_package = "io.convospot.engine.grpc";
 option java_outer_classname = "conversation";
 
-// The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+service Conversation {
+  rpc Say (EventRequest) returns (EventResponse) {}
+  rpc Talk (stream EventRequest) returns (stream EventResponse) {}
+  rpc Join (CommandRequest) returns (CommandResponse) {}
+  rpc Leave (CommandRequest) returns (CommandResponse) {}
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
-}
-
-// The response message containing the greetings
-message HelloResponse {
+message EventRequest {
   string message = 1;
+  int64 typeCode = 2;
+  string type = 3;
+  int64 timestamp = 4;
+  string data = 5;
 }
 
-// TODO: add join, leave, say, hear, getMembers, forceClose, getStatus?
-// Two type, command and event
+message EventResponse {
+  string message = 1;
+  int64 code = 2;
+  string details = 3;
+  int64 timestamp =4;
+  string data = 5;
+}
+
+message CommandRequest {
+  string message = 1;
+  int64 typeCode = 2;
+  string type = 3;
+  int64 timestamp =4;
+  string data = 5;
+}
+
+message CommandResponse {
+  string message = 1;
+  int64 code = 2;
+  string details = 3;
+  int64 timestamp = 4;
+  string data = 5;
+}
+
+// updateMemberList
+// updateConversationList
 // say {message: string, type: String, from: <party>, to: <party>, middle: <party>, ts: Long, action: string, nlp: JSON, extra: JSON}
