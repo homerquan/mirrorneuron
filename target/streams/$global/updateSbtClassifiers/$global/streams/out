@@ -2259,8 +2259,62 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.jboss.interceptor#jboss-interceptor-api;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jboss.interceptor#jboss-interceptor-api;1.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jboss.interceptor#jboss-interceptor-api;1.1[0m
-[0m[[0mdebug[0m] [0m	found org.jboss.interceptor#jboss-interceptor-api;1.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.jboss.interceptor#jboss-interceptor-api;1.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.jboss.interceptor#jboss-interceptor-api;1.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.jboss.interceptor#jboss-interceptor-api;1.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.jboss.interceptor#jboss-interceptor-api;1.1[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.jboss.interceptor/jboss-interceptor-api/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jboss.interceptor#jboss-interceptor-api;1.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.jboss.interceptor#jboss-interceptor-api;1.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom (1.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.pom(pom.original) (139ms)[0m
+[0m[[0minfo[0m] [0mResolving org.jboss#jboss-parent;4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jboss#jboss-parent;4 {}[0m
+[0m[[0minfo[0m] [0mResolving org.jboss#jboss-parent;4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.jboss#jboss-parent;4 {}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jboss/jboss-parent/4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jboss/jboss-parent/4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.jboss#jboss-parent;4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss/jboss-parent/4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss/jboss-parent/4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.jboss#jboss-parent;4[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.jboss/jboss-parent/4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jboss#jboss-parent;4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.jboss#jboss-parent;4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom (4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jboss#jboss-parent;4!jboss-parent.pom(pom.original) (150ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/jboss/jboss-parent/4/jboss-parent-4.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.sbt/preloaded/org.jboss/jboss-parent/4/jars/jboss-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/homer/.sbt/preloaded/org/jboss/jboss-parent/4/jboss-parent-4.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/releases/org/jboss/jboss-parent/4/jboss-parent-4.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/org/jboss/jboss-parent/4/jboss-parent-4.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/jars/jboss-interceptor-api.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/jars/jboss-interceptor-api.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/jars/jboss-interceptor-api.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/jars/jboss-interceptor-api.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.jboss.interceptor/jboss-interceptor-api/1.1/jars/jboss-interceptor-api.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar[0m
+[0m[[0mdebug[0m] [0m	found org.jboss.interceptor#jboss-interceptor-api;1.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.enterprise#cdi-api;1.0->org.jboss.interceptor#jboss-interceptor-api;1.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.enterprise#cdi-api;1.0->javax.annotation#jsr250-api;1.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -2662,10 +2716,15 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.16!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 674ms :: artifacts dl 15ms[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar (145ms)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3714ms :: artifacts dl 169ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine$sbt_2.10;0.2.0 default produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine$sbt_2.10-default.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (674ms resolve - 15ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3714ms resolve - 169ms download)[0m
 [0m[[0mdebug[0m] [0mUsing inline dependencies specified in Scala.[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: io.convospot#engine$sources_2.10;0.2.0[0m
 [0m[[0mdebug[0m] [0m	confs: [default][0m
@@ -3951,89 +4010,682 @@
 [0m[[0mdebug[0m] [0mignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator[0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.enterprise#cdi-api;1.0!cdi-api.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm-tree;5.2!asm-tree.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jetbrains#sbt-structure-extractor;2017.2!sbt-structure-extractor.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.eclipse.sisu#org.eclipse.sisu.inject;0.3.2!org.eclipse.sisu.inject.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalastyle#scalastyle_2.10;1.0.0!scalastyle_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.maven#maven-artifact;3.3.9!maven-artifact.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.ant#ant-launcher;1.9.9!ant-launcher.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#collections;0.13.16!collections.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.maven#maven-plugin-api;3.3.9!maven-plugin-api.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalariform#scalariform_2.10;0.2.0!scalariform_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#protoc-bridge_2.10;0.3.0-M1!protoc-bridge_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalactic#scalactic_2.10;3.0.1!scalactic_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#task-system;0.13.16!task-system.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.plexus#plexus-utils;3.0.22!plexus-utils.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.maven#maven-model;3.3.9!maven-model.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#serialization_2.10;0.1.2!serialization_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.16!incremental-compiler.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-pickling_2.10;0.10.1!scala-pickling_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#logic;0.13.16!logic.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.plexus#plexus-classworlds;2.5.2!plexus-classworlds.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-ivy-integration;0.13.16!compiler-ivy-integration.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.6!scala-reflect.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/javax.enterprise/cdi-api/1.0/srcs/cdi-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/javax.enterprise/cdi-api/1.0/srcs/cdi-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.enterprise/cdi-api/1.0/srcs/cdi-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.enterprise/cdi-api/1.0/srcs/cdi-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/javax.enterprise/cdi-api/1.0/srcs/cdi-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.enterprise#cdi-api;1.0!cdi-api.jar(src) (260ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm-tree/5.2/srcs/asm-tree-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm-tree/5.2/srcs/asm-tree-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm-tree/5.2/srcs/asm-tree-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm-tree/5.2/srcs/asm-tree-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.ow2.asm/asm-tree/5.2/srcs/asm-tree-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.ow2.asm#asm-tree;5.2!asm-tree.jar(src) (711ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/srcs/sbt-structure-extractor-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jetbrains#sbt-structure-extractor;2017.2!sbt-structure-extractor.jar(src) (1150ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.eclipse.sisu/org.eclipse.sisu.inject/0.3.2/srcs/org.eclipse.sisu.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.eclipse.sisu/org.eclipse.sisu.inject/0.3.2/srcs/org.eclipse.sisu.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.eclipse.sisu/org.eclipse.sisu.inject/0.3.2/srcs/org.eclipse.sisu.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.eclipse.sisu/org.eclipse.sisu.inject/0.3.2/srcs/org.eclipse.sisu.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.eclipse.sisu/org.eclipse.sisu.inject/0.3.2/srcs/org.eclipse.sisu.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.sisu#org.eclipse.sisu.inject;0.3.2!org.eclipse.sisu.inject.jar(src) (274ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/srcs/scalastyle_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle_2.10/1.0.0/srcs/scalastyle_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/srcs/scalastyle_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle_2.10/1.0.0/srcs/scalastyle_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle_2.10/1.0.0/srcs/scalastyle_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle_2.10;1.0.0!scalastyle_2.10.jar(src) (201ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-artifact/3.3.9/srcs/maven-artifact-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-artifact/3.3.9/srcs/maven-artifact-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-artifact/3.3.9/srcs/maven-artifact-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-artifact/3.3.9/srcs/maven-artifact-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.maven/maven-artifact/3.3.9/srcs/maven-artifact-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.maven#maven-artifact;3.3.9!maven-artifact.jar(src) (189ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.ant/ant-launcher/1.9.9/srcs/ant-launcher-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.ant/ant-launcher/1.9.9/srcs/ant-launcher-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ant/ant-launcher/1.9.9/srcs/ant-launcher-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ant/ant-launcher/1.9.9/srcs/ant-launcher-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.ant/ant-launcher/1.9.9/srcs/ant-launcher-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.ant#ant-launcher;1.9.9!ant-launcher.jar(src) (186ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.16/srcs/collections-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.16/srcs/collections-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.16/srcs/collections-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.16/srcs/collections-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.16/srcs/collections-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#collections;0.13.16!collections.jar(src) (1175ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-plugin-api/3.3.9/srcs/maven-plugin-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-plugin-api/3.3.9/srcs/maven-plugin-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-plugin-api/3.3.9/srcs/maven-plugin-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-plugin-api/3.3.9/srcs/maven-plugin-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.maven/maven-plugin-api/3.3.9/srcs/maven-plugin-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.maven#maven-plugin-api;3.3.9!maven-plugin-api.jar(src) (196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/srcs/scalariform_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.2.0/srcs/scalariform_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/srcs/scalariform_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.2.0/srcs/scalariform_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scalariform/scalariform_2.10/0.2.0/srcs/scalariform_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.2.0/scalariform_2.10-0.2.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.2.0!scalariform_2.10.jar(src) (196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.3.0-M1/srcs/protoc-bridge_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.3.0-M1/srcs/protoc-bridge_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.3.0-M1/srcs/protoc-bridge_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.3.0-M1/srcs/protoc-bridge_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/protoc-bridge_2.10/0.3.0-M1/srcs/protoc-bridge_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.3.0-M1/protoc-bridge_2.10-0.3.0-M1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.3.0-M1/protoc-bridge_2.10-0.3.0-M1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.3.0-M1/protoc-bridge_2.10-0.3.0-M1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.3.0-M1/protoc-bridge_2.10-0.3.0-M1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.3.0-M1/protoc-bridge_2.10-0.3.0-M1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#protoc-bridge_2.10;0.3.0-M1!protoc-bridge_2.10.jar(src) (219ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/3.0.1/srcs/scalactic_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalactic/scalactic_2.10/3.0.1/srcs/scalactic_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/3.0.1/srcs/scalactic_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalactic/scalactic_2.10/3.0.1/srcs/scalactic_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scalactic/scalactic_2.10/3.0.1/srcs/scalactic_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalactic#scalactic_2.10;3.0.1!scalactic_2.10.jar(src) (231ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.16/srcs/task-system-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.16/srcs/task-system-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.16/srcs/task-system-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.16/srcs/task-system-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.16/srcs/task-system-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#task-system;0.13.16!task-system.jar(src) (1105ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalamacros/quasiquotes_2.10/2.0.1/srcs/quasiquotes_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalamacros/quasiquotes_2.10/2.0.1/srcs/quasiquotes_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalamacros/quasiquotes_2.10/2.0.1/srcs/quasiquotes_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalamacros/quasiquotes_2.10/2.0.1/srcs/quasiquotes_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scalamacros/quasiquotes_2.10/2.0.1/srcs/quasiquotes_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar(src) (179ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-utils/3.0.22/srcs/plexus-utils-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-utils/3.0.22/srcs/plexus-utils-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-utils/3.0.22/srcs/plexus-utils-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-utils/3.0.22/srcs/plexus-utils-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.codehaus.plexus/plexus-utils/3.0.22/srcs/plexus-utils-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.plexus#plexus-utils;3.0.22!plexus-utils.jar(src) (248ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-model/3.3.9/srcs/maven-model-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.maven/maven-model/3.3.9/srcs/maven-model-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-model/3.3.9/srcs/maven-model-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.maven/maven-model/3.3.9/srcs/maven-model-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.maven/maven-model/3.3.9/srcs/maven-model-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.maven#maven-model;3.3.9!maven-model.jar(src) (189ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-lang3/3.4/srcs/commons-lang3-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-lang3/3.4/srcs/commons-lang3-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-lang3/3.4/srcs/commons-lang3-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-lang3/3.4/srcs/commons-lang3-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.commons/commons-lang3/3.4/srcs/commons-lang3-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.4!commons-lang3.jar(src) (291ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/serialization_2.10/0.1.2/srcs/serialization_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/serialization_2.10/0.1.2/srcs/serialization_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/serialization_2.10/0.1.2/srcs/serialization_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/serialization_2.10/0.1.2/srcs/serialization_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-sbt/serialization_2.10/0.1.2/srcs/serialization_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.10/0.1.2/serialization_2.10-0.1.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.10/0.1.2/serialization_2.10-0.1.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.10/0.1.2/serialization_2.10-0.1.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.10/0.1.2/serialization_2.10-0.1.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-sbt/serialization_2.10/0.1.2/serialization_2.10-0.1.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#serialization_2.10;0.1.2!serialization_2.10.jar(src) (184ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.16/srcs/incremental-compiler-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.16/srcs/incremental-compiler-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.16/srcs/incremental-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.16/srcs/incremental-compiler-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.16/srcs/incremental-compiler-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#incremental-compiler;0.13.16!incremental-compiler.jar(src) (1332ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang.modules/scala-pickling_2.10/0.10.1/srcs/scala-pickling_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang.modules/scala-pickling_2.10/0.10.1/srcs/scala-pickling_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang.modules/scala-pickling_2.10/0.10.1/srcs/scala-pickling_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang.modules/scala-pickling_2.10/0.10.1/srcs/scala-pickling_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-lang.modules/scala-pickling_2.10/0.10.1/srcs/scala-pickling_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.1/scala-pickling_2.10-0.10.1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.1/scala-pickling_2.10-0.10.1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.1/scala-pickling_2.10-0.10.1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.1/scala-pickling_2.10-0.10.1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.1/scala-pickling_2.10-0.10.1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-pickling_2.10;0.10.1!scala-pickling_2.10.jar(src) (179ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.16/srcs/logic-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.16/srcs/logic-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.16/srcs/logic-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.16/srcs/logic-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.16/srcs/logic-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logic;0.13.16!logic.jar(src) (1075ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-classworlds/2.5.2/srcs/plexus-classworlds-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-classworlds/2.5.2/srcs/plexus-classworlds-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-classworlds/2.5.2/srcs/plexus-classworlds-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-classworlds/2.5.2/srcs/plexus-classworlds-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.codehaus.plexus/plexus-classworlds/2.5.2/srcs/plexus-classworlds-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.plexus#plexus-classworlds;2.5.2!plexus-classworlds.jar(src) (183ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.16/srcs/compiler-ivy-integration-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.16/srcs/compiler-ivy-integration-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.16/srcs/compiler-ivy-integration-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.16/srcs/compiler-ivy-integration-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.16/srcs/compiler-ivy-integration-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-ivy-integration;0.13.16!compiler-ivy-integration.jar(src) (1057ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-lang/scala-reflect/2.10.6/srcs/scala-reflect-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.6!scala-reflect.jar(src) (277ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.4.0!protobuf-java.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#api;0.13.16!api.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#ivy;0.13.16!ivy.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#process;0.13.16!process.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.pantsbuild#jarjar;1.6.4!jarjar.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.16!control.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.16/srcs/api-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.16/srcs/api-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.16/srcs/api-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.16/srcs/api-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.16/srcs/api-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#api;0.13.16!api.jar(src) (1149ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.16/srcs/ivy-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.16/srcs/ivy-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.16/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.16/srcs/ivy-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.16/srcs/ivy-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#ivy;0.13.16!ivy.jar(src) (1257ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.16/srcs/process-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.16/srcs/process-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.16/srcs/process-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.16/srcs/process-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.16/srcs/process-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#process;0.13.16!process.jar(src) (1067ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.pantsbuild/jarjar/1.6.4/srcs/jarjar-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.pantsbuild/jarjar/1.6.4/srcs/jarjar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.pantsbuild/jarjar/1.6.4/srcs/jarjar-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.pantsbuild/jarjar/1.6.4/srcs/jarjar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.pantsbuild/jarjar/1.6.4/srcs/jarjar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.pantsbuild#jarjar;1.6.4!jarjar.jar(src) (183ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.16/srcs/control-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.16/srcs/control-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.16/srcs/control-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.16/srcs/control-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.16/srcs/control-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#control;0.13.16!control.jar(src) (1085ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.16!compiler-interface.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jetbrains#sbt-idea-shell;2017.2!sbt-idea-shell.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#tasks;0.13.16!tasks.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cross;0.13.16!cross.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-integration;0.13.16!compiler-integration.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#interface;0.13.16!interface.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#launcher-interface;1.0.1!launcher-interface.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.14.5!sbt-assembly.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.json4s#json4s-core_2.10;3.2.10!json4s-core_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#relation;0.13.16!relation.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#completion;0.13.16!completion.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.16!apply-macro.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#run;0.13.16!run.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compile;0.13.16!compile.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.spire-math#jawn-parser_2.10;0.6.0!jawn-parser_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#persist;0.13.16!persist.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.json4s#json4s-ast_2.10;3.2.10!json4s-ast_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#actions;0.13.16!actions.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#classfile;0.13.16!classfile.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#compilerplugin_2.10;0.6.6!compilerplugin_2.10.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/srcs/sbt-idea-shell-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jetbrains#sbt-idea-shell;2017.2!sbt-idea-shell.jar(src) (1239ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.16/srcs/tasks-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.16/srcs/tasks-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.16/srcs/tasks-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.16/srcs/tasks-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.16/srcs/tasks-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tasks;0.13.16!tasks.jar(src) (1476ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.16/srcs/cross-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.16/srcs/cross-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.16/srcs/cross-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.16/srcs/cross-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.16/srcs/cross-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cross;0.13.16!cross.jar(src) (1060ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.16/srcs/compiler-integration-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.16/srcs/compiler-integration-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.16/srcs/compiler-integration-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.16/srcs/compiler-integration-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.16/srcs/compiler-integration-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-integration;0.13.16!compiler-integration.jar(src) (1062ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.16/srcs/interface-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.16/srcs/interface-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.16/srcs/interface-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.16/srcs/interface-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.16/srcs/interface-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#interface;0.13.16!interface.jar(src) (1087ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/1.0.1/srcs/launcher-interface-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/1.0.1/srcs/launcher-interface-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/launcher-interface/1.0.1/srcs/launcher-interface-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/launcher-interface/1.0.1/srcs/launcher-interface-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-sbt/launcher-interface/1.0.1/srcs/launcher-interface-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.0.1/launcher-interface-1.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.0.1/launcher-interface-1.0.1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.0.1/launcher-interface-1.0.1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.0.1/launcher-interface-1.0.1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.0.1/launcher-interface-1.0.1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#launcher-interface;1.0.1!launcher-interface.jar(src) (289ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.14.5!sbt-assembly.jar(src) (1095ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.json4s/json4s-core_2.10/3.2.10/srcs/json4s-core_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.json4s/json4s-core_2.10/3.2.10/srcs/json4s-core_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.json4s/json4s-core_2.10/3.2.10/srcs/json4s-core_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.json4s/json4s-core_2.10/3.2.10/srcs/json4s-core_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.json4s/json4s-core_2.10/3.2.10/srcs/json4s-core_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-core_2.10;3.2.10!json4s-core_2.10.jar(src) (218ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.16/srcs/relation-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.16/srcs/relation-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.16/srcs/relation-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.16/srcs/relation-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.16/srcs/relation-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#relation;0.13.16!relation.jar(src) (1059ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.16/srcs/completion-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.16/srcs/completion-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.16/srcs/completion-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.16/srcs/completion-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.16/srcs/completion-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#completion;0.13.16!completion.jar(src) (1150ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.16/srcs/apply-macro-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.16/srcs/apply-macro-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.16/srcs/apply-macro-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.16/srcs/apply-macro-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.16/srcs/apply-macro-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#apply-macro;0.13.16!apply-macro.jar(src) (1050ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.16/srcs/run-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.16/srcs/run-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.16/srcs/run-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.16/srcs/run-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.16/srcs/run-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#run;0.13.16!run.jar(src) (1049ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.16/srcs/compile-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.16/srcs/compile-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.16/srcs/compile-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.16/srcs/compile-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.16/srcs/compile-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compile;0.13.16!compile.jar(src) (1070ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.spire-math/jawn-parser_2.10/0.6.0/srcs/jawn-parser_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.spire-math/jawn-parser_2.10/0.6.0/srcs/jawn-parser_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.spire-math/jawn-parser_2.10/0.6.0/srcs/jawn-parser_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.spire-math/jawn-parser_2.10/0.6.0/srcs/jawn-parser_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.spire-math/jawn-parser_2.10/0.6.0/srcs/jawn-parser_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.spire-math#jawn-parser_2.10;0.6.0!jawn-parser_2.10.jar(src) (283ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.16/srcs/persist-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.16/srcs/persist-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.16/srcs/persist-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.16/srcs/persist-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.16/srcs/persist-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#persist;0.13.16!persist.jar(src) (1071ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.json4s/json4s-ast_2.10/3.2.10/srcs/json4s-ast_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.json4s/json4s-ast_2.10/3.2.10/srcs/json4s-ast_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.json4s/json4s-ast_2.10/3.2.10/srcs/json4s-ast_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.json4s/json4s-ast_2.10/3.2.10/srcs/json4s-ast_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.json4s/json4s-ast_2.10/3.2.10/srcs/json4s-ast_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-ast_2.10;3.2.10!json4s-ast_2.10.jar(src) (171ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-lang/scala-library/2.10.6/srcs/scala-library-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.6!scala-library.jar(src) (405ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.16/srcs/actions-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.16/srcs/actions-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.16/srcs/actions-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.16/srcs/actions-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.16/srcs/actions-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#actions;0.13.16!actions.jar(src) (1131ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.16/srcs/classfile-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.16/srcs/classfile-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.16/srcs/classfile-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.16/srcs/classfile-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.16/srcs/classfile-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classfile;0.13.16!classfile.jar(src) (1050ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.6/srcs/compilerplugin_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.6/srcs/compilerplugin_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.6/srcs/compilerplugin_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.6/srcs/compilerplugin_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.trueaccord.scalapb/compilerplugin_2.10/0.6.6/srcs/compilerplugin_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.6/compilerplugin_2.10-0.6.6-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.6/compilerplugin_2.10-0.6.6-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.6/compilerplugin_2.10-0.6.6-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.6/compilerplugin_2.10-0.6.6-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.6/compilerplugin_2.10-0.6.6-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#compilerplugin_2.10;0.6.6!compilerplugin_2.10.jar(src) (177ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.16!main.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.eclipse.sisu#org.eclipse.sisu.plexus;0.3.2!org.eclipse.sisu.plexus.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#testing;0.13.16!testing.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.16!sbt.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.spire-math#json4s-support_2.10;0.6.0!json4s-support_2.10.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.plexus#plexus-component-annotations;1.5.5!plexus-component-annotations.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#io;0.13.16!io.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.annotation#jsr250-api;1.0!jsr250-api.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.github.os72#protoc-jar;3.4.0!protoc-jar.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm;5.2!asm.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm-commons;5.2!asm-commons.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.16/srcs/main-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.16/srcs/main-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.16/srcs/main-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.16/srcs/main-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.16/srcs/main-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main;0.13.16!main.jar(src) (1314ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar(src) (1056ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.eclipse.sisu/org.eclipse.sisu.plexus/0.3.2/srcs/org.eclipse.sisu.plexus-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.eclipse.sisu/org.eclipse.sisu.plexus/0.3.2/srcs/org.eclipse.sisu.plexus-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.eclipse.sisu/org.eclipse.sisu.plexus/0.3.2/srcs/org.eclipse.sisu.plexus-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.eclipse.sisu/org.eclipse.sisu.plexus/0.3.2/srcs/org.eclipse.sisu.plexus-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.eclipse.sisu/org.eclipse.sisu.plexus/0.3.2/srcs/org.eclipse.sisu.plexus-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.sisu#org.eclipse.sisu.plexus;0.3.2!org.eclipse.sisu.plexus.jar(src) (202ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.16/srcs/testing-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.16/srcs/testing-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.16/srcs/testing-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.16/srcs/testing-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.16/srcs/testing-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#testing;0.13.16!testing.jar(src) (1065ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/srcs/sbt-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/srcs/sbt-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/srcs/sbt-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/srcs/sbt-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/srcs/sbt-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#sbt;0.13.16!sbt.jar(src) (1189ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/srcs/jboss-interceptor-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/srcs/jboss-interceptor-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/srcs/jboss-interceptor-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jboss.interceptor/jboss-interceptor-api/1.1/srcs/jboss-interceptor-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.jboss.interceptor/jboss-interceptor-api/1.1/srcs/jboss-interceptor-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/jboss/interceptor/jboss-interceptor-api/1.1/jboss-interceptor-api-1.1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar(src) (164ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.spire-math/json4s-support_2.10/0.6.0/srcs/json4s-support_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.spire-math/json4s-support_2.10/0.6.0/srcs/json4s-support_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.spire-math/json4s-support_2.10/0.6.0/srcs/json4s-support_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.spire-math/json4s-support_2.10/0.6.0/srcs/json4s-support_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.spire-math/json4s-support_2.10/0.6.0/srcs/json4s-support_2.10-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.spire-math#json4s-support_2.10;0.6.0!json4s-support_2.10.jar(src) (196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-component-annotations/1.5.5/srcs/plexus-component-annotations-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.codehaus.plexus/plexus-component-annotations/1.5.5/srcs/plexus-component-annotations-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-component-annotations/1.5.5/srcs/plexus-component-annotations-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.codehaus.plexus/plexus-component-annotations/1.5.5/srcs/plexus-component-annotations-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.codehaus.plexus/plexus-component-annotations/1.5.5/srcs/plexus-component-annotations-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.plexus#plexus-component-annotations;1.5.5!plexus-component-annotations.jar(src) (180ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.16/srcs/io-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.16/srcs/io-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.16/srcs/io-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.16/srcs/io-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.16/srcs/io-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#io;0.13.16!io.jar(src) (1121ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/javax.annotation/jsr250-api/1.0/srcs/jsr250-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/javax.annotation/jsr250-api/1.0/srcs/jsr250-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.annotation/jsr250-api/1.0/srcs/jsr250-api-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.annotation/jsr250-api/1.0/srcs/jsr250-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/javax.annotation/jsr250-api/1.0/srcs/jsr250-api-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.annotation#jsr250-api;1.0!jsr250-api.jar(src) (173ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.4.0/srcs/protoc-jar-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.4.0/srcs/protoc-jar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.4.0/srcs/protoc-jar-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.4.0/srcs/protoc-jar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.github.os72/protoc-jar/3.4.0/srcs/protoc-jar-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.4.0/protoc-jar-3.4.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.4.0/protoc-jar-3.4.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.4.0/protoc-jar-3.4.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.4.0/protoc-jar-3.4.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.4.0/protoc-jar-3.4.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.github.os72#protoc-jar;3.4.0!protoc-jar.jar(src) (173ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm/5.2/srcs/asm-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm/5.2/srcs/asm-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm/5.2/srcs/asm-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm/5.2/srcs/asm-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.ow2.asm/asm/5.2/srcs/asm-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.ow2.asm#asm;5.2!asm.jar(src) (268ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.thoughtworks.paranamer/paranamer/2.6/srcs/paranamer-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.thoughtworks.paranamer/paranamer/2.6/srcs/paranamer-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thoughtworks.paranamer/paranamer/2.6/srcs/paranamer-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thoughtworks.paranamer/paranamer/2.6/srcs/paranamer-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.thoughtworks.paranamer/paranamer/2.6/srcs/paranamer-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar(src) (177ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm-commons/5.2/srcs/asm-commons-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.ow2.asm/asm-commons/5.2/srcs/asm-commons-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm-commons/5.2/srcs/asm-commons-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.ow2.asm/asm-commons/5.2/srcs/asm-commons-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.ow2.asm/asm-commons/5.2/srcs/asm-commons-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.ow2.asm#asm-commons;5.2!asm-commons.jar(src) (258ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.4!jline.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#classpath;0.13.16!classpath.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.16!main-settings.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.16/srcs/classpath-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.16/srcs/classpath-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.16/srcs/classpath-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.16/srcs/classpath-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.16/srcs/classpath-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classpath;0.13.16!classpath.jar(src) (1119ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.16/srcs/main-settings-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.16/srcs/main-settings-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.16/srcs/main-settings-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.16/srcs/main-settings-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.16/srcs/main-settings-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main-settings;0.13.16!main-settings.jar(src) (1162ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cache;0.13.16!cache.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalastyle#scalastyle-sbt-plugin;1.0.0!scalastyle-sbt-plugin.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4!ivy.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#logging;0.13.16!logging.jar(src)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.16/srcs/cache-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.16/srcs/cache-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.16/srcs/cache-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.16/srcs/cache-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.16/srcs/cache-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cache;0.13.16!cache.jar(src) (1196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/srcs/scalastyle-sbt-plugin-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/srcs/scalastyle-sbt-plugin-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/srcs/scalastyle-sbt-plugin-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/srcs/scalastyle-sbt-plugin-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scalastyle/scalastyle-sbt-plugin/scala_2.10/sbt_0.13/1.0.0/srcs/scalastyle-sbt-plugin-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/1.0.0/scalastyle-sbt-plugin-1.0.0-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalastyle#scalastyle-sbt-plugin;1.0.0!scalastyle-sbt-plugin.jar(src) (180ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-sbt.ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/srcs/ivy-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/ivy-2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/ivy-2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/ivy-2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/ivy-2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4/ivy-2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt.ivy#ivy;2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4!ivy.jar(src) (268ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.16/srcs/logging-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.16/srcs/logging-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.16/srcs/logging-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.16/srcs/logging-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.16/srcs/logging-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logging;0.13.16!logging.jar(src) (1119ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.jcraft#jsch;0.1.50!jsch.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.thesamet#sbt-protoc;0.99.12!sbt-protoc.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#tracking;0.13.16!tracking.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.ant#ant;1.9.9!ant.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.16!test-agent.jar(src)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#command;0.13.16!command.jar(src)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 313ms :: artifacts dl 24ms[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.jcraft/jsch/0.1.50/srcs/jsch-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.jcraft/jsch/0.1.50/srcs/jsch-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jcraft/jsch/0.1.50/srcs/jsch-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jcraft/jsch/0.1.50/srcs/jsch-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/com.jcraft/jsch/0.1.50/srcs/jsch-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.50/jsch-0.1.50-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.50/jsch-0.1.50-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.50/jsch-0.1.50-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.50/jsch-0.1.50-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.50/jsch-0.1.50-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.jcraft#jsch;0.1.50!jsch.jar(src) (187ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.scala-lang/scala-compiler/2.10.6/srcs/scala-compiler-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src) (324ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.12/srcs/sbt-protoc-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.thesamet#sbt-protoc;0.99.12!sbt-protoc.jar(src) (1630ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.16/srcs/tracking-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.16/srcs/tracking-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.16/srcs/tracking-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.16/srcs/tracking-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.16/srcs/tracking-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tracking;0.13.16!tracking.jar(src) (1068ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.ant/ant/1.9.9/srcs/ant-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.ant/ant/1.9.9/srcs/ant-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ant/ant/1.9.9/srcs/ant-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ant/ant/1.9.9/srcs/ant-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/org.apache.ant/ant/1.9.9/srcs/ant-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.ant#ant;1.9.9!ant.jar(src) (298ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/javax.inject/javax.inject/1/srcs/javax.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/javax.inject/javax.inject/1/srcs/javax.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.inject/javax.inject/1/srcs/javax.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/javax.inject/javax.inject/1/srcs/javax.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/homer/.ivy2/local/javax.inject/javax.inject/1/srcs/javax.inject-sources.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.inject#javax.inject;1!javax.inject.jar(src) (178ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.16/srcs/test-agent-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.16/srcs/test-agent-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.16/srcs/test-agent-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.16/srcs/test-agent-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.16/srcs/test-agent-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#test-agent;0.13.16!test-agent.jar(src) (1042ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.16/srcs/command-sources.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.16/srcs/command-sources.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.16/srcs/command-sources.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.16/srcs/command-sources.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.16/srcs/command-sources.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#command;0.13.16!command.jar(src) (1122ms)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 284ms :: artifacts dl 70038ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine$sources_2.10;0.2.0 default produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine$sources_2.10-default.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (313ms resolve - 24ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (284ms resolve - 70038ms download)[0m

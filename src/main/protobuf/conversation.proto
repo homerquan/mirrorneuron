@@ -23,4 +23,5 @@ message HelloResponse {
 }
 
 // TODO: add join, leave, say, hear, getMembers, forceClose, getStatus?
+// Two type, command and event
 // say {message: string, type: String, from: <party>, to: <party>, middle: <party>, ts: Long, action: string, nlp: JSON, extra: JSON}
