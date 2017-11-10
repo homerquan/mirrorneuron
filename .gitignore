@@ -1,5 +1,11 @@
+
+# IntelliJ
+*.iml
 .idea
+
 .DS_Store
+*.class
+*.log
+
 /project/target
-/project/project/target
 /target
