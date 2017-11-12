@@ -33,7 +33,7 @@ message CommandRequest {
   string message = 1;
   int64 typeCode = 2;
   string type = 3;
-  int64 timestamp =4;
+  int64 timestamp = 4;
   string data = 5;
 }
 

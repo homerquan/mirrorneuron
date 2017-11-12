@@ -16404,7 +16404,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.11!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.5!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.3!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 6204ms :: artifacts dl 73ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2392ms :: artifacts dl 47ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 compile produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 runtime produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 test produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-test.xml[0m
@@ -16419,7 +16419,7 @@
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 docs produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 pom produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine_2.11;0.2.0 scala-tool produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (6204ms resolve - 73ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2392ms resolve - 47ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mFound version conflict(s) in library dependencies; some are suspected to be binary incompatible:[0m
 [0m[[33mwarn[0m] [0m[0m

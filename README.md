@@ -37,7 +37,11 @@ Redis: ``docker run --name convospot-redis -d redis``
 * [Intellij Protobuf plugin](https://plugins.jetbrains.com/plugin/8277-protobuf-support)
 * Scala Protobuf compiler https://scalapb.github.io/grpc.html
 
-## Call RPC in nodejs
+## GRPC in scala
+
+* https://www.beyondthelines.net/computing/grpc-in-scala/
+
+## Call GRPC in nodejs
 
 ```
 npm install -g grpc-tools
