@@ -9,3 +9,4 @@ all {file:/Users/homer/Projects/convospot-engine/}convospot-engine/products {fil
 all {file:/Users/homer/Projects/convospot-engine/}convospot-engine/products {file:/Users/homer/Projects/convospot-engine/}convospot-engine/test:products
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/qm/t7bdjyc90n37j677_t_rqfth0000gn/T/sbt-structure.xml
 all {file:/Users/homer/Projects/convospot-engine/}convospot-engine/products {file:/Users/homer/Projects/convospot-engine/}convospot-engine/test:products
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/rg/0zx6fkcn533djf1r6nf647qh0000gn/T/sbt-structure.xml

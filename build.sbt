@@ -9,7 +9,8 @@ scalaVersion := "2.11.11"
 fork := true
 
 resolvers ++= Seq(
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
+  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/",
+  Resolver.jcenterRepo
 )
 
 libraryDependencies ++= Seq(
@@ -33,6 +34,7 @@ libraryDependencies ++= Seq(
   "com.github.scopt" %% "scopt" % "3.7.0",
   "net.debasishg" %% "redisclient" % "3.4",
   "org.specs2" %% "specs2-core" % "4.0.0",
+  "com.hootsuite" %% "akka-persistence-redis" % "0.6.0",
   "io.grpc" % "grpc-netty" % com.trueaccord.scalapb.compiler.Version.grpcJavaVersion,
   "com.trueaccord.scalapb" %% "scalapb-runtime-grpc" % com.trueaccord.scalapb.compiler.Version.scalapbVersion
 )

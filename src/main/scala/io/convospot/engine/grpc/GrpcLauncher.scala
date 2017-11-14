@@ -1,48 +1,16 @@
 package io.convospot.engine.grpc
 
+import io.convospot.engine.actors.conversation.UserActor
+
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder
 import io.convospot.engine.grpc.conversation._
 import io.grpc.stub.StreamObserver
-import java.util.logging.Logger
+import org.apache.log4j._
 
 
 private[convospot] object GrpcLauncher {
-
-  private class ConversationImpl extends ConversationGrpc.Conversation {
-    override def say(req: EventRequest) = {
-      val reply = EventResponse(message = "Hello " + req.message)
-      Future.successful(reply)
-    }
-
-    /*
-    * @param responseObserver an observer to receive the stream of previous messages.
-    * @return an observer to handle requested message/location pairs.
-     */
-    override def talk(responseObserver: StreamObserver[EventResponse]): StreamObserver[EventRequest] = {
-      new StreamObserver[EventRequest]() {
-        override def onNext(note: EventRequest): Unit = {
-        }
-
-        override def onError(t: Throwable): Unit = {
-        }
-
-        override def onCompleted(): Unit = {
-          responseObserver.onCompleted
-        }
-      }
-    }
-
-    override def join(req: CommandRequest) = {
-      val reply = CommandResponse(message = "Hello " + req.message)
-      Future.successful(reply)
-    }
-
-    override def leave(req: CommandRequest) = {
-      val reply = CommandResponse(message = "Hello " + req.message)
-      Future.successful(reply)
-    }
-  }
+  val log = Logger.getLogger(getClass().getName())
 
   val server = new GrpcServer(
     ServerBuilder
