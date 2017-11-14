@@ -5,9 +5,10 @@ import io.convospot.engine.grpc.conversation.{Request, Response}
 
 import scala.concurrent.Future
 private[convospot] object Handlers {
-  private implicit val system = ActorSystem("engine")
+  private implicit val system = ActorSystem("convospot-engine")
   def createBot(req:Request) = {
     // parse json data and put Bot id in name
+    // check exists before create
     val bot = system.actorOf(Props(new BotActor()), name="test")
     val reply = Response(message = "Success!")
     Future.successful(reply)
