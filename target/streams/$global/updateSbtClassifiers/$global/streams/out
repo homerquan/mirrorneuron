@@ -12,7 +12,6 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt;0.13.16 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.16 {default=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mno default cache defined: set to /Users/homer/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.16[0m
 [0m[[0mdebug[0m] [0m	found org.scala-sbt#sbt;0.13.16 in sbt-chain[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}[0m
@@ -36,6 +35,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#main;0.13.16 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#main;0.13.16 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mno default cache defined: set to /Users/homer/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#main;0.13.16[0m
 [0m[[0mdebug[0m] [0m	found org.scala-sbt#main;0.13.16 in sbt-chain[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}[0m
@@ -2663,9 +2663,9 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.16!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jboss.interceptor#jboss-interceptor-api;1.1!jboss-interceptor-api.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 654ms :: artifacts dl 26ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 458ms :: artifacts dl 19ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine$sbt_2.10;0.2.0 default produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine$sbt_2.10-default.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (654ms resolve - 26ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (458ms resolve - 19ms download)[0m
 [0m[[0mdebug[0m] [0mUsing inline dependencies specified in Scala.[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: io.convospot#engine$sources_2.10;0.2.0[0m
 [0m[[0mdebug[0m] [0m	confs: [default][0m
@@ -4034,6 +4034,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.16!test-agent.jar(src)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#command;0.13.16!command.jar(src)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 243ms :: artifacts dl 32ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 204ms :: artifacts dl 20ms[0m
 [0m[[0mdebug[0m] [0m	report for io.convospot#engine$sources_2.10;0.2.0 default produced in /Users/homer/Projects/convospot-engine/target/scala-2.11/resolution-cache/reports/io.convospot-engine$sources_2.10-default.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (243ms resolve - 32ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (204ms resolve - 20ms download)[0m

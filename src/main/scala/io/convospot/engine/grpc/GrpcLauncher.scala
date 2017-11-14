@@ -1,13 +1,16 @@
 package io.convospot.engine.grpc
 
+import io.convospot.engine.actors.conversation.UserActor
+
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder
 import io.convospot.engine.grpc.conversation._
 import io.grpc.stub.StreamObserver
+import org.apache.log4j._
 
 
 private[convospot] object GrpcLauncher {
-
+  val log = Logger.getLogger(getClass().getName())
   private class ConversationImpl extends ConversationGrpc.Conversation {
     override def say(req: Request) = {
       val reply = Response(message = "Hello " + req.message)
@@ -33,8 +36,15 @@ private[convospot] object GrpcLauncher {
     }
 
     override def ask(req: Request) = {
-      val reply = Response(message = "Hello " + req.message)
-      Future.successful(reply)
+      req.`type` match {
+        case "create_a_new_bot" => {
+          Handlers.createBot(req)
+        }
+        case _ => {
+          val ex = new RuntimeException("unsupported request topic:"+ req.`type`)
+          Future.failed(ex)
+        }
+      }
     }
   }
 
