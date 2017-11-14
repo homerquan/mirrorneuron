@@ -55,6 +55,6 @@ fabric.properties
 *.class
 *.log
 
-/project/target
+/target/**/*
+/project/target/**/*
 /project/project
-/target
