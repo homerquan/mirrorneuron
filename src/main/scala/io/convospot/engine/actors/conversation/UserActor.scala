@@ -26,6 +26,11 @@ class UserActor(connection: ActorRef, role:String = "VISITOR") extends Actor wit
     * Visitor room
     */
   var room: String = ""
+  /** states: online/offline
+    * last active:
+    * Context: {}
+    * Intention: Computed() context -> intention
+    */
 
   /**
     * Initial state
