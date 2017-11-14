@@ -7,13 +7,12 @@ option java_package = "io.convospot.engine.grpc";
 option java_outer_classname = "conversation";
 
 service Conversation {
-  rpc Say (EventRequest) returns (EventResponse) {}
-  rpc Talk (stream EventRequest) returns (stream EventResponse) {}
-  rpc Join (CommandRequest) returns (CommandResponse) {}
-  rpc Leave (CommandRequest) returns (CommandResponse) {}
+  rpc Say (Request) returns (Response) {}   //for event, ask and forget
+  rpc Talk (stream Request) returns (stream Response) {}
+  rpc Ask (Request) returns (Response) {}   //for command, ask and expect response
 }
 
-message EventRequest {
+message Request {
   string message = 1;
   int64 typeCode = 2;
   string type = 3;
@@ -21,30 +20,10 @@ message EventRequest {
   string data = 5;
 }
 
-message EventResponse {
+message Response {
   string message = 1;
   int64 code = 2;
   string details = 3;
   int64 timestamp =4;
   string data = 5;
 }
-
-message CommandRequest {
-  string message = 1;
-  int64 typeCode = 2;
-  string type = 3;
-  int64 timestamp = 4;
-  string data = 5;
-}
-
-message CommandResponse {
-  string message = 1;
-  int64 code = 2;
-  string details = 3;
-  int64 timestamp = 4;
-  string data = 5;
-}
-
-// updateMemberList
-// updateConversationList
-// say {message: string, type: String, from: <party>, to: <party>, middle: <party>, ts: Long, action: string, nlp: JSON, extra: JSON}

@@ -4,24 +4,23 @@ import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder
 import io.convospot.engine.grpc.conversation._
 import io.grpc.stub.StreamObserver
-import java.util.logging.Logger
 
 
 private[convospot] object GrpcLauncher {
 
   private class ConversationImpl extends ConversationGrpc.Conversation {
-    override def say(req: EventRequest) = {
-      val reply = EventResponse(message = "Hello " + req.message)
+    override def say(req: Request) = {
+      val reply = Response(message = "Hello " + req.message)
       Future.successful(reply)
     }
 
     /*
-    * @param responseObserver an observer to receive the stream of previous messages.
-    * @return an observer to handle requested message/location pairs.
+     * @param responseObserver an observer to receive the stream of previous messages.
+     * @return an observer to handle requested message/location pairs.
      */
-    override def talk(responseObserver: StreamObserver[EventResponse]): StreamObserver[EventRequest] = {
-      new StreamObserver[EventRequest]() {
-        override def onNext(note: EventRequest): Unit = {
+    override def talk(responseObserver: StreamObserver[Response]): StreamObserver[Request] = {
+      new StreamObserver[Request]() {
+        override def onNext(note: Request): Unit = {
         }
 
         override def onError(t: Throwable): Unit = {
@@ -33,13 +32,8 @@ private[convospot] object GrpcLauncher {
       }
     }
 
-    override def join(req: CommandRequest) = {
-      val reply = CommandResponse(message = "Hello " + req.message)
-      Future.successful(reply)
-    }
-
-    override def leave(req: CommandRequest) = {
-      val reply = CommandResponse(message = "Hello " + req.message)
+    override def ask(req: Request) = {
+      val reply = Response(message = "Hello " + req.message)
       Future.successful(reply)
     }
   }

@@ -17,6 +17,8 @@ class UserActor(connection: ActorRef, role:String = "VISITOR") extends Actor wit
 
   val roomRegion = ClusterSharding(context.system).shardRegion(RoomActor.shardName)
 
+  //TODO: context to intention map, understanding here
+
   /**
     * Visitor name
     */
