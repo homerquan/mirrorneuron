@@ -34,6 +34,15 @@ private[convospot] class ConversationImpl extends ConversationGrpc.Conversation 
       case "create_a_new_bot" => {
         Handlers.createBot(req)
       }
+      case "join_a_conversation" => {
+        Handlers.createBot(req)
+      }
+      case "end_a_conversation" => {
+        Handlers.createBot(req)
+      }
+      case "reset_and_seed_the_engine" => {
+        Handlers.createBot(req)
+      }
       case _ => {
         val ex = new RuntimeException("unsupported request topic:" + req.`type`)
         Future.failed(ex)
