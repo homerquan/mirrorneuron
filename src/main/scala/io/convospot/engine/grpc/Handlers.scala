@@ -25,4 +25,16 @@ private[convospot] object Handlers {
       case e: Exception => Future.failed(e)
     }
   }
+
+  def createBot(req: Request) = {
+    val data = req.data.parseJson.convertTo[CreateBot]
+    try {
+      system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = s"Bot $data.id created success!")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
 }
