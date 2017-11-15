@@ -12,10 +12,6 @@ service Conversation {
   rpc Ask (Request) returns (Response) {}   //for command, ask and expect response
 }
 
-service Event {
-  rpc Send (Request) returns (Response) {}  //output from engine
-}
-
 message Request {
   string message = 1;
   int64 typeCode = 2;

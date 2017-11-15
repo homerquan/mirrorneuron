@@ -31,19 +31,19 @@ private[convospot] class ConversationImpl extends ConversationGrpc.Conversation 
 
   override def ask(req: Request) = {
     req.`type` match {
-      case "create_a_new_bot" => {
+      case "create_bot" => {
         Handlers.createBot(req)
       }
-      case "create_a_conversation" => {
+      case "create_conversation" => {
         Handlers.createBot(req)
       }
-      case "join_a_conversation" => {
+      case "join_conversation" => {
         Handlers.createBot(req)
       }
-      case "end_a_conversation" => {
+      case "end_conversation" => {
         Handlers.createBot(req)
       }
-      case "reset_and_seed_the_engine" => {
+      case "reset_engine" => {
         Handlers.createBot(req)
       }
       case _ => {
