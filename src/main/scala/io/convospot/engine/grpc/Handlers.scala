@@ -48,4 +48,48 @@ private[convospot] object Handlers {
     }
   }
 
+  def joinConversation(req: Request) = {
+    val data = req.data.parseJson.convertTo[CreateBot]
+    try {
+      system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = s"Bot $data.id created success!")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  def leaveConversation(req: Request) = {
+    val data = req.data.parseJson.convertTo[CreateBot]
+    try {
+      system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = s"Bot $data.id created success!")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  def say(req: Request) = {
+    val data = req.data.parseJson.convertTo[CreateBot]
+    try {
+      system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = s"Bot $data.id created success!")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  def act(req: Request) = {
+    val data = req.data.parseJson.convertTo[CreateBot]
+    try {
+      system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = s"Bot $data.id created success!")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
 }
