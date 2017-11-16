@@ -7,8 +7,6 @@ import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._
 import scala.concurrent.duration._
-import akka.pattern.ask
-import scala.util.{Failure, Success}
 import scala.concurrent.{Await, Future}
 import akka.util.Timeout
 
