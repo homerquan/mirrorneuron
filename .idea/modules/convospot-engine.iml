@@ -136,5 +136,43 @@
     <orderEntry type="library" name="SBT: joda-time:joda-time:2.9.2:jar" level="project" />
     <orderEntry type="library" name="SBT: org.joda:joda-convert:1.8.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-stm:scala-stm_2.11:0.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.blstream.akkaviz:api_2.11:0.1.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.blstream.akkaviz:monitoring_2.11:0.1.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.datastax.cassandra:cassandra-driver-core:3.0.0:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:ammonite-ops_2.11:0.5.6:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:ammonite-repl_2.11.7:0.5.6:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:ammonite-terminal_2.11:0.5.6:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:derive_2.11:0.3.8:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:pprint_2.11:0.3.8:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:scalaparse_2.11:0.3.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.lihaoyi:upickle_2.11:0.3.8:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.typesafe.akka:akka-http-core_2.11:2.4.10:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.typesafe.akka:akka-http-experimental_2.11:2.4.10:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.typesafe.akka:akka-parsing_2.11:2.4.10:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: com.wacai:config-annotation_2.11:0.3.4:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: io.dropwizard.metrics:metrics-core:3.1.2:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: io.getquill:quill-cassandra_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: io.getquill:quill-core_2.11:0.4.1:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: jline:jline:2.12:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: me.chrons:boopickle_2.11:1.1.2:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.apache.ivy:ivy:2.4.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.aspectj:aspectjrt:1.8.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.clapper:classutil_2.11:1.0.6:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.clapper:grizzled-scala_2.11:1.4.0:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.clapper:grizzled-slf4j_2.11:1.0.2:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.monifu:monifu-core_2.11:1.0:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.monifu:monifu_2.11:1.0:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.scala-lang:scala-compiler:2.11.11:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.scala-lang.modules:scala-async_2.11:0.9.1:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.scalamacros:resetallattrs_2.11:1.0.0:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.spire-math:jawn-parser_2.11:0.8.3:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars:jquery:1.11.1:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars:jquery-ui:1.11.4:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.bower:bootstrap:3.3.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.bower:bootstrap-material-design:0.5.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.bower:bootstrap-sass:3.3.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.bower:jquery:2.1.4:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.npm:bootstrap:3.3.6:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.webjars.npm:vis:4.15.0:jar" level="project" />
   </component>
 </module>

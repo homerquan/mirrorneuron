@@ -56,3 +56,5 @@ AKKA Docs: https://doc.akka.io/docs/akka/2.5.6/scala/
 Scala CLI opt parser: https://github.com/scopt/scopt
 grpc in scala: https://www.beyondthelines.net/computing/grpc-in-scala/
 grpc to akka handler: https://github.com/eiennohito/grpc-akka-stream-subrepo
+Using stream for event processing https://index.scala-lang.org/qubitproducts/akka-cloudpubsub/akka-cloudpubsub/1.0.0?target=_2.11
+Vis for debug https://github.com/blstream/akka-viz

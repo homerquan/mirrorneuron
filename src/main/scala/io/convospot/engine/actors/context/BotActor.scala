@@ -1,7 +1,9 @@
 package io.convospot.engine.actors.context
 
-import akka.actor.SupervisorStrategy.{Restart, Resume}
+import akka.actor.SupervisorStrategy.{Restart, Resume, Escalate}
 import akka.actor._
+import io.convospot.engine.actors.conversation.ConversationActor
+import io.convospot.engine.grpc.data.CreateConversation
 import io.convospot.engine.util.ActorTrait
 
 import scala.concurrent.duration._
@@ -15,6 +17,7 @@ import scala.concurrent.duration._
 private[convospot] class BotActor() extends Actor with ActorTrait with ActorLogging {
 
   def receive = {
+    case msg: CreateConversation => context.actorOf(Props(new ConversationActor()),msg.id)
     case _ => log.error("unsupported message in MasterActor")
   }
 
@@ -22,7 +25,7 @@ private[convospot] class BotActor() extends Actor with ActorTrait with ActorLogg
     OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = 30 seconds) {
       case _: ArithmeticException => Resume
       case _: NullPointerException => Restart
-      case _: Exception => Restart
+      case _: Exception => Escalate //send to a error channel for bot_id
     }
 
   override def preStart() {

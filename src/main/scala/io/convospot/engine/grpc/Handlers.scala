@@ -1,22 +1,27 @@
 package io.convospot.engine.grpc
 
-import akka.actor.{ActorRef, ActorSystem, Props, InvalidActorNameException}
+import akka.actor.{ActorRef, ActorSystem, InvalidActorNameException, Props}
 import io.convospot.engine.actors.context.BotActor
 import io.convospot.engine.grpc.conversation.{Request, Response}
 import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._
-
-import scala.concurrent.Future
+import scala.concurrent.duration._
+import akka.pattern.ask
+import scala.util.{Failure, Success}
+import scala.concurrent.{Await, Future}
+import akka.util.Timeout
 
 private[convospot] object Handlers {
   private implicit val system = ActorSystem("convospot-engine")
+  private implicit val shortTimeout = Timeout(5 seconds)
 
   def createBot(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[CreateBot]
+
       system.actorOf(Props(new BotActor()), data.id)
-      val reply = Response(message = s"Bot $data.id created success!")
+      val reply = Response(message = s"Bot ${data.id} created success!")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)
@@ -27,7 +32,7 @@ private[convospot] object Handlers {
     try {
       val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
-      val reply = Response(message = s"Visitor $data created success!")
+      val reply = Response(message = s"Visitor ${data.id} created success!")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)
@@ -37,8 +42,9 @@ private[convospot] object Handlers {
   def createConversation(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[CreateConversation]
-      system.actorSelection(data.bot) ! data
-      val reply = Response(message = s"Conversation $data created success!")
+      var botActor = Await.result(system.actorSelection("/user/"+data.bot).resolveOne(), shortTimeout.duration)
+      botActor ! data
+      val reply = Response(message = s"Send to the bot, it may or may not executed correctly.")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)

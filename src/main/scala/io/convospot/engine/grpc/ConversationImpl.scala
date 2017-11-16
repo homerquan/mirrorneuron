@@ -35,7 +35,7 @@ private[convospot] class ConversationImpl extends ConversationGrpc.Conversation 
         Handlers.createBot(req)
       }
       case "create_conversation" => {
-        Handlers.createBot(req)
+        Handlers.createConversation(req)
       }
       case "join_conversation" => {
         Handlers.joinConversation(req)
