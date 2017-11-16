@@ -19,7 +19,6 @@ private[convospot] object Handlers {
   def createBot(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[CreateBot]
-
       system.actorOf(Props(new BotActor()), data.id)
       val reply = Response(message = s"Bot ${data.id} created success!")
       Future.successful(reply)
@@ -44,7 +43,7 @@ private[convospot] object Handlers {
       val data = req.data.parseJson.convertTo[CreateConversation]
       var botActor = Await.result(system.actorSelection("/user/"+data.bot).resolveOne(), shortTimeout.duration)
       botActor ! data
-      val reply = Response(message = s"Send to the bot, it may or may not executed correctly.")
+      val reply = Response(message = "Received.")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)

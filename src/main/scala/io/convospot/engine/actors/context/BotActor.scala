@@ -10,7 +10,7 @@ import scala.concurrent.duration._
 
 
 /**
-  * The master actor
+  * The master actor for each bot
   * set context for each bot (multi-tenancy)
   */
 

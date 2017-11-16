@@ -4,14 +4,10 @@ Launch point of convospot engine
 */
 
 package io.convospot.engine.app
-
 import com.typesafe.scalalogging.LazyLogging
 import io.convospot.engine.config.Config
-import scala.concurrent.Await
-import scala.concurrent.duration._
 import scala.util.Properties.{javaVersion, javaVmName, versionString}
 import java.io.File
-import io.convospot.engine.console.ConsoleLauncher
 import io.convospot.engine.grpc.GrpcLauncher
 
 private[convospot] object Main extends App with LazyLogging {
@@ -24,17 +20,6 @@ private[convospot] object Main extends App with LazyLogging {
 
     val parser = new scopt.OptionParser[Input]("engine") {
 
-      opt[File]('p', "profile").valueName("<file>").
-        action((x, c) => c.copy(profile = x)).
-        text("load a profile")
-
-      opt[File]('r', "restore").valueName("<file>").
-        action((x, c) => c.copy(restoreFile = x)).
-        text("restore from previous data")
-
-      opt[Unit]('c', "console").action((_, c) =>
-        c.copy(console = true)).text("interactive console mode")
-
       opt[Unit]('v', "verbose").action((_, c) =>
         c.copy(verbose = true)).text("show verbose")
 
@@ -45,17 +30,6 @@ private[convospot] object Main extends App with LazyLogging {
     }
 
     GrpcLauncher.start()
-
-    // parser.parse returns Option[C]
-    parser.parse(args, Input()) match {
-      case Some(config) => {
-        if (config.console) {
-          ConsoleLauncher.start()
-        }
-      }
-      case None =>
-      // arguments are bad, error message will have been displayed
-    }
 
     try {
       Thread.sleep(10000)
