@@ -9,4 +9,5 @@ import spray.json.{DefaultJsonProtocol}
 
 private[convospot] object JsonProtocol extends DefaultJsonProtocol {
   implicit val createBotFormat = jsonFormat(CreateBot, "id", "client", "user")
+  implicit val createConversationFormat = jsonFormat(CreateConversation, "id", "bot", "client")
 }

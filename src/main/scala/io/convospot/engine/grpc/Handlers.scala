@@ -3,21 +3,18 @@ package io.convospot.engine.grpc
 import akka.actor.{ActorRef, ActorSystem, Props, InvalidActorNameException}
 import io.convospot.engine.actors.context.BotActor
 import io.convospot.engine.grpc.conversation.{Request, Response}
-import io.convospot.engine.util.RedisConnector
 import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._
-
 
 import scala.concurrent.Future
 
 private[convospot] object Handlers {
   private implicit val system = ActorSystem("convospot-engine")
-  val redis = RedisConnector.getRedis
 
   def createBot(req: Request) = {
-    val data = req.data.parseJson.convertTo[CreateBot]
     try {
+      val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
       val reply = Response(message = s"Bot $data.id created success!")
       Future.successful(reply)
@@ -26,11 +23,11 @@ private[convospot] object Handlers {
     }
   }
 
-  def createUser(req: Request) = {
-    val data = req.data.parseJson.convertTo[CreateBot]
+  def createVisitor(req: Request) = {
     try {
+      val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
-      val reply = Response(message = s"Bot $data.id created success!")
+      val reply = Response(message = s"Visitor $data created success!")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)
@@ -38,10 +35,10 @@ private[convospot] object Handlers {
   }
 
   def createConversation(req: Request) = {
-    val data = req.data.parseJson.convertTo[CreateBot]
     try {
-      system.actorOf(Props(new BotActor()), data.id)
-      val reply = Response(message = s"Bot $data.id created success!")
+      val data = req.data.parseJson.convertTo[CreateConversation]
+      system.actorSelection(data.bot) ! data
+      val reply = Response(message = s"Conversation $data created success!")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)
@@ -49,8 +46,8 @@ private[convospot] object Handlers {
   }
 
   def joinConversation(req: Request) = {
-    val data = req.data.parseJson.convertTo[CreateBot]
     try {
+      val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
       val reply = Response(message = s"Bot $data.id created success!")
       Future.successful(reply)
@@ -74,7 +71,7 @@ private[convospot] object Handlers {
     val data = req.data.parseJson.convertTo[CreateBot]
     try {
       system.actorOf(Props(new BotActor()), data.id)
-      val reply = Response(message = s"Bot $data.id created success!")
+      val reply = Response(message = "Received words!")
       Future.successful(reply)
     } catch {
       case e: Exception => Future.failed(e)

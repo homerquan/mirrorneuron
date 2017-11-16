@@ -55,3 +55,4 @@ Check details at https://grpc.io/docs/quickstart/node.html
 AKKA Docs: https://doc.akka.io/docs/akka/2.5.6/scala/
 Scala CLI opt parser: https://github.com/scopt/scopt
 grpc in scala: https://www.beyondthelines.net/computing/grpc-in-scala/
+grpc to akka handler: https://github.com/eiennohito/grpc-akka-stream-subrepo
