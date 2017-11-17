@@ -1,16 +1,18 @@
 package io.convospot.engine.actors.conversation
 
 import akka.actor._
+
 import scala.collection.immutable
 import akka.actor.SupervisorStrategy.{Restart, Resume}
 import akka.util.Timeout
 import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.common.Messages
+import io.convospot.engine.actors.conversation.ConversationActor.Mode._
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
 
 import scala.concurrent.Await
 
-private[convospot] class ConversationActor(bot:ActorRef) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
+private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
   /**
     * Initial state and data
@@ -24,15 +26,13 @@ private[convospot] class ConversationActor(bot:ActorRef) extends FSM[Conversatio
     */
   when(State.Initial) {
 
-    case Event(msg@Command.Subscribe(), _) =>
+    case Event(msg: Command.Subscribe, _) =>
       sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      context.system.eventStream.subscribe(sender, classOf[Command.Say])
-      goto(State.Active) using Data.Active(Some(sender),None)
+      goto(State.Active) using Data.Active(Some(sender), None, Semi)
 
-    case Event(msg@Command.Supervise(), _) =>
+    case Event(msg: Command.Supervise, _) =>
       sender ! HelperActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      context.system.eventStream.subscribe(sender, classOf[Command.Say])
-      goto(State.Active) using Data.Active(None,Some(sender))
+      goto(State.Active) using Data.Active(None, Some(sender), Semi)
 
   }
 
@@ -45,19 +45,35 @@ private[convospot] class ConversationActor(bot:ActorRef) extends FSM[Conversatio
     /**
       * Can't Subscribe new Visitor.
       */
-    case Event(msg@Command.Subscribe(), stateData: Data.Active) =>
+    case Event(msg: Command.Subscribe, stateData: Data.Active) =>
       sender ! VisitorActor.Message.Response(s"Already taken by ${stateData.visitor.getClass.getSimpleName}")
       stay
 
-    case Event(msg@Command.Hear, stateData: Data.Active) =>
-      context.system.eventStream.publish(msg)
+    case Event(msg: Command.Supervise, stateData: Data.Active) =>
+      sender ! VisitorActor.Message.Response(s"Already taken by ${stateData.visitor.getClass.getSimpleName}")
+      stay
+
+    case Event(msg: Command.Hear, stateData: Data.Active) =>
+
+      /**
+        * Iu auto mode, AI answer directly
+        * In semi mode, hear and ask AI, send best guess answer before timeout
+        * In Manual mode, forward to the other party
+        */
+      stateData.mode match {
+        case Semi => {
+          if (msg.from == stateData.visitor && stateData.helper != None)
+            stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+          if (msg.from == stateData.helper && stateData.visitor != None)
+            stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+        }
+      }
       stay
 
     /**
       * Unsubscribe visitor.
       */
-    case Event(msg@Command.Leave(), stateData: Data.Active) =>
-      context.system.eventStream.unsubscribe(sender, classOf[Command.Say])
+    case Event(msg: Command.Leave, stateData: Data.Active) =>
       stay using stateData.copy(
         visitor = None
       )
@@ -65,8 +81,7 @@ private[convospot] class ConversationActor(bot:ActorRef) extends FSM[Conversatio
     /**
       * Unsupervise helper.
       */
-    case Event(msg@Command.Unsupervise(), stateData: Data.Active) =>
-      context.system.eventStream.unsubscribe(sender, classOf[Command.Say])
+    case Event(msg: Command.Unsupervise, stateData: Data.Active) =>
       stay using stateData.copy(
         helper = None
       )
@@ -87,7 +102,7 @@ private[convospot] class ConversationActor(bot:ActorRef) extends FSM[Conversatio
 
 private[convospot] object ConversationActor {
 
-  def props(bot: ActorRef) = Props(new ConversationActor(bot))
+  def props(bot: ActorContext) = Props(new ConversationActor(bot))
 
   sealed trait Command
 
@@ -114,9 +129,22 @@ private[convospot] object ConversationActor {
 
     final case class Active(
                              visitor: Option[ActorRef],
-                             helper: Option[ActorRef]
+                             helper: Option[ActorRef],
+                             mode: Mode
                            ) extends Data
 
+
+  }
+
+  sealed trait Mode
+
+  object Mode {
+
+    case object Auto extends Mode
+
+    case object Semi extends Mode
+
+    case object Manual extends Mode
 
   }
 
@@ -128,7 +156,6 @@ private[convospot] object ConversationActor {
     case object Initial extends State
 
     case object Active extends State
-
 
 
   }

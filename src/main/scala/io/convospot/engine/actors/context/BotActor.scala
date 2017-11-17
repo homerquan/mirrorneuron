@@ -22,10 +22,10 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
 
   def receive = {
     case msg: CreateConversation => {
-      context.actorOf(Props(new ConversationActor(self)),msg.id)
+      context.actorOf(Props(new ConversationActor(context)),msg.id)
     }
     case msg: CreateVisitor => {
-      context.actorOf(Props(new VisitorActor(self)),msg.id)
+      context.actorOf(Props(new VisitorActor(context)),msg.id)
     }
     case _ =>log.error("unsupported message in " + this.getClass.getSimpleName)
   }

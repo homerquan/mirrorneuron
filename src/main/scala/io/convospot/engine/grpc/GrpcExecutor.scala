@@ -28,6 +28,9 @@ private[convospot] object GrpcExecutor {
       case "join_conversation" => {
         joinConversation(req)
       }
+      case "supervise_conversation" => {
+        superviseConversation(req)
+      }
       case "say" => {
         say(req)
       }
@@ -96,6 +99,18 @@ private[convospot] object GrpcExecutor {
       val data = req.data.parseJson.convertTo[LeaveConversation]
       var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
       visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def superviseConversation(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[SuperviseConversation]
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      helperActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {
