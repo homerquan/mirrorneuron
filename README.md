@@ -50,6 +50,10 @@ grpc_tools_node_protoc --js_out=import_style=commonjs,binary:../node/static_code
 
 Check details at https://grpc.io/docs/quickstart/node.html
 
+## Converstaion FSM
+
+``State(S) x Event(E) -> Actions (A), State(S’)``
+
 ## Reference
 
 AKKA Docs: https://doc.akka.io/docs/akka/2.5.6/scala/

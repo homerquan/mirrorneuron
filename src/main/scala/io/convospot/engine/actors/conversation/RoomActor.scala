@@ -52,6 +52,7 @@ class RoomActor extends FSM[RoomActor.State, RoomActor.Data] with ActorLogging {
     * @return
     */
   when(State.Active) {
+
     /**
       * Subscribe new Visitor and notify subscribed Visitors.
       */

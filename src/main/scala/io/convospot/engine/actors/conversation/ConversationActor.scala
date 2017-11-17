@@ -1,8 +1,6 @@
 package io.convospot.engine.actors.conversation
 
 import akka.actor._
-import akka.cluster.sharding.ShardRegion
-
 import scala.collection.immutable
 import akka.actor.SupervisorStrategy.{Restart, Resume}
 import akka.util.Timeout
@@ -12,9 +10,8 @@ import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data,
 
 import scala.concurrent.Await
 
-private[convospot] class ConversationActor extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging{
-  val Task:String = ""
-  val Context:String = ""
+private[convospot] class ConversationActor(bot:ActorRef) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
+
   /**
     * Initial state and data
     */
@@ -27,13 +24,15 @@ private[convospot] class ConversationActor extends FSM[ConversationActor.State, 
     */
   when(State.Initial) {
 
-    /**
-      * Setup Room id.
-      * Subscribe Visitor.
-      */
-    case Event(msg@Command.Subscribe(_, _, _), _) =>
-      sender ! UserActor.Message.Output(s"ROOM[${msg.id}]> Welcome, ${msg.name}!")
-      goto(State.Active) using Data.Active(msg.id, immutable.HashMap(sender -> msg.name))
+    case Event(msg@Command.Subscribe(), _) =>
+      sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
+      context.system.eventStream.subscribe(sender, classOf[Command.Say])
+      goto(State.Active) using Data.Active(Some(sender),None)
+
+    case Event(msg@Command.Supervise(), _) =>
+      sender ! HelperActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
+      context.system.eventStream.subscribe(sender, classOf[Command.Say])
+      goto(State.Active) using Data.Active(None,Some(sender))
 
   }
 
@@ -44,44 +43,32 @@ private[convospot] class ConversationActor extends FSM[ConversationActor.State, 
     */
   when(State.Active) {
     /**
-      * Subscribe new Visitor and notify subscribed Visitors.
+      * Can't Subscribe new Visitor.
       */
-    case Event(msg@Command.Subscribe(_, _, _), stateData: Data.Active) =>
-      for ((visitor: ActorRef, name: String) <- stateData.visitors) {
-        visitor ! UserActor.Message.Output(s"ROOM[${stateData.id}] ${msg.name} has joined the room.")
-      }
-      sender ! UserActor.Message.Output(s"ROOM[${stateData.id}] Welcome, ${msg.name}!")
-      stay using stateData.copy(
-        visitors = stateData.visitors + (sender -> msg.name)
-      )
+    case Event(msg@Command.Subscribe(), stateData: Data.Active) =>
+      sender ! VisitorActor.Message.Response(s"Already taken by ${stateData.visitor.getClass.getSimpleName}")
+      stay
 
-    /**
-      * Broadcast received message.
-      */
-    case Event(msg@Command.Message(_, message, sourceRole), stateData: Data.Active) =>
-      stateData.visitors.get(sender) match {
-        case Some(senderName) =>
-          for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            //TODO: Demo AI here
-
-          }
-        case None =>
-      }
+    case Event(msg@Command.Hear, stateData: Data.Active) =>
+      context.system.eventStream.publish(msg)
       stay
 
     /**
-      * Unsubscribe Visitor and notify subscribed Visitors.
+      * Unsubscribe visitor.
       */
-    case Event(msg@Command.Leave(_), stateData: Data.Active) =>
-      stateData.visitors.get(sender) match {
-        case Some(senderName) =>
-          for ((visitor, name) <- stateData.visitors if visitor != sender) {
-            visitor ! UserActor.Message.Output(s"ROOM[${stateData.id}] Visitor $senderName left room.")
-          }
-        case None =>
-      }
+    case Event(msg@Command.Leave(), stateData: Data.Active) =>
+      context.system.eventStream.unsubscribe(sender, classOf[Command.Say])
       stay using stateData.copy(
-        visitors = stateData.visitors - sender
+        visitor = None
+      )
+
+    /**
+      * Unsupervise helper.
+      */
+    case Event(msg@Command.Unsupervise(), stateData: Data.Active) =>
+      context.system.eventStream.unsubscribe(sender, classOf[Command.Say])
+      stay using stateData.copy(
+        helper = None
       )
 
   }
@@ -100,86 +87,50 @@ private[convospot] class ConversationActor extends FSM[ConversationActor.State, 
 
 private[convospot] object ConversationActor {
 
-  def props() = Props(new ConversationActor())
-  val numberOfShards = 5
-  val shardName: String = "io.convospot.engine.conversation"
-  val idExtractor: ShardRegion.ExtractEntityId = {
-    case cmd: Command => (cmd.id, cmd)
-  }
-  val shardResolver: ShardRegion.ExtractShardId = {
-    case cmd: Command => (math.abs(cmd.id.hashCode) % numberOfShards).toString
-  }
-  type Visitors = immutable.HashMap[ActorRef, String]
-  sealed trait Command {
-    def id: String
-  }
+  def props(bot: ActorRef) = Props(new ConversationActor(bot))
 
-  object Message {
-
-  }
+  sealed trait Command
 
   object Command {
 
-    /**
-      * Subscribe
-      *
-      * @param id   Room id
-      * @param name Visitor name
-      */
-    final case class Subscribe(id: String, name: String, role: String) extends Command
+    final case class Subscribe() extends Command
 
-    /**
-      * Leave Room
-      *
-      * @param id Room id
-      */
-    final case class Leave(id: String) extends Command
+    final case class Leave() extends Command
 
-    /**
-      * Chat Message
-      *
-      * @param id      Room id
-      * @param message Chat message
-      */
-    final case class Message(id: String, message: String, sourceRole: String) extends Command
+    final case class Supervise() extends Command
+
+    final case class Unsupervise() extends Command
+
+    final case class Hear(from: ActorRef, message: String) extends Command
 
   }
 
-  /**
-    * FSM Data
-    */
+
   sealed trait Data
 
   object Data {
 
-    /**
-      * Initial State
-      */
     case object Initial extends Data
 
-    /**
-      * Active State
-      *
-      * @param id       Room Id
-      * @param visitors Subscribed visitors
-      */
     final case class Active(
-                             id: String,
-                             visitors: Visitors
+                             visitor: Option[ActorRef],
+                             helper: Option[ActorRef]
                            ) extends Data
+
 
   }
 
-  /**
-    * FSM States
-    */
+
   sealed trait State
 
   object State {
+
     case object Initial extends State
+
     case object Active extends State
-    // wait human input
-    // fully auto ...
+
+
+
   }
 
 }

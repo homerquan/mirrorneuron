@@ -7,9 +7,9 @@ option java_package = "io.convospot.engine.grpc";
 option java_outer_classname = "conversation";
 
 service Conversation {
-  rpc Say (Request) returns (Response) {}   //for event, ask and forget
+  rpc Say (Request) returns (Response) {}   //for event, say and forget
   rpc Talk (stream Request) returns (stream Response) {}
-  rpc Ask (Request) returns (Response) {}   //for command, ask and expect response (for none cqrs command in actor system)
+  rpc Ask (Request) returns (Response) {}
 }
 
 message Request {

@@ -29,27 +29,5 @@ private[convospot] class ConversationImpl extends ConversationGrpc.Conversation 
     }
   }
 
-  override def ask(req: Request) = {
-    req.`type` match {
-      case "create_bot" => {
-        Handlers.createBot(req)
-      }
-      case "create_conversation" => {
-        Handlers.createConversation(req)
-      }
-      case "join_conversation" => {
-        Handlers.joinConversation(req)
-      }
-      case "end_conversation" => {
-        Handlers.createBot(req)
-      }
-      case "reset_engine" => {
-        Handlers.createBot(req)
-      }
-      case _ => {
-        val ex = new RuntimeException("unsupported request topic:" + req.`type`)
-        Future.failed(ex)
-      }
-    }
-  }
+  override def ask(req: Request) = GrpcExecutor.handlers(req: Request)
 }
