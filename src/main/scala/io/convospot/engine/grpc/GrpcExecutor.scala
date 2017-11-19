@@ -25,12 +25,19 @@ private[convospot] object GrpcExecutor {
       case "create_visitor" => {
         createVisitor(req)
       }
+      case "create_helper" => {
+        createHelper(req)
+      }
       case "join_conversation" => {
         joinConversation(req)
       }
       case "supervise_conversation" => {
         superviseConversation(req)
       }
+      case "leave_conversation" =>
+        leaveConversation(req)
+      case "unsupervise_conversation"=>
+        unsuperviseConversation(req)
       case "say" => {
         say(req)
       }
@@ -61,6 +68,18 @@ private[convospot] object GrpcExecutor {
   private def createVisitor(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[CreateVisitor]
+      var botActor = Await.result(system.actorSelection("/user/"+data.bot).resolveOne(), shortTimeout.duration)
+      botActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def createHelper(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[CreateHelper]
       var botActor = Await.result(system.actorSelection("/user/"+data.bot).resolveOne(), shortTimeout.duration)
       botActor ! data
       val reply = Response(message = "ok")
@@ -109,6 +128,18 @@ private[convospot] object GrpcExecutor {
   private def superviseConversation(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[SuperviseConversation]
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      helperActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def unsuperviseConversation(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[UnsuperviseConversation]
       var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
       helperActor ! data
       val reply = Response(message = "ok")

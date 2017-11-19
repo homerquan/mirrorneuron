@@ -1,20 +1,23 @@
 package io.convospot.engine.actors.conversation
 import akka.actor._
-import io.convospot.engine.grpc.data.Say
+import io.convospot.engine.actors.context.BotOutputActor
+import io.convospot.engine.grpc.data.{Say, SuperviseConversation}
 
-class HelperActor (bot: ActorContext) extends Actor with ActorLogging {
+private[convospot] class HelperActor (bot:ActorContext) extends Actor with ActorLogging {
   def receive = {
+    case msg: SuperviseConversation=>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Supervise()
     case msg: Say =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self,msg.message)
     case msg: HelperActor.Command.Hear =>
-      log.info(msg.toString)
+      bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a",msg.message)
     case msg: HelperActor.Message.Response =>
       log.info(msg.toString)
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 }
 
-object HelperActor {
+private[convospot] object HelperActor {
   def props(bot: ActorContext) = Props(new HelperActor(bot))
   sealed trait Message
   object Message {

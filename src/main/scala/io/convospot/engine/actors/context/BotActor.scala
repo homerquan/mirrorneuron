@@ -2,8 +2,8 @@ package io.convospot.engine.actors.context
 
 import akka.actor.SupervisorStrategy.{Restart, Resume, Escalate}
 import akka.actor._
-import io.convospot.engine.actors.conversation.{ConversationActor,VisitorActor}
-import io.convospot.engine.grpc.data.{CreateConversation,CreateVisitor}
+import io.convospot.engine.actors.conversation.{ConversationActor,VisitorActor,HelperActor}
+import io.convospot.engine.grpc.data.{CreateConversation,CreateVisitor,CreateHelper}
 import io.convospot.engine.util.ActorTrait
 
 import scala.concurrent.duration._
@@ -17,8 +17,8 @@ import scala.concurrent.duration._
 
 private[convospot] class BotActor extends Actor with ActorTrait with ActorLogging {
 
-  val outputActor=context.actorOf(Props(new BotOutputActor(self.path.name)),"outputActor")
-  val exceptionActor=context.actorOf(Props(new BotExceptionActor(self.path.name)),"exceptionActor")
+  val outputActor=context.actorOf(Props(new BotOutputActor(context)),"outputActor")
+  val exceptionActor=context.actorOf(Props(new BotExceptionActor(context)),"exceptionActor")
 
   def receive = {
     case msg: CreateConversation => {
@@ -26,6 +26,9 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
     }
     case msg: CreateVisitor => {
       context.actorOf(Props(new VisitorActor(context)),msg.id)
+    }
+    case msg: CreateHelper => {
+      context.actorOf(Props(new HelperActor(context)),msg.id)
     }
     case _ =>log.error("unsupported message in " + this.getClass.getSimpleName)
   }

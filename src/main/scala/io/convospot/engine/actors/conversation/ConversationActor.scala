@@ -30,10 +30,6 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
       sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
       goto(State.Active) using Data.Active(Some(sender), None, Semi)
 
-    case Event(msg: Command.Supervise, _) =>
-      sender ! HelperActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      goto(State.Active) using Data.Active(None, Some(sender), Semi)
-
   }
 
   /**
@@ -50,8 +46,10 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
       stay
 
     case Event(msg: Command.Supervise, stateData: Data.Active) =>
-      sender ! VisitorActor.Message.Response(s"Already taken by ${stateData.visitor.getClass.getSimpleName}")
-      stay
+      sender ! HelperActor.Message.Response(s"Supervise conversation ${this.getClass.getSimpleName}")
+      stay using stateData.copy(
+        helper = Some(sender)
+      )
 
     case Event(msg: Command.Hear, stateData: Data.Active) =>
 
@@ -62,9 +60,9 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
         */
       stateData.mode match {
         case Semi => {
-          if (msg.from == stateData.visitor && stateData.helper != None)
+          if (msg.from == stateData.visitor.get && stateData.helper.get != None)
             stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-          if (msg.from == stateData.helper && stateData.visitor != None)
+          if (msg.from == stateData.helper.get && stateData.visitor.get != None)
             stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
         }
       }
