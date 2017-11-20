@@ -16,6 +16,7 @@ import scala.concurrent.Await
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
 
+  // evaluate helper's performance
   val observer = Some(context.actorOf(Props(new PolicyActor(context)), "policy_actor"))
 
   /**

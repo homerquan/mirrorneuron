@@ -1,9 +1,6 @@
 package io.convospot.engine.actors.brain
 
 import akka.actor._
-import akka.util.Timeout
-import io.convospot.engine.actors.conversation.RoomActor
-import scala.concurrent.Await
 import io.convospot.engine.actors.common.Messages
 
 class LanguageActor extends Actor with ActorLogging {

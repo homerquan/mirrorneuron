@@ -3,6 +3,12 @@ import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
 import io.convospot.engine.grpc.data.{Say, SuperviseConversation, UnsuperviseConversation}
 
+/**
+  * Augmented AI from human and machine
+  * Link to AI Brain
+  * Switch mode: auto, semi, manual
+  * @param bot
+  */
 private[convospot] class HelperActor (bot:ActorContext) extends Actor with ActorLogging {
   def receive = {
     case msg: SuperviseConversation=>

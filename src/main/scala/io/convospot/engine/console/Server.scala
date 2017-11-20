@@ -5,7 +5,7 @@ import java.net.InetSocketAddress
 import akka.actor.{Actor, ActorLogging, Props}
 import akka.io.Tcp._
 import akka.io._
-import io.convospot.engine.actors.conversation.UserActor
+import io.convospot.engine.actors.brain.UserActor
 
 /**
   * Main TCP socket server (for console test)
