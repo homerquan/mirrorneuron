@@ -16,7 +16,7 @@ import scala.concurrent.Await
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
 
-  val observer = context.actorOf(Props(new PolicyActor(context)), "policy_actor")
+  val observer = Some(context.actorOf(Props(new PolicyActor(context)), "policy_actor"))
 
   /**
     * Initial state and data
@@ -80,10 +80,11 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
           if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
             stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
         }
-        case Auto => {
-          if (stateData.visitor!= None && msg.from == stateData.visitor.get)
-            stateData.visitor.get ! VisitorActor.Command.Hear(observer,"babababa from A.I.")
-        }
+//        case Auto => {
+//          if (sta
+        // teData.visitor!= None && msg.from == stateData.visitor.get)
+//            stateData.visitor.get ! VisitorActor.Command.Hear(observer,"babababa from A.I.")
+//        }
         case Manual => {
           if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
             stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
