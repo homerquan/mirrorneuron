@@ -9,3 +9,4 @@ final case class LeaveConversation(visitor: String, conversation: String, bot: S
 final case class SuperviseConversation(user: String, conversation: String, bot: String, client: String)
 final case class UnsuperviseConversation(user: String, conversation: String, bot: String, client: String)
 final case class Say(source: String, sid: String, message: String, conversation: String, bot: String, client: String)
+final case class SwitchConversationMode(conversation: String, mode: String, bot: String, client: String)

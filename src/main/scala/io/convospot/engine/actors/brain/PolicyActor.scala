@@ -10,7 +10,7 @@ import scala.concurrent.Await
 
 case object AskNameMessage
 
-private[convospot] class PolicyActor extends Actor with ActorLogging{
+private[convospot] class PolicyActor(conversation:ActorContext) extends Actor with ActorLogging{
 
   val languageActor = context.actorOf(Props[LanguageActor], "sample_language_actor")
   val knowledgeActor = context.actorOf(Props[KnowledgeActor], "sample_knowledge_actor")

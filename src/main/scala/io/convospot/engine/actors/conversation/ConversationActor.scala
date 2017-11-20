@@ -9,10 +9,14 @@ import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.common.Messages
 import io.convospot.engine.actors.conversation.ConversationActor.Mode._
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
+import io.convospot.engine.grpc.data.SwitchConversationMode
 
 import scala.concurrent.Await
 
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
+
+
+  val observer = context.actorOf(Props(new PolicyActor(context)), "policy_actor")
 
   /**
     * Initial state and data
@@ -38,9 +42,7 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
     * @return
     */
   when(State.Active) {
-    /**
-      * Can't Subscribe new Visitor.
-      */
+
     case Event(msg: Command.Subscribe, stateData: Data.Active) =>
       sender ! VisitorActor.Message.Response(s"Re-join conversation ${this.getClass.getSimpleName}")
       stay using stateData.copy(
@@ -73,9 +75,19 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
         */
       stateData.mode match {
         case Semi => {
-          if (msg.from == stateData.visitor.get && stateData.helper.get != None)
+          if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
             stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-          if (msg.from == stateData.helper.get && stateData.visitor.get != None)
+          if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
+            stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+        }
+        case Auto => {
+          if (stateData.visitor!= None && msg.from == stateData.visitor.get)
+            stateData.visitor.get ! VisitorActor.Command.Hear(observer,"babababa from A.I.")
+        }
+        case Manual => {
+          if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
+            stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+          if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
             stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
         }
       }
@@ -89,14 +101,19 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
         visitor = None
       )
 
-    /**
-      * Unsupervise helper.
-      */
     case Event(msg: Command.Unsupervise, stateData: Data.Active) =>
       stay using stateData.copy(
         helper = None
       )
 
+    case Event(msg: SwitchConversationMode, stateData: Data.Active) =>
+      var mode = stateData.mode
+      if (msg.mode == "semi") mode=Semi
+      if (msg.mode == "auto") mode=Auto
+      if (msg.mode == "manual") mode=Manual
+      stay using stateData.copy(
+        mode = mode
+      )
   }
 
   /**

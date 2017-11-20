@@ -34,12 +34,17 @@ private[convospot] object GrpcExecutor {
       case "supervise_conversation" => {
         superviseConversation(req)
       }
-      case "leave_conversation" =>
+      case "leave_conversation" => {
         leaveConversation(req)
-      case "unsupervise_conversation"=>
+      }
+      case "unsupervise_conversation"=> {
         unsuperviseConversation(req)
+      }
       case "say" => {
         say(req)
+      }
+      case "switch_conversation_mode" => {
+        switchConversationMode(req)
       }
       case "end_conversation" => {
         createBot(req)
@@ -154,6 +159,18 @@ private[convospot] object GrpcExecutor {
       val data = req.data.parseJson.convertTo[Say]
       var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.sid).resolveOne(), shortTimeout.duration)
       visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def switchConversationMode(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[SwitchConversationMode]
+      var conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.conversation).resolveOne(), shortTimeout.duration)
+      conversationActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {

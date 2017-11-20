@@ -1,12 +1,14 @@
 package io.convospot.engine.actors.conversation
 import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
-import io.convospot.engine.grpc.data.{Say, SuperviseConversation}
+import io.convospot.engine.grpc.data.{Say, SuperviseConversation, UnsuperviseConversation}
 
 private[convospot] class HelperActor (bot:ActorContext) extends Actor with ActorLogging {
   def receive = {
     case msg: SuperviseConversation=>
       bot.child(msg.conversation).get ! ConversationActor.Command.Supervise()
+    case msg: UnsuperviseConversation=>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Unsupervise()
     case msg: Say =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self,msg.message)
     case msg: HelperActor.Command.Hear =>
