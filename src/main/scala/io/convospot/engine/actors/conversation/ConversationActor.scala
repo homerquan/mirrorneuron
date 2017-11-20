@@ -42,13 +42,26 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
       * Can't Subscribe new Visitor.
       */
     case Event(msg: Command.Subscribe, stateData: Data.Active) =>
-      sender ! VisitorActor.Message.Response(s"Already taken by ${stateData.visitor.getClass.getSimpleName}")
-      stay
+      sender ! VisitorActor.Message.Response(s"Re-join conversation ${this.getClass.getSimpleName}")
+      stay using stateData.copy(
+        visitor = Some(sender)
+      )
+
+    case Event(msg: Command.Leave, stateData: Data.Active) =>
+      sender ! VisitorActor.Message.Response(s"Leave conversation ${this.getClass.getSimpleName}")
+      stay using stateData.copy(
+        visitor = None
+      )
 
     case Event(msg: Command.Supervise, stateData: Data.Active) =>
       sender ! HelperActor.Message.Response(s"Supervise conversation ${this.getClass.getSimpleName}")
       stay using stateData.copy(
         helper = Some(sender)
+      )
+    case Event(msg: Command.Unsupervise, stateData: Data.Active) =>
+      sender ! HelperActor.Message.Response(s"Stop supervise conversation ${this.getClass.getSimpleName}")
+      stay using stateData.copy(
+        helper = None
       )
 
     case Event(msg: Command.Hear, stateData: Data.Active) =>

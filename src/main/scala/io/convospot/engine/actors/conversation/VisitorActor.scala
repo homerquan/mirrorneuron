@@ -1,12 +1,14 @@
 package io.convospot.engine.actors.conversation
 import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
-import io.convospot.engine.grpc.data.{JoinConversation, Say}
+import io.convospot.engine.grpc.data.{JoinConversation, LeaveConversation, Say}
 
 private[convospot] class VisitorActor(bot:ActorContext) extends Actor with ActorLogging {
   def receive = {
     case msg: JoinConversation=>
       bot.child(msg.conversation).get ! ConversationActor.Command.Subscribe()
+    case msg: LeaveConversation=>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Leave()
     case msg: Say =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self,msg.message)
     case msg: VisitorActor.Command.Hear =>
