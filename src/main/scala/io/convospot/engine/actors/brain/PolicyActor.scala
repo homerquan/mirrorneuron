@@ -31,7 +31,6 @@ private[convospot] class PolicyActor(bot:ActorContext) extends Actor with ActorL
 
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
-
 }
 
 object PolicyActor {

@@ -42,7 +42,7 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
       stay
     case Event(msg:Command.Hear,_) =>
-      // In timeout, if no human response, forward the suggested result from brain.
+      // In timeout, if no human answer, forward the suggested result from brain.
       val future = machine ? PolicyActor.Command.Ask(msg.message)
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
       bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a", result.message)
@@ -100,6 +100,8 @@ private[convospot] object HelperActor {
     final case class Hear(from: ActorRef, message: String) extends Command
 
     final case class AnswerFromMachine(message: String) extends Command
+
+    final case class AnswerFromUser(message: String) extends Command
 
   }
 
