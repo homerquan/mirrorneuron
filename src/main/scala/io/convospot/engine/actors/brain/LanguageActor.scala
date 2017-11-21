@@ -3,7 +3,7 @@ package io.convospot.engine.actors.brain
 import akka.actor._
 import io.convospot.engine.actors.common.Messages
 
-class LanguageActor extends Actor with ActorLogging {
+private[convospot] class LanguageActor(bot:ActorContext) extends Actor with ActorLogging {
 
   def receive = active(scala.collection.mutable.Map.empty[String, String])
 
@@ -19,9 +19,9 @@ class LanguageActor extends Actor with ActorLogging {
       context become active(memory += (conversation -> reply))
       //Add this sentence into knowledge
       if(reply.length>20) {
-        context.actorSelection("../sample_knowledge_actor")!KnowledgeActor.Message.Learn(reply)
+       // context.actorSelection("../sample_knowledge_actor")!KnowledgeActor.Message.Learn(reply)
       }
-    case _ => println("that was unexpected")
+    case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 
 }

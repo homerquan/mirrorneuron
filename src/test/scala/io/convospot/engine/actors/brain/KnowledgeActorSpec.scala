@@ -15,7 +15,7 @@ class KnowledgeActorSpec extends Specification {
     new ActorsTestSupport {
       within(1 second) {
         val probe = TestProbe()
-        val message = KnowledgeActor.Message.Ask("what is your vision?")
+        val message = KnowledgeActor.Command.Ask("what is your vision?")
         val actor = system.actorOf(Props(classOf[KnowledgeActor]))
         actor.tell(message, probe.ref)
         probe.expectMsgType[String]

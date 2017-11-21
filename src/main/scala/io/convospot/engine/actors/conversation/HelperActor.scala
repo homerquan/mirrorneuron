@@ -2,15 +2,20 @@ package io.convospot.engine.actors.conversation
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
+import akka.pattern.ask
+import akka.util.Timeout
+import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.context.BotOutputActor
 import io.convospot.engine.actors.conversation.HelperActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
 import io.convospot.engine.grpc.data.{Say, SuperviseConversation, SwitchConversationMode, UnsuperviseConversation}
 
+import scala.concurrent.Await
 import scala.concurrent.duration.FiniteDuration
+import io.convospot.engine.constants.Timeouts
 
 /**
-  * Augmented AI from human and machine
+  * Augmented Intelligence from human and machine
   * Link to AI Brain
   * Switch mode: auto, semi, manual
   * Iu auto mode, AI answer directly
@@ -20,6 +25,9 @@ import scala.concurrent.duration.FiniteDuration
   * @param bot
   */
 private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.State, HelperActor.Data] with ActorLogging {
+
+  val machine = context.actorOf(Props(new PolicyActor(bot)), "policy_actor")
+  implicit val timeout = Timeout(Timeouts.MEDIAN)
 
   startWith(State.Semi, Data.Semi(Timeouts.MEDIAN))
 
@@ -34,7 +42,10 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
       stay
     case Event(msg:Command.Hear,_) =>
-      bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a", msg.message)
+      // In timeout, if no human response, forward the suggested result from brain.
+      val future = machine ? PolicyActor.Command.Ask(msg.message)
+      val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
+      bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a", result.message)
       stay
     case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)
@@ -87,6 +98,8 @@ private[convospot] object HelperActor {
   object Command {
 
     final case class Hear(from: ActorRef, message: String) extends Command
+
+    final case class AnswerFromMachine(message: String) extends Command
 
   }
 

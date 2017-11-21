@@ -1,24 +1,25 @@
 package io.convospot.engine.actors.brain
-import akka.actor.{Actor, ActorLogging}
+import akka.actor.{Actor, ActorContext, ActorLogging}
 import io.convospot.engine.util.RedisConnector
 import spray.json._
-
 import com.softwaremill.sttp._
 
 
-class KnowledgeActor extends Actor with ActorLogging{
+private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with ActorLogging{
   val redis=RedisConnector.getRedis
   val redisPool= RedisConnector.getPool
-  //demo only
-  var kb = redis.hget("demo","knowledge").get
+  val key = bot.getClass.getSimpleName + "-kb"
+
+  //var kb = redis.hget(key,"knowledge").get
+
+  val kb = "convospot is a cool tool"
+
   def receive = {
-    case KnowledgeActor.Message.Ask(message: String) =>
-        //ask Machine Comprehension api
-        kb = redis.hget("demo","knowledge").get
-        sender ! getAnswer(kb,message)
-    case KnowledgeActor.Message.Learn(message: String) =>
-        redis.hset("demo","knowledge",kb+"\n"+message)
-    case _ => println("that was unexpected")
+    case KnowledgeActor.Command.Ask(message: String) =>
+        sender ! PolicyActor.Command.AnswerFromKnowledge(getAnswer(kb,message))
+    case KnowledgeActor.Command.Learn(message: String) =>
+        //redis.hset(key,"knowledge",kb+"\n"+message)
+    case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 
   private def getAnswer(passage:String, question: String): String = {
@@ -42,14 +43,8 @@ class KnowledgeActor extends Actor with ActorLogging{
 object KnowledgeActor {
 
   object Command {
-
-  }
-
-  object Message {
-
     final case class Ask(message: String)
     final case class Learn(reply: String)
-
   }
 
 }

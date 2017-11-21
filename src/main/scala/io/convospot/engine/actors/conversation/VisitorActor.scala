@@ -4,6 +4,13 @@ import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
 import io.convospot.engine.grpc.data.{JoinConversation, LeaveConversation, Say}
 
+/**
+  * Map visitor into a digital actor
+  * State includes predicted intentions
+  *
+  * @param bot
+  */
+
 private[convospot] class VisitorActor(bot: ActorContext) extends Actor with ActorLogging {
   def receive = {
     case msg: JoinConversation =>
