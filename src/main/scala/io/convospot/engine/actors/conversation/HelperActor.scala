@@ -1,38 +1,118 @@
 package io.convospot.engine.actors.conversation
+
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
-import io.convospot.engine.grpc.data.{Say, SuperviseConversation, UnsuperviseConversation}
+import io.convospot.engine.actors.conversation.HelperActor.{Command, Data, State}
+import io.convospot.engine.constants.Timeouts
+import io.convospot.engine.grpc.data.{Say, SuperviseConversation, SwitchConversationMode, UnsuperviseConversation}
+
+import scala.concurrent.duration.FiniteDuration
 
 /**
   * Augmented AI from human and machine
   * Link to AI Brain
   * Switch mode: auto, semi, manual
+  * Iu auto mode, AI answer directly
+  * In semi mode, hear and ask AI, send best guess answer before timeout
+  * In Manual mode, forward to the other party
+  *
   * @param bot
   */
-private[convospot] class HelperActor (bot:ActorContext) extends Actor with ActorLogging {
-  def receive = {
-    case msg: SuperviseConversation=>
+private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.State, HelperActor.Data] with ActorLogging {
+
+  startWith(State.Semi, Data.Semi(Timeouts.MEDIAN))
+
+  when(State.Semi) {
+    case Event(msg: SuperviseConversation, _) =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Supervise()
-    case msg: UnsuperviseConversation=>
+      stay
+    case Event(msg: UnsuperviseConversation, _) =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Unsupervise()
-    case msg: Say =>
-      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self,msg.message)
-    case msg: HelperActor.Command.Hear =>
-      bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a",msg.message)
-    case msg: HelperActor.Message.Response =>
+      stay
+    case Event(msg: Say,_) =>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
+      stay
+    case Event(msg:Command.Hear,_) =>
+      bot.child("outputActor").get ! BotOutputActor.Message.Output("68ad82ea-ca32-11e7-abc4-cec278b6b50a", msg.message)
+      stay
+    case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)
-    case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
+      stay
+    case Event(msg: SwitchConversationMode, stateData:Data.Semi) =>
+      if (msg.mode == "auto")
+        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN)
+      if (msg.mode == "manual")
+        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN)
+      else
+        stay
+
   }
+  /**
+    * Default handler
+    */
+  whenUnhandled {
+    case Event(e, s) =>
+      log.warning("received unhandled request {} in state {}/{}", e, stateName, s)
+      stay
+  }
+
+  override val supervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
+      case _: ArithmeticException => Resume
+      case _: NullPointerException => Restart
+      case _: Exception => Escalate
+    }
+
+  override def preStart() {
+    log.debug("A helper actor has created or recovered:" + self.path)
+  }
+
+  initialize()
 }
 
 private[convospot] object HelperActor {
   def props(bot: ActorContext) = Props(new HelperActor(bot))
+
   sealed trait Message
+
   object Message {
+
     final case class Response(message: String) extends Message
+
   }
+
   sealed trait Command
+
   object Command {
+
     final case class Hear(from: ActorRef, message: String) extends Command
+
   }
+
+  sealed trait Data
+
+  object Data {
+
+    final case class Manual() extends Data
+
+    final case class Semi(timeout: FiniteDuration) extends Data
+
+    final case class Auto(timeout: FiniteDuration) extends Data
+
+  }
+
+
+  sealed trait State
+
+  object State {
+
+    case object Auto extends State
+
+    case object Semi extends State
+
+    case object Manual extends State
+
+  }
+
 }

@@ -1,6 +1,6 @@
-package io.convospot.engine.actors.brain
+package io.convospot.engine.actors.context
 
-import akka.actor.{Actor, ActorContext, ActorLogging, ActorRef, Props}
+import akka.actor.{Actor, ActorContext, ActorLogging, Props}
 
 /**
   * Visitor. One for each connection.

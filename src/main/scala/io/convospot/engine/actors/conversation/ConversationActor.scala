@@ -3,21 +3,18 @@ package io.convospot.engine.actors.conversation
 import akka.actor._
 
 import scala.collection.immutable
-import akka.actor.SupervisorStrategy.{Restart, Resume}
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.util.Timeout
 import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.common.Messages
-import io.convospot.engine.actors.conversation.ConversationActor.Mode._
+import io.convospot.engine.actors.context.ObserverActor
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
 import io.convospot.engine.grpc.data.SwitchConversationMode
-
-import scala.concurrent.Await
+import io.convospot.engine.constants.Timeouts
 
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
-
-  // evaluate helper's performance
-  val observer = Some(context.actorOf(Props(new PolicyActor(context)), "policy_actor"))
+  val observer = context.actorOf(Props(new ObserverActor(context)), "observer")
 
   /**
     * Initial state and data
@@ -33,7 +30,7 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
 
     case Event(msg: Command.Subscribe, _) =>
       sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      goto(State.Active) using Data.Active(Some(sender), None, Semi)
+      goto(State.Active) using Data.Active(Some(sender), None)
 
   }
 
@@ -66,33 +63,11 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
       stay using stateData.copy(
         helper = None
       )
-
     case Event(msg: Command.Hear, stateData: Data.Active) =>
-
-      /**
-        * Iu auto mode, AI answer directly
-        * In semi mode, hear and ask AI, send best guess answer before timeout
-        * In Manual mode, forward to the other party
-        */
-      stateData.mode match {
-        case Semi => {
-          if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
-            stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-          if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
-            stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-        }
-//        case Auto => {
-//          if (sta
-        // teData.visitor!= None && msg.from == stateData.visitor.get)
-//            stateData.visitor.get ! VisitorActor.Command.Hear(observer,"babababa from A.I.")
-//        }
-        case Manual => {
-          if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
-            stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-          if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
-            stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-        }
-      }
+      if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
+        stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+      if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
+        stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
       stay
 
     /**
@@ -108,14 +83,6 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
         helper = None
       )
 
-    case Event(msg: SwitchConversationMode, stateData: Data.Active) =>
-      var mode = stateData.mode
-      if (msg.mode == "semi") mode=Semi
-      if (msg.mode == "auto") mode=Auto
-      if (msg.mode == "manual") mode=Manual
-      stay using stateData.copy(
-        mode = mode
-      )
   }
 
   /**
@@ -125,6 +92,17 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
     case Event(e, s) =>
       log.warning("received unhandled request {} in state {}/{}", e, stateName, s)
       stay
+  }
+
+  override val supervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
+      case _: ArithmeticException => Resume
+      case _: NullPointerException => Restart
+      case _: Exception => Escalate
+    }
+
+  override def preStart() {
+    log.debug("A conversation actor has created or recovered:" + self.path)
   }
 
   initialize()
@@ -159,22 +137,9 @@ private[convospot] object ConversationActor {
 
     final case class Active(
                              visitor: Option[ActorRef],
-                             helper: Option[ActorRef],
-                             mode: Mode
+                             helper: Option[ActorRef]
                            ) extends Data
 
-
-  }
-
-  sealed trait Mode
-
-  object Mode {
-
-    case object Auto extends Mode
-
-    case object Semi extends Mode
-
-    case object Manual extends Mode
 
   }
 

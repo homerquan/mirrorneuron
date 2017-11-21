@@ -4,7 +4,6 @@ import akka.actor._
 import akka.pattern.ask
 import akka.util.Timeout
 import scala.concurrent.duration._
-import io.convospot.engine.actors.conversation.RoomActor
 import io.convospot.engine.actors.common.Messages
 import scala.concurrent.Await
 

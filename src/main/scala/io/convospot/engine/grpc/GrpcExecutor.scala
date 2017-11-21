@@ -9,10 +9,11 @@ import io.convospot.engine.grpc.data._
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
 import akka.util.Timeout
+import io.convospot.engine.constants.Timeouts
 
 private[convospot] object GrpcExecutor {
   private implicit val system = ActorSystem("convospot-engine")
-  private implicit val shortTimeout = Timeout(5 seconds)
+  private implicit val shortTimeout = Timeout(Timeouts.SHORT)
 
   def handlers(req: Request): Future[Response] = {
     req.`type` match {

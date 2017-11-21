@@ -5,9 +5,7 @@ import akka.actor._
 import io.convospot.engine.actors.conversation.{ConversationActor,VisitorActor,HelperActor}
 import io.convospot.engine.grpc.data.{CreateConversation,CreateVisitor,CreateHelper}
 import io.convospot.engine.util.ActorTrait
-
-import scala.concurrent.duration._
-
+import io.convospot.engine.constants.Timeouts
 
 /**
   * The master actor for each bot
@@ -34,13 +32,13 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
   }
 
   override val supervisorStrategy =
-    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = 30 seconds) {
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
       case _: ArithmeticException => Resume
       case _: NullPointerException => Restart
       case _: Exception => Escalate
     }
 
   override def preStart() {
-    log.debug("A master actor has created or recovered:" + self.path)
+    log.debug("A bot actor has created or recovered:" + self.path)
   }
 }
