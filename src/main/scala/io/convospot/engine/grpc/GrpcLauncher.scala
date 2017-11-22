@@ -1,6 +1,6 @@
 package io.convospot.engine.grpc
 
-import io.convospot.engine.actors.context.UserActor
+import io.convospot.engine.actors.brain.UserActor
 
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder

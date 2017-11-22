@@ -1,30 +1,71 @@
 package io.convospot.engine.actors.conversation
 
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
 import io.convospot.engine.grpc.data.{JoinConversation, LeaveConversation, Say}
+import io.convospot.engine.actors.conversation.VisitorActor.{Command, Data, State}
+import io.convospot.engine.constants.Timeouts
+
+import scala.collection.SortedSet
 
 /**
   * Map visitor into a digital actor
-  * State includes predicted intentions
+  * State data includes predicted intentions
   *
   * @param bot
   */
 
-private[convospot] class VisitorActor(bot: ActorContext) extends Actor with ActorLogging {
-  def receive = {
-    case msg: JoinConversation =>
-      bot.child(msg.conversation).get ! ConversationActor.Command.Subscribe()
-    case msg: LeaveConversation =>
-      bot.child(msg.conversation).get ! ConversationActor.Command.Leave()
-    case msg: Say =>
-      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
-    case msg: VisitorActor.Command.Hear =>
-      bot.child("outputActor").get ! BotOutputActor.Message.Output("d03a578e-ca1a-11e7-abc4-cec278b6b50a", msg.message)
-    case msg: VisitorActor.Message.Response =>
-      log.info(msg.toString)
-    case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
+private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActor.State, VisitorActor.Data] with ActorLogging {
+
+  startWith(State.Offline, Data.Offline(SortedSet.empty[String]))
+
+  when(State.Offline) {
+    case Event(msg:Command.Online,_) =>
+      goto(State.Online) using Data.Online(SortedSet.empty[String])
   }
+
+  when(State.Online) {
+    case Event(msg: JoinConversation, _) =>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Subscribe()
+      stay
+    case Event(msg: LeaveConversation, _) =>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Leave()
+      stay
+    case Event(msg: Say, _) =>
+      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
+      stay
+    case Event(msg: VisitorActor.Command.Hear, _) =>
+      bot.child("outputActor").get ! BotOutputActor.Message.Output("d03a578e-ca1a-11e7-abc4-cec278b6b50a", msg.message)
+      stay
+    case Event(msg: VisitorActor.Message.Response, _) =>
+      log.info(msg.toString)
+      stay
+    case Event(msg:Command.Offline,_) =>
+      goto(State.Offline) using Data.Offline(SortedSet.empty[String])
+  }
+
+  /**
+    * Default handler
+    */
+  whenUnhandled {
+    case Event(e, s) =>
+      log.warning("received unhandled request {} in state {}/{}", e, stateName, s)
+      stay
+  }
+
+  override val supervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
+      case _: ArithmeticException => Resume
+      case _: NullPointerException => Restart
+      case _: Exception => Escalate
+    }
+
+  override def preStart() {
+    log.debug("A helper actor has created or recovered:" + self.path)
+  }
+
+  initialize()
 }
 
 private[convospot] object VisitorActor {
@@ -42,7 +83,30 @@ private[convospot] object VisitorActor {
 
   object Command {
 
+    final case class Online() extends Command
+    final case class Offline() extends Command
     final case class Hear(from: ActorRef, message: String) extends Command
+
+  }
+
+  sealed trait Data
+
+  object Data {
+
+    final case class Online(intention:SortedSet[String]) extends Data
+
+    final case class Offline(intention:SortedSet[String]) extends Data
+
+  }
+
+
+  sealed trait State
+
+  object State {
+
+    case object Online extends State
+
+    case object Offline extends State
 
   }
 
