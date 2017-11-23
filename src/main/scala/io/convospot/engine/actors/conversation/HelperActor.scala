@@ -8,7 +8,7 @@ import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.context.BotOutputActor
 import io.convospot.engine.actors.conversation.HelperActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
-import io.convospot.engine.grpc.data.{Say, SuperviseConversation, SwitchConversationMode, UnsuperviseConversation}
+import io.convospot.engine.grpc.data._
 
 import scala.concurrent.Await
 import scala.concurrent.duration.FiniteDuration
@@ -29,7 +29,7 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
   val machine = context.actorOf(Props(new PolicyActor(bot)), "policy_actor")
   implicit val timeout = Timeout(Timeouts.MEDIAN)
 
-  startWith(State.Semi, Data.Semi(Timeouts.MEDIAN))
+  startWith(State.Semi, Data.Semi(Timeouts.MEDIAN, Set.empty[ActorRef]))
 
   when(State.Semi) {
     case Event(msg: SuperviseConversation, _) =>
@@ -41,6 +41,11 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
     case Event(msg: Say,_) =>
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
       stay
+    case Event(msg: AddUserToHelper,stateData: Data.Semi) =>
+      val newUser = bot.child(msg.user).get
+      stay using stateData.copy(
+        users = stateData.users + newUser
+      )
     case Event(msg:Command.Hear,_) =>
       // TODO: Send to broadcast route. In timeout, if no human answer, forward the suggested result from brain.
       val future = machine ? PolicyActor.Command.Ask(msg.message)
@@ -52,9 +57,9 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       stay
     case Event(msg: SwitchConversationMode, stateData:Data.Semi) =>
       if (msg.mode == "auto")
-        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN)
+        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN, stateData.users)
       if (msg.mode == "manual")
-        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN)
+        goto(State.Auto) using Data.Auto(Timeouts.MEDIAN, stateData.users)
       else
         stay
 
@@ -109,11 +114,11 @@ private[convospot] object HelperActor {
 
   object Data {
 
-    final case class Manual() extends Data
+    final case class Manual(timeout: FiniteDuration, users: Set[ActorRef]) extends Data
 
-    final case class Semi(timeout: FiniteDuration) extends Data
+    final case class Semi(timeout: FiniteDuration, users: Set[ActorRef]) extends Data
 
-    final case class Auto(timeout: FiniteDuration) extends Data
+    final case class Auto(timeout: FiniteDuration, users: Set[ActorRef]) extends Data
 
   }
 

@@ -3,7 +3,7 @@ package io.convospot.engine.actors.conversation
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
 import io.convospot.engine.actors.context.BotOutputActor
-import io.convospot.engine.grpc.data.{JoinConversation, LeaveConversation, Say}
+import io.convospot.engine.grpc.data._
 import io.convospot.engine.actors.conversation.VisitorActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
 
@@ -21,7 +21,7 @@ private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActo
   startWith(State.Offline, Data.Offline(SortedSet.empty[String]))
 
   when(State.Offline) {
-    case Event(msg:Command.Online,_) =>
+    case Event(msg: OnlineVisitor,_) =>
       goto(State.Online) using Data.Online(SortedSet.empty[String])
   }
 
@@ -41,7 +41,7 @@ private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActo
     case Event(msg: VisitorActor.Message.Response, _) =>
       log.info(msg.toString)
       stay
-    case Event(msg:Command.Offline,_) =>
+    case Event(msg: OfflineVisitor,_) =>
       goto(State.Offline) using Data.Offline(SortedSet.empty[String])
   }
 
@@ -83,8 +83,6 @@ private[convospot] object VisitorActor {
 
   object Command {
 
-    final case class Online() extends Command
-    final case class Offline() extends Command
     final case class Hear(from: ActorRef, message: String) extends Command
 
   }

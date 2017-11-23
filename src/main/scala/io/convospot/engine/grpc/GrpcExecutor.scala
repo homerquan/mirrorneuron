@@ -47,11 +47,29 @@ private[convospot] object GrpcExecutor {
       case "switch_conversation_mode" => {
         switchConversationMode(req)
       }
+      case "online_visitor" => {
+        onlineVisitor(req)
+      }
+      case "offline_visitor" => {
+        offlineVisitor(req)
+      }
+      case "create_user" => {
+        createUser(req)
+      }
+      case "online_user" => {
+        onlineUser(req)
+      }
+      case "offline_user" => {
+        offlineUser(req)
+      }
+      case "add_user_to_helper" => {
+        addUserToHelper(req)
+      }
       case "end_conversation" => {
-        createBot(req)
+        //TODO
       }
       case "reset_engine" => {
-        createBot(req)
+        //TODO
       }
       case _ => {
         val ex = new RuntimeException("unsupported request topic:" + req.`type`)
@@ -183,6 +201,78 @@ private[convospot] object GrpcExecutor {
     val data = req.data.parseJson.convertTo[CreateBot]
     try {
       system.actorOf(Props(new BotActor()), data.id)
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def onlineVisitor(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[OnlineVisitor]
+      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
+      visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def offlineVisitor(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[OfflineVisitor]
+      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
+      visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def createUser(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[CreateUser]
+      var botActor = Await.result(system.actorSelection("/user/"+data.bot).resolveOne(), shortTimeout.duration)
+      botActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def onlineUser(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[OnlineUser]
+      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def offlineUser(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[OfflineUser]
+      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      visitorActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def addUserToHelper(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[AddUserToHelper]
+      var botActor = Await.result(system.actorSelection("/user/"+data.helper).resolveOne(), shortTimeout.duration)
+      botActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {

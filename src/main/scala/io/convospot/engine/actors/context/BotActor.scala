@@ -1,9 +1,10 @@
 package io.convospot.engine.actors.context
 
-import akka.actor.SupervisorStrategy.{Restart, Resume, Escalate}
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
-import io.convospot.engine.actors.conversation.{ConversationActor,VisitorActor,HelperActor}
-import io.convospot.engine.grpc.data.{CreateConversation,CreateVisitor,CreateHelper}
+import io.convospot.engine.actors.brain.UserActor
+import io.convospot.engine.actors.conversation.{ConversationActor, HelperActor, VisitorActor}
+import io.convospot.engine.grpc.data.{CreateConversation, CreateHelper, CreateUser, CreateVisitor}
 import io.convospot.engine.util.ActorTrait
 import io.convospot.engine.constants.Timeouts
 
@@ -27,6 +28,9 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
     }
     case msg: CreateHelper => {
       context.actorOf(Props(new HelperActor(context)),msg.id)
+    }
+    case msg: CreateUser => {
+      context.actorOf(Props(new UserActor(context)),msg.id)
     }
     case _ =>log.error("unsupported message in " + this.getClass.getSimpleName)
   }
