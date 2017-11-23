@@ -134,7 +134,7 @@ private[convospot] object GrpcExecutor {
   private def superviseConversation(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[SuperviseConversation]
-      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
       helperActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
@@ -146,7 +146,7 @@ private[convospot] object GrpcExecutor {
   private def unsuperviseConversation(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[UnsuperviseConversation]
-      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.user).resolveOne(), shortTimeout.duration)
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
       helperActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
