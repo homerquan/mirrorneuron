@@ -9,7 +9,6 @@ import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.common.Messages
 import io.convospot.engine.actors.context.ObserverActor
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
-import io.convospot.engine.grpc.data.SwitchConversationMode
 import io.convospot.engine.constants.Timeouts
 
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {

@@ -55,7 +55,7 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
     case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)
       stay
-    case Event(msg: SwitchConversationMode, stateData:Data.Semi) =>
+    case Event(msg: SwitchHelperMode, stateData:Data.Semi) =>
       if (msg.mode == "auto")
         goto(State.Auto) using Data.Auto(Timeouts.MEDIAN, stateData.users)
       if (msg.mode == "manual")

@@ -17,7 +17,7 @@ private[convospot] object JsonProtocol extends DefaultJsonProtocol {
   implicit val superviseConversationFormat = jsonFormat(SuperviseConversation, "helper", "conversation", "bot", "client")
   implicit val unsuperviseConversationFormat = jsonFormat(UnsuperviseConversation, "helper", "conversation", "bot", "client")
   implicit val sayFormat = jsonFormat(Say, "source", "sid", "message", "conversation", "bot", "client")
-  implicit val switchConversationModeFormat = jsonFormat(SwitchConversationMode, "conversation", "mode","bot", "client")
+  implicit val switchHelperModeFormat = jsonFormat(SwitchHelperMode, "conversation", "mode","bot", "client")
   implicit val onlineVisitorFormat = jsonFormat(OnlineVisitor,"visitor","bot","client")
   implicit val offlineVisitorFormat = jsonFormat(OfflineVisitor,"visitor","bot","client")
   implicit val createUserFormat = jsonFormat(CreateUser, "id", "bot", "client")

@@ -9,7 +9,7 @@ final case class LeaveConversation(visitor: String, conversation: String, bot: S
 final case class SuperviseConversation(helper: String, conversation: String, bot: String, client: String)
 final case class UnsuperviseConversation(helper: String, conversation: String, bot: String, client: String)
 final case class Say(source: String, sid: String, message: String, conversation: String, bot: String, client: String)
-final case class SwitchConversationMode(conversation: String, mode: String, bot: String, client: String)
+final case class SwitchHelperMode(helper: String, mode: String, bot: String, client: String)
 final case class OnlineVisitor(visitor:String,bot: String, client: String)
 final case class OfflineVisitor(visitor:String,bot: String, client: String)
 final case class CreateUser(id:String,bot: String, client: String)

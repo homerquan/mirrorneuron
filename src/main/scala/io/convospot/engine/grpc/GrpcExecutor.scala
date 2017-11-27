@@ -44,8 +44,8 @@ private[convospot] object GrpcExecutor {
       case "say" => {
         say(req)
       }
-      case "switch_conversation_mode" => {
-        switchConversationMode(req)
+      case "switch_helper_mode" => {
+        switchHelperMode(req)
       }
       case "online_visitor" => {
         onlineVisitor(req)
@@ -65,12 +65,12 @@ private[convospot] object GrpcExecutor {
       case "add_user_to_helper" => {
         addUserToHelper(req)
       }
-      case "end_conversation" => {
-        //TODO
-      }
-      case "reset_engine" => {
-        //TODO
-      }
+//      case "end_conversation" => {
+//        //TODO
+//      }
+//      case "reset_engine" => {
+//        //TODO
+//      }
       case _ => {
         val ex = new RuntimeException("unsupported request topic:" + req.`type`)
         Future.failed(ex)
@@ -185,10 +185,10 @@ private[convospot] object GrpcExecutor {
     }
   }
 
-  private def switchConversationMode(req: Request) = {
+  private def switchHelperMode(req: Request) = {
     try {
-      val data = req.data.parseJson.convertTo[SwitchConversationMode]
-      var conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.conversation).resolveOne(), shortTimeout.duration)
+      val data = req.data.parseJson.convertTo[SwitchHelperMode]
+      var conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
       conversationActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
@@ -271,8 +271,8 @@ private[convospot] object GrpcExecutor {
   private def addUserToHelper(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[AddUserToHelper]
-      var botActor = Await.result(system.actorSelection("/user/"+data.helper).resolveOne(), shortTimeout.duration)
-      botActor ! data
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
+      helperActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {

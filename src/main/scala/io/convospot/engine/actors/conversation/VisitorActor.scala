@@ -18,7 +18,7 @@ import scala.collection.SortedSet
 
 private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActor.State, VisitorActor.Data] with ActorLogging {
 
-  startWith(State.Offline, Data.Offline(SortedSet.empty[String]))
+  startWith(State.Online, Data.Offline(SortedSet.empty[String]))
 
   when(State.Offline) {
     case Event(msg: OnlineVisitor,_) =>
@@ -36,7 +36,7 @@ private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActo
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
       stay
     case Event(msg: VisitorActor.Command.Hear, _) =>
-      bot.child("outputActor").get ! BotOutputActor.Message.Output("d03a578e-ca1a-11e7-abc4-cec278b6b50a", msg.message)
+      bot.child("outputActor").get ! BotOutputActor.Message.Output(self.path.name, msg.message)
       stay
     case Event(msg: VisitorActor.Message.Response, _) =>
       log.info(msg.toString)
