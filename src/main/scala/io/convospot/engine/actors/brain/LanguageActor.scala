@@ -1,7 +1,6 @@
 package io.convospot.engine.actors.brain
 
 import akka.actor._
-import io.convospot.engine.actors.common.Messages
 
 private[convospot] class LanguageActor(bot:ActorContext) extends Actor with ActorLogging {
 
@@ -11,10 +10,10 @@ private[convospot] class LanguageActor(bot:ActorContext) extends Actor with Acto
     case LanguageActor.Message.Ask(message: String) =>
       val reply = memory.getOrElse(message, "")
       log.info("memory is {}", memory.toString())
-      if (reply == "")
-        sender ! Messages.Acknowledge("AI has no answer")
-      else
-        sender ! Messages.Utterance(reply, "AI", "VISITOR") //Know nothing is a Acknowledge not utterrance
+//      if (reply == "")
+//        sender ! Messages.Acknowledge("AI has no answer")
+//      else
+//        sender ! Messages.Utterance(reply, "AI", "VISITOR") //Know nothing is a Acknowledge not utterrance
     case LanguageActor.Message.Learn(conversation: String, reply: String) =>
       context become active(memory += (conversation -> reply))
       //Add this sentence into knowledge

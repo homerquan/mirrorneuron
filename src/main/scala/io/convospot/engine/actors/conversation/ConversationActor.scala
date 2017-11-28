@@ -6,7 +6,6 @@ import scala.collection.immutable
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.util.Timeout
 import io.convospot.engine.actors.brain.PolicyActor
-import io.convospot.engine.actors.common.Messages
 import io.convospot.engine.actors.context.ObserverActor
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
@@ -123,7 +122,7 @@ private[convospot] object ConversationActor {
 
     final case class Unsupervise() extends Command
 
-    final case class Hear(from: ActorRef, message: String) extends Command
+    final case class Hear(from: ActorRef, source: String, message: String) extends Command
 
   }
 

@@ -33,10 +33,10 @@ private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActo
       bot.child(msg.conversation).get ! ConversationActor.Command.Leave()
       stay
     case Event(msg: Say, _) =>
-      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, msg.message)
+      bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, "visitor", msg.message)
       stay
     case Event(msg: VisitorActor.Command.Hear, _) =>
-      bot.child("outputActor").get ! BotOutputActor.Message.Output(self.path.name, msg.message)
+      bot.child("outputActor").get ! BotOutputActor.Message.OutputVisitorHear(self.path.name, msg)
       stay
     case Event(msg: VisitorActor.Message.Response, _) =>
       log.info(msg.toString)
@@ -83,7 +83,7 @@ private[convospot] object VisitorActor {
 
   object Command {
 
-    final case class Hear(from: ActorRef, message: String) extends Command
+    final case class Hear(from: ActorRef, source: String, message: String) extends Command
 
   }
 
