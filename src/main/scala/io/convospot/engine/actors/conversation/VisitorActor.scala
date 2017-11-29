@@ -36,7 +36,8 @@ private[convospot] class VisitorActor(bot: ActorContext) extends FSM[VisitorActo
       bot.child(msg.conversation).get ! ConversationActor.Command.Hear(self, "visitor", msg.message)
       stay
     case Event(msg: VisitorActor.Command.Hear, _) =>
-      bot.child("outputActor").get ! BotOutputActor.Message.OutputVisitorHear(self.path.name, msg)
+      val conversation = sender.path.name
+      bot.child("outputActor").get ! BotOutputActor.Command.OutputVisitorHear(self.path.name, msg, conversation)
       stay
     case Event(msg: VisitorActor.Message.Response, _) =>
       log.info(msg.toString)

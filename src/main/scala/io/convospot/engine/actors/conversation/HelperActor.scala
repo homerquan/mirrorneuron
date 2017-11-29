@@ -51,7 +51,8 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       val future = machine ? PolicyActor.Command.Ask(msg.message)
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
       //TODO: move output to user
-      bot.child("outputActor").get ! BotOutputActor.Message.OutputHelperHear(self.path.name, msg)
+      val conversation = sender.path.name
+      bot.child("outputActor").get ! BotOutputActor.Command.OutputHelperHear(self.path.name, msg, conversation)
       stay
     case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)
