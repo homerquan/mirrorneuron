@@ -64,6 +64,8 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
     case Event(msg: Command.Hear, stateData: Data.Active) =>
       if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
         stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
+        //DEMO only
+        sender ! VisitorActor.Command.Hear(self,"user","ANSWER FROM ENGINE...")
       if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
         stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
       stay
