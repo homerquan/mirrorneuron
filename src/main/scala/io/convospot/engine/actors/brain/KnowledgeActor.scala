@@ -8,11 +8,9 @@ import com.softwaremill.sttp._
 private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with ActorLogging{
   val redis=RedisConnector.getRedis
   val redisPool= RedisConnector.getPool
-  val key = bot.getClass.getSimpleName + "-kb"
+  val key = "demo-kb"
 
-  //var kb = redis.hget(key,"knowledge").get
-
-  val kb = "convospot is a cool tool"
+  var kb = redis.hget(key,"knowledge").get
 
   def receive = {
     case KnowledgeActor.Command.Ask(message: String) =>

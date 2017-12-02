@@ -35,6 +35,7 @@ libraryDependencies ++= Seq(
   "net.debasishg" %% "redisclient" % "3.4",
   "org.specs2" %% "specs2-core" % "4.0.0",
   "com.hootsuite" %% "akka-persistence-redis" % "0.6.0",
+  "io.jvm.uuid" %% "scala-uuid" % "0.2.3",
   "io.grpc" % "grpc-netty" % com.trueaccord.scalapb.compiler.Version.grpcJavaVersion,
   "com.trueaccord.scalapb" %% "scalapb-runtime-grpc" % com.trueaccord.scalapb.compiler.Version.scalapbVersion
 )

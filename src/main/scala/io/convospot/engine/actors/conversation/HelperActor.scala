@@ -50,9 +50,10 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       // TODO: Send to broadcast route. In timeout, if no human answer, forward the suggested result from brain.
       val future = machine ? PolicyActor.Command.Ask(msg.message)
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
-      //TODO: move output to user
+      //TODO: DEMO ONLY
       val conversation = sender.path.name
-      bot.child("outputActor").get ! BotOutputActor.Command.OutputHelperHear(self.path.name, msg, conversation)
+      sender ! ConversationActor.Command.Hear(self, "AI", result.message)
+      //bot.child("outputActor").get ! BotOutputActor.Command.OutputHelperHear(self.path.name, msg, conversation)
       stay
     case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)

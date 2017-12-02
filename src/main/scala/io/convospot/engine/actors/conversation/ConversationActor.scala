@@ -9,6 +9,7 @@ import io.convospot.engine.actors.brain.PolicyActor
 import io.convospot.engine.actors.context.ObserverActor
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
+import io.jvm.uuid.{UUID}
 
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
@@ -28,7 +29,9 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
 
     case Event(msg: Command.Subscribe, _) =>
       sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      goto(State.Active) using Data.Active(Some(sender), None)
+      // Always assign a helper once visitor is active, it may change later
+      val helper = bot.actorOf(Props(new HelperActor(context)),UUID.random.toString)
+      goto(State.Active) using Data.Active(Some(sender), Some(helper))
 
   }
 
@@ -64,8 +67,6 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
     case Event(msg: Command.Hear, stateData: Data.Active) =>
       if (stateData.visitor!= None && msg.from == stateData.visitor.get && stateData.helper != None)
         stateData.helper.get ! HelperActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
-        //DEMO only
-        sender ! VisitorActor.Command.Hear(self,"user","ANSWER FROM ENGINE...")
       if (stateData.helper!= None && msg.from == stateData.helper.get && stateData.visitor != None)
         stateData.visitor.get ! VisitorActor.Command.Hear.tupled(Command.Hear.unapply(msg).get)
       stay
