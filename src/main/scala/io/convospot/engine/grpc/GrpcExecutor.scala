@@ -1,12 +1,11 @@
 package io.convospot.engine.grpc
 
-import akka.actor.{ActorRef, ActorSystem, InvalidActorNameException, Props}
+import akka.actor.{ActorSystem, Props}
 import io.convospot.engine.actors.context.BotActor
 import io.convospot.engine.grpc.conversation.{Request, Response}
 import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._
-import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
 import akka.util.Timeout
 import io.convospot.engine.constants.Timeouts
@@ -64,6 +63,9 @@ private[convospot] object GrpcExecutor {
       }
       case "add_user_to_helper" => {
         addUserToHelper(req)
+      }
+      case "visitor_analytics" => {
+        visitorAnalytics(req)
       }
 //      case "end_conversation" => {
 //        //TODO
@@ -273,6 +275,18 @@ private[convospot] object GrpcExecutor {
       val data = req.data.parseJson.convertTo[AddUserToHelper]
       var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
       helperActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
+
+  private def visitorAnalytics(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[Analytics]
+      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
+      visitorActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {

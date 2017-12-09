@@ -5,7 +5,7 @@ import akka.actor._
 import io.convospot.engine.actors.brain.UserActor
 import io.convospot.engine.actors.conversation.{ConversationActor, HelperActor, VisitorActor}
 import io.convospot.engine.grpc.data.{CreateConversation, CreateHelper, CreateUser, CreateVisitor}
-import io.convospot.engine.util.ActorTrait
+import io.convospot.engine.util.{ActorTrait}
 import io.convospot.engine.constants.Timeouts
 
 /**
@@ -18,6 +18,8 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
 
   val outputActor=context.actorOf(Props(new BotOutputActor(context)),"outputActor")
   val exceptionActor=context.actorOf(Props(new BotExceptionActor(context)),"exceptionActor")
+
+  //TODO: add unsubscribe later
 
   def receive = {
     case msg: CreateConversation => {
