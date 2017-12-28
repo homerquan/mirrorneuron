@@ -17,7 +17,9 @@ private[convospot] class BotOutputActor(bot:ActorContext) extends Actor with Act
   def receive = {
     case output: BotOutputActor.Command.OutputVisitorHear =>
       val message = CreateMessage(output.hear.from.path.name,output.hear.source,output.hear.message, output.conversation, sender.path.name)
-      redis.publish(output.channel, message.toJson.compactPrint)
+      redis.publish("CONVOSPOT-MESSAGE:"+output.channel, message.toJson.compactPrint)
+    case output: BotOutputActor.Command.OutputConversationUpdate =>
+      redis.publish("CONVOSPOT-CONVOSATION:"+output.channel, output.conversationUpdate.toJson.compactPrint)
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 }
@@ -28,6 +30,7 @@ private[convospot] object BotOutputActor {
   object Command {
     final case class OutputVisitorHear(channel: String, hear: VisitorActor.Command.Hear, conversation:String) extends Command
     final case class OutputHelperHear(channel: String, hear: HelperActor.Command.Hear, conversation:String) extends Command
+    final case class OutputConversationUpdate(channel: String, conversationUpdate:ConversationUpdate) extends Command
   }
 }
 

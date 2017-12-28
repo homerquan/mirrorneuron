@@ -2,7 +2,11 @@
 
 A real-time decision engine
 
-Readme:
+## Todo
+
+Recover from restart
+
+## How to run
 
 Run CEP:
 sbt run

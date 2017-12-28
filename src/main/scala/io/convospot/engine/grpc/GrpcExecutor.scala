@@ -67,6 +67,9 @@ private[convospot] object GrpcExecutor {
       case "visitor_analytics" => {
         visitorAnalytics(req)
       }
+      case "fill_conversation" => {
+        fillConversation(req)
+      }
 //      case "end_conversation" => {
 //        //TODO
 //      }
@@ -190,8 +193,8 @@ private[convospot] object GrpcExecutor {
   private def switchHelperMode(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[SwitchHelperMode]
-      var conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
-      conversationActor ! data
+      var helperActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.helper).resolveOne(), shortTimeout.duration)
+      helperActor ! data
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {
@@ -294,4 +297,15 @@ private[convospot] object GrpcExecutor {
     }
   }
 
+  private def fillConversation(req: Request) = {
+    try {
+      val data = req.data.parseJson.convertTo[FillConversation]
+      var conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.conversation).resolveOne(), shortTimeout.duration)
+      conversationActor ! data
+      val reply = Response(message = "ok")
+      Future.successful(reply)
+    } catch {
+      case e: Exception => Future.failed(e)
+    }
+  }
 }

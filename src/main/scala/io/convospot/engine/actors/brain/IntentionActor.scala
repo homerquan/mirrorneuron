@@ -2,11 +2,11 @@ package io.convospot.engine.actors.brain
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
+import io.convospot.engine.actors.brain.IntentionActor.Message.GetIntention
 import io.convospot.engine.actors.brain.IntentionActor.{Data, State}
 import io.convospot.engine.constants.Timeouts
 import io.convospot.engine.grpc.data.Analytics
-
-import scala.collection.SortedSet
+import io.convospot.engine.actors.context.output.Intention
 import scala.collection.immutable.Queue
 
 /**
@@ -19,16 +19,18 @@ import scala.collection.immutable.Queue
 private[convospot] class IntentionActor(visitor:ActorContext) extends FSM[IntentionActor.State, IntentionActor.Data] with ActorLogging {
 
 
-  startWith(State.Active, Data.Active(Queue.empty[Analytics]))
+  startWith(State.Active, Data.Active(Queue.empty[Intention]))
   // only consider limited window of events
-  val windowSize = 5
+  val windowSize = 3
+  var intentionSize = 3
+
 
   when(State.Active) {
     case Event(msg: Analytics, stateData: Data.Active) =>
-      //TODO: sequence labeling here
-      if(stateData.window.length<=windowSize) {
+      //TODO: sequence labeling here, for moment only add obvious intention
+      if(!msg.intention.isEmpty && stateData.window.length<=windowSize) {
         stay using stateData.copy(
-          window = stateData.window.enqueue(msg)
+          window = stateData.window.enqueue(new Intention(msg.intention,100))
         )
       } else {
         val (_, updatedQueue) = stateData.window.dequeue
@@ -36,6 +38,9 @@ private[convospot] class IntentionActor(visitor:ActorContext) extends FSM[Intent
           window = updatedQueue
         )
       }
+    case Event(msg: GetIntention, stateData: Data.Active) =>
+      sender ! stateData.window.toList
+      stay
   }
 
   /**
@@ -65,12 +70,19 @@ private[convospot] class IntentionActor(visitor:ActorContext) extends FSM[Intent
 private[convospot] object IntentionActor {
   def props(visitor: ActorContext) = Props(new IntentionActor(visitor))
 
+  sealed trait Message
+
+  object Message {
+
+    final case class GetIntention() extends Message
+
+  }
+
   sealed trait Data
 
   object Data {
-    final case class Active(window:Queue[Analytics]) extends Data
+    final case class Active(window:Queue[Intention]) extends Data
   }
-
 
   sealed trait State
 

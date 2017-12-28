@@ -6,10 +6,12 @@ import scala.collection.immutable
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.util.Timeout
 import io.convospot.engine.actors.brain.PolicyActor
-import io.convospot.engine.actors.context.ObserverActor
+import io.convospot.engine.actors.context.output.{ConversationUpdate, Intention, Action}
+import io.convospot.engine.actors.context.{BotOutputActor, ObserverActor}
 import io.convospot.engine.actors.conversation.ConversationActor.{Command, Data, State}
 import io.convospot.engine.constants.Timeouts
-import io.jvm.uuid.{UUID}
+import io.convospot.engine.grpc.data.FillConversation
+import io.jvm.uuid.UUID
 
 private[convospot] class ConversationActor(bot: ActorContext) extends FSM[ConversationActor.State, ConversationActor.Data] with ActorLogging {
 
@@ -84,6 +86,10 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
         helper = None
       )
 
+    case Event(msg: FillConversation, stateData: Data.Active) =>
+      val testData = ConversationUpdate(self.path.name,List(Intention("see",100)),List(Action("language","thinking","in-progress")))
+      bot.child("outputActor").get ! BotOutputActor.Command.OutputConversationUpdate(self.path.name, testData)
+      stay
   }
 
   /**
