@@ -25,5 +25,5 @@ private[convospot] object JsonProtocol extends DefaultJsonProtocol {
   implicit val offlineUserFormat = jsonFormat(OfflineUser,"user","bot","client")
   implicit val addUserToHelperFormat = jsonFormat(AddUserToHelper,"user","helper","bot","client")
   implicit val fillConversationFormat = jsonFormat(FillConversation,"conversation","bot","client")
-  implicit val analyticsFormat = jsonFormat(Analytics,"eid","visitor","bot","event","intention","timestamp")
+  implicit val analyticsFormat = jsonFormat(Analytics,"eid","visitor","conversation","bot","event","intention","timestamp")
 }

@@ -2,11 +2,12 @@ package io.convospot.engine.actors.brain
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
-import io.convospot.engine.actors.brain.IntentionActor.Message.GetIntention
 import io.convospot.engine.actors.brain.IntentionActor.{Data, State}
 import io.convospot.engine.constants.Timeouts
 import io.convospot.engine.grpc.data.Analytics
 import io.convospot.engine.actors.context.output.Intention
+import io.convospot.engine.actors.conversation.VisitorActor.Command.UpdateIntentions
+
 import scala.collection.immutable.Queue
 
 /**
@@ -14,33 +15,33 @@ import scala.collection.immutable.Queue
   * it's a probabilistic graphic model to predict visitor's intention
   * It's a Sequence Classification Problem
   * Update the model using online learning
+  *
   * @param visitor
   */
-private[convospot] class IntentionActor(visitor:ActorContext) extends FSM[IntentionActor.State, IntentionActor.Data] with ActorLogging {
+private[convospot] class IntentionActor(visitor: ActorContext) extends FSM[IntentionActor.State, IntentionActor.Data] with ActorLogging {
 
 
   startWith(State.Active, Data.Active(Queue.empty[Intention]))
   // only consider limited window of events
   val windowSize = 3
-  var intentionSize = 3
-
 
   when(State.Active) {
     case Event(msg: Analytics, stateData: Data.Active) =>
       //TODO: sequence labeling here, for moment only add obvious intention
-      if(!msg.intention.isEmpty && stateData.window.length<=windowSize) {
-        stay using stateData.copy(
-          window = stateData.window.enqueue(new Intention(msg.intention,100))
-        )
+      if(!msg.intention.isEmpty) {
+        if (stateData.window.length < windowSize) {
+          val newWindow = stateData.window.enqueue(new Intention(msg.intention, 100))
+          visitor.self ! UpdateIntentions(newWindow.toList.distinct)
+          stay using Data.Active(newWindow)
+        } else {
+          val (_, updatedQueue) = stateData.window.dequeue
+          val newWindow = updatedQueue.enqueue(new Intention(msg.intention, 100))
+          visitor.self ! UpdateIntentions(newWindow.toList.distinct)
+          stay using Data.Active(newWindow)
+        }
       } else {
-        val (_, updatedQueue) = stateData.window.dequeue
-        stay using stateData.copy(
-          window = updatedQueue
-        )
+        stay
       }
-    case Event(msg: GetIntention, stateData: Data.Active) =>
-      sender ! stateData.window.toList
-      stay
   }
 
   /**
@@ -73,21 +74,22 @@ private[convospot] object IntentionActor {
   sealed trait Message
 
   object Message {
-
-    final case class GetIntention() extends Message
-
   }
 
   sealed trait Data
 
   object Data {
-    final case class Active(window:Queue[Intention]) extends Data
+
+    final case class Active(window: Queue[Intention]) extends Data
+
   }
 
   sealed trait State
 
   object State {
+
     case object Active extends State
+
   }
 
 }

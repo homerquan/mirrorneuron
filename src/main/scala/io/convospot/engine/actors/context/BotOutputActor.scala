@@ -20,6 +20,10 @@ private[convospot] class BotOutputActor(bot:ActorContext) extends Actor with Act
       redis.publish("CONVOSPOT-MESSAGE:"+output.channel, message.toJson.compactPrint)
     case output: BotOutputActor.Command.OutputConversationUpdate =>
       redis.publish("CONVOSPOT-CONVOSATION:"+output.channel, output.conversationUpdate.toJson.compactPrint)
+    case output: BotOutputActor.Command.OutputConversationIntentionsUpdate =>
+      redis.publish("CONVOSPOT-INTENTIONS:"+output.channel, output.conversationIntentionsUpdate.toJson.compactPrint)
+    case output: BotOutputActor.Command.OutputConversationActionsUpdate =>
+      redis.publish("CONVOSPOT-ACTIONS:"+output.channel, output.conversationActionsUpdate.toJson.compactPrint)
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 }
@@ -31,6 +35,8 @@ private[convospot] object BotOutputActor {
     final case class OutputVisitorHear(channel: String, hear: VisitorActor.Command.Hear, conversation:String) extends Command
     final case class OutputHelperHear(channel: String, hear: HelperActor.Command.Hear, conversation:String) extends Command
     final case class OutputConversationUpdate(channel: String, conversationUpdate:ConversationUpdate) extends Command
+    final case class OutputConversationIntentionsUpdate(channel: String, conversationIntentionsUpdate:ConversationIntentionsUpdate) extends Command
+    final case class OutputConversationActionsUpdate(channel: String, conversationActionsUpdate:ConversationActionsUpdate) extends Command
   }
 }
 

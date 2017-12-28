@@ -17,5 +17,5 @@ final case class OnlineUser(user:String,bot: String, client: String)
 final case class OfflineUser(user:String,bot: String, client: String)
 final case class AddUserToHelper(user:String,helper:String,bot:String,client:String)
 final case class FillConversation(conversation: String, bot: String, client: String)
-final case class Analytics(eid:String,visitor:String,bot:String,event:String,intention:String,timestamp:Int)
+final case class Analytics(eid:String,conversation:String, visitor:String,bot:String,event:String,intention:String,timestamp:Int)
 

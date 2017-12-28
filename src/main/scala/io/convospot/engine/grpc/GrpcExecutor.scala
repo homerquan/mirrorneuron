@@ -288,8 +288,12 @@ private[convospot] object GrpcExecutor {
   private def visitorAnalytics(req: Request) = {
     try {
       val data = req.data.parseJson.convertTo[Analytics]
-      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
-      visitorActor ! data
+      //TODO: visitor is not implemented. use conversation for MVP
+//      var visitorActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.visitor).resolveOne(), shortTimeout.duration)
+//      visitorActor ! data
+      val conversationActor = Await.result(system.actorSelection("/user/"+data.bot+"/"+data.conversation).resolveOne(), shortTimeout.duration)
+      conversationActor ! data
+
       val reply = Response(message = "ok")
       Future.successful(reply)
     } catch {
