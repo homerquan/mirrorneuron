@@ -9,11 +9,10 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
   val redis=RedisConnector.getRedis
   val redisPool= RedisConnector.getPool
   val key = "demo-kb"
-
-  var kb = redis.hget(key,"knowledge").get
-
+  
   def receive = {
     case KnowledgeActor.Command.Ask(message: String) =>
+        val kb = redis.hget(key,"knowledge").get
         sender ! PolicyActor.Command.AnswerFromKnowledge(getAnswer(kb,message))
     case KnowledgeActor.Command.Learn(message: String) =>
         //redis.hset(key,"knowledge",kb+"\n"+message)
