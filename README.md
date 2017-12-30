@@ -33,6 +33,7 @@ prod_release -> rc build
 ## Requirement
 
 Redis: ``docker run --name convospot-redis -d redis``
+alennlp: ``docker run -p 8000:8000 -d allennlp/allennlp``
 
 ## Development setting
 

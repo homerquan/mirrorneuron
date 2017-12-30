@@ -9,7 +9,7 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
   val redis=RedisConnector.getRedis
   val redisPool= RedisConnector.getPool
   val key = "demo-kb"
-  
+
   def receive = {
     case KnowledgeActor.Command.Ask(message: String) =>
         val kb = redis.hget(key,"knowledge").get
@@ -24,7 +24,7 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
       s"""
         |{"passage":"$passage","question":"$question"}
       """.stripMargin
-    val request = sttp.post(uri"http://10.0.1.100:8008/predict/machine-comprehension")
+    val request = sttp.post(uri"http://10.0.1.10:8000/predict/machine-comprehension")
     implicit val backend = HttpURLConnectionBackend()
     val response = request.body(json).send()
 
