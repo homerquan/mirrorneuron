@@ -24,7 +24,10 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
       s"""
         |{"passage":"$passage","question":"$question"}
       """.stripMargin
-    val request = sttp.post(uri"http://10.0.1.10:8000/predict/machine-comprehension")
+    val request = sttp
+        .header("Content-Type", "application/json")
+        .header("Accept", "application/json")
+        .post(uri"http://10.0.1.10:8000/predict/machine-comprehension")
     implicit val backend = HttpURLConnectionBackend()
     val response = request.body(json).send()
 
