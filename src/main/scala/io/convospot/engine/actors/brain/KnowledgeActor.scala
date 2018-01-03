@@ -28,6 +28,8 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
     implicit val backend = HttpURLConnectionBackend()
     val response = request.body(json).send()
 
+    log.info(response.toString);
+
     // response.header(...): Option[String]
     println(response.header("Content-Length"))
 
