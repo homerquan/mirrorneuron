@@ -2,10 +2,11 @@ package io.convospot.engine.actors.context
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor._
+import akka.persistence.SnapshotOffer
 import io.convospot.engine.actors.brain.UserActor
 import io.convospot.engine.actors.conversation.{ConversationActor, HelperActor, VisitorActor}
 import io.convospot.engine.grpc.data.{CreateConversation, CreateHelper, CreateUser, CreateVisitor}
-import io.convospot.engine.util.{ActorTrait}
+import io.convospot.engine.util.ActorTrait
 import io.convospot.engine.constants.Timeouts
 
 /**
