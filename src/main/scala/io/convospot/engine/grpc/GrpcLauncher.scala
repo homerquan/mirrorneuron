@@ -1,20 +1,18 @@
 package io.convospot.engine.grpc
 
-import io.convospot.engine.actors.brain.UserActor
-
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder
 import io.convospot.engine.grpc.conversation._
-import io.grpc.stub.StreamObserver
+import io.convospot.engine.constants.Grpc
 import org.apache.log4j._
 
 
 private[convospot] object GrpcLauncher {
-  val log = Logger.getLogger(getClass().getName())
+  private implicit val log = Logger.getLogger(getClass().getName())
 
   val server = new GrpcServer(
     ServerBuilder
-      .forPort(8980)
+      .forPort(Grpc.PORT)
       .addService(ConversationGrpc.bindService(new ConversationImpl, ExecutionContext.global))
       .build()
   )

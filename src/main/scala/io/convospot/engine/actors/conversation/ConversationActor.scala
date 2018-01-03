@@ -31,10 +31,9 @@ private[convospot] class ConversationActor(bot: ActorContext) extends FSM[Conver
 
     case Event(msg: Command.Subscribe, _) =>
       sender ! VisitorActor.Message.Response(s"Join conversation ${this.getClass.getSimpleName}")
-      // Always assign a helper once visitor is active, it may change later
+      // Only assign a helper once visitor is active
       val helper = bot.actorOf(Props(new HelperActor(context)),UUID.random.toString)
       goto(State.Active) using Data.Active(Some(sender), Some(helper))
-
   }
 
   /**

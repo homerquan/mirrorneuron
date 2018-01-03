@@ -35,6 +35,7 @@ libraryDependencies ++= Seq(
   "net.debasishg" %% "redisclient" % "3.4",
   "org.specs2" %% "specs2-core" % "4.0.0",
   "io.jvm.uuid" %% "scala-uuid" % "0.2.3",
+  "com.github.scullxbones" %% "akka-persistence-mongo-rxmongo" % "2.0.4",
   "io.grpc" % "grpc-netty" % com.trueaccord.scalapb.compiler.Version.grpcJavaVersion,
   "com.trueaccord.scalapb" %% "scalapb-runtime-grpc" % com.trueaccord.scalapb.compiler.Version.scalapbVersion
 )
