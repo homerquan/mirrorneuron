@@ -45,6 +45,11 @@ alennlp: ``docker run -p 8000:8000 -d allennlp/allennlp``
 * [Intellij Protobuf plugin](https://plugins.jetbrains.com/plugin/8277-protobuf-support)
 * Scala Protobuf compiler https://scalapb.github.io/grpc.html
 
+## Debug
+
+* Visulize actor system: http://localhost:8888
+    * https://github.com/blstream/akka-viz
+
 ## GRPC in scala
 
 * https://www.beyondthelines.net/computing/grpc-in-scala/
