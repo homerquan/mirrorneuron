@@ -3,13 +3,12 @@ package io.convospot.engine.grpc
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.ServerBuilder
 import io.convospot.engine.grpc.input.CommandsGrpc
-import io.convospot.engine.constants.Grpc
+import io.convospot.engine.constants.GrpcOutputCode
 import org.apache.log4j._
-import io.convospot.engine.util.Config
+import io.convospot.engine.util.ObjectTrait
 
 
-private[convospot] object GrpcLauncher extends Config {
-  private implicit val log = Logger.getLogger(getClass().getName())
+private[convospot] object GrpcLauncher extends ObjectTrait {
 
   val server = new GrpcServer(
     ServerBuilder
@@ -19,6 +18,7 @@ private[convospot] object GrpcLauncher extends Config {
   )
 
   def start() = {
+    log.debug("Grpc server is ready.")
     server.start()
     server.blockUntilShutdown()
   }

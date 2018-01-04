@@ -2,10 +2,11 @@ package io.convospot.engine.app
 
 import akka.actor.{ActorSystem, Props}
 import akka.util.Timeout
+import com.typesafe.scalalogging.LazyLogging
 import io.convospot.engine.actors.context.BotActor
 import io.grpc.ManagedChannelBuilder
 import io.convospot.engine.grpc.output.{CommandsGrpc, Request, Response}
-import io.convospot.engine.util.Config
+import io.convospot.engine.util.ObjectTrait
 import io.convospot.engine.constants.GrpcOutputCode._
 import io.convospot.engine.constants.Timeouts
 import io.convospot.engine.grpc.GrpcExecutor.{shortTimeout, system}
@@ -15,7 +16,7 @@ import io.convospot.engine.grpc.data._
 
 import scala.concurrent.Await
 
-private[convospot] object SystemRecovery extends Config {
+private[convospot] object SystemRecovery extends ObjectTrait with LazyLogging {
   private implicit val system = ActorSystem("convospot-engine")
   private implicit val shortTimeout = Timeout(Timeouts.SHORT)
   private implicit val apiGrpcHost = config.getString("grpc.api-host")
@@ -23,9 +24,10 @@ private[convospot] object SystemRecovery extends Config {
   private implicit val channel = ManagedChannelBuilder.forAddress(apiGrpcHost, apiGrpcPort).usePlaintext(true).build
 
   def restore() = {
+    log.debug("Start to restore actor system...")
     this.restoreBot()
-    this.restoreVisitor()
-    this.restoreConversation()
+    //this.restoreVisitor()
+    //this.restoreConversation()
   }
 
   private def restoreBot() = {

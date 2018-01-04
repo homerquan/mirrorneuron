@@ -1,13 +1,13 @@
 package io.convospot.engine.grpc
 
 import java.util.logging.Logger
+
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
+import com.typesafe.scalalogging.LazyLogging
 import io.grpc.Server
 
-class GrpcServer(server: Server) {
-
-  val logger: Logger = Logger.getLogger(classOf[GrpcServer].getName)
+class GrpcServer(server: Server) extends LazyLogging {
 
   def start(): Unit = {
     server.start()
