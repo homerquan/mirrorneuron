@@ -55,10 +55,12 @@ private[convospot] class SystemRecovery(system:ActorSystem) extends CommonTrait 
     val request = Request(typeCode = LIST_CONVERSATIONS)
     val blockingStub = CommandsGrpc.blockingStub(channel)
     val reply: Response = blockingStub.ask(request)
-    val visitors = reply.data.parseJson.convertTo[List[Conversation]]
-    visitors.map(visitor => {
-      var botActor = Await.result(system.actorSelection("/user/" + visitor.bot).resolveOne(), shortTimeout.duration)
-      botActor ! CreateConversation(visitor.id,visitor.bot,visitor.client)
+    val conversations = reply.data.parseJson.convertTo[List[Conversation]]
+    conversations.map(conversation => {
+      var botActor = Await.result(system.actorSelection("/user/" + conversation.bot).resolveOne(), shortTimeout.duration)
+      botActor ! CreateConversation(conversation.id,conversation.bot,conversation.client)
+      var visitorActor = Await.result(system.actorSelection("/user/"+conversation.bot+"/"+conversation.visitor).resolveOne(), shortTimeout.duration)
+      visitorActor ! JoinConversation(conversation.visitor,conversation.id,conversation.bot,conversation.client)
     })
   }
 }
