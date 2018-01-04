@@ -8,7 +8,7 @@ import com.typesafe.config.ConfigFactory
 private[convospot] object Config {
   val env = if (System.getenv("SCALA_ENV") == null) "development" else System.getenv("SCALA_ENV")
   val conf = ConfigFactory.load()
-  def apply() = conf
+  def apply() = conf.getConfig(env)
   def parse(path:String) =  ConfigFactory.parseString(path).
-    withFallback(ConfigFactory.load())
+    withFallback(conf.getConfig(env))
 }

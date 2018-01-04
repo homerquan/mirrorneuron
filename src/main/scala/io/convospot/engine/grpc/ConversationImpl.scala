@@ -1,11 +1,11 @@
 package io.convospot.engine.grpc
 
-import io.convospot.engine.grpc.conversation.{ConversationGrpc, Request, Response}
+import io.convospot.engine.grpc.input.{CommandsGrpc, Request, Response}
 import io.grpc.stub.StreamObserver
 
 import scala.concurrent.Future
 
-private[convospot] class ConversationImpl extends ConversationGrpc.Conversation {
+private[convospot] class ConversationImpl extends CommandsGrpc.Commands {
   override def say(req: Request) = {
     val reply = Response(message = "Hello " + req.message)
     Future.successful(reply)
@@ -15,7 +15,7 @@ private[convospot] class ConversationImpl extends ConversationGrpc.Conversation 
    * @param responseObserver an observer to receive the stream of previous messages.
    * @return an observer to handle requested message/location pairs.
    */
-  override def talk(responseObserver: StreamObserver[Response]): StreamObserver[Request] = {
+  override def stream(responseObserver: StreamObserver[Response]): StreamObserver[Request] = {
     new StreamObserver[Request]() {
       override def onNext(note: Request): Unit = {
       }

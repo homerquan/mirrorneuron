@@ -2,7 +2,7 @@ package io.convospot.engine.grpc
 
 import akka.actor.{ActorSystem, Props}
 import io.convospot.engine.actors.context.BotActor
-import io.convospot.engine.grpc.conversation.{Request, Response}
+import io.convospot.engine.grpc.input.{Request, Response}
 import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._

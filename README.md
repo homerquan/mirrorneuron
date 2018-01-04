@@ -15,7 +15,6 @@ Test CEP:
 sbt test
 
 
-
 Package into a jar (include deps):
 sbt assembly
 
@@ -29,6 +28,10 @@ Branches:
 
 stage_release -> dev build
 prod_release -> rc build
+
+Note:
+Remember to highlight protobuf folder as source code
+After change proto, run: `sbt compile`
 
 ## Requirement
 

@@ -19,7 +19,6 @@ private[convospot] object Main extends App with LazyLogging {
     printWelcome()
 
     val parser = new scopt.OptionParser[Input]("engine") {
-
       opt[Unit]('v', "verbose").action((_, c) =>
         c.copy(verbose = true)).text("show verbose")
 
