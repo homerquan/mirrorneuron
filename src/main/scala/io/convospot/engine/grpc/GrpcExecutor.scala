@@ -12,8 +12,8 @@ import akka.util.Timeout
 import io.convospot.engine.constants.Timeouts
 import io.convospot.engine.util.{ActorDebugTrait}
 
-private[convospot] object GrpcExecutor extends ActorDebugTrait{
-  private implicit val system = ActorSystem("convospot-engine")
+private[convospot] class GrpcExecutor(system:ActorSystem) extends ActorDebugTrait{
+
   private implicit val shortTimeout = Timeout(Timeouts.SHORT)
 
   def handlers(req: Request): Future[Response] = {
@@ -87,7 +87,6 @@ private[convospot] object GrpcExecutor extends ActorDebugTrait{
 
   private def createBot(req: Request) = {
     try {
-      printActors(system)
       val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
       val reply = Response(message = s"Bot ${data.id} created success!")

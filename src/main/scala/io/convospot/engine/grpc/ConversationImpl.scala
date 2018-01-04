@@ -1,11 +1,14 @@
 package io.convospot.engine.grpc
 
+import akka.actor.ActorSystem
 import io.convospot.engine.grpc.input.{CommandsGrpc, Request, Response}
 import io.grpc.stub.StreamObserver
 
 import scala.concurrent.Future
 
-private[convospot] class ConversationImpl extends CommandsGrpc.Commands {
+private[convospot] class ConversationImpl(system:ActorSystem) extends CommandsGrpc.Commands {
+  private val executoer = new GrpcExecutor(system)
+
   override def say(req: Request) = {
     val reply = Response(message = "Hello " + req.message)
     Future.successful(reply)
@@ -29,5 +32,5 @@ private[convospot] class ConversationImpl extends CommandsGrpc.Commands {
     }
   }
 
-  override def ask(req: Request) = GrpcExecutor.handlers(req: Request)
+  override def ask(req: Request) = executoer.handlers(req: Request)
 }

@@ -19,6 +19,6 @@ final case class AddUserToHelper(user:String,helper:String,bot:String,client:Str
 final case class FillConversation(conversation: String, bot: String, client: String)
 final case class Analytics(eid:String,conversation:String, visitor:String,bot:String,event:String,intention:String,timestamp:Int)
 final case class Bot(id:String, client:String)
-final case class Visitor(id:String, client:String, bot:String)
-final case class Conversation(id:String, visitor:String, mode: String, status: String, client:String, bot:String)
+final case class Visitor(id:String, bot:String, client:String)
+final case class Conversation(id:String, visitor:String, mode: String, status: String, bot:String, client:String)
 

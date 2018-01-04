@@ -28,9 +28,6 @@ private[convospot] object Main extends App with LazyLogging {
       help("help").text("prints this usage text")
     }
 
-    // restore actors from persistent storage
-    SystemRecovery.restore()
-
     GrpcLauncher.start()
 
     // TODO
