@@ -6,11 +6,13 @@ import io.convospot.engine.grpc.input.{Request, Response}
 import spray.json._
 import io.convospot.engine.grpc.data.JsonProtocol._
 import io.convospot.engine.grpc.data._
+
 import scala.concurrent.{Await, Future}
 import akka.util.Timeout
 import io.convospot.engine.constants.Timeouts
+import io.convospot.engine.util.{ActorDebugTrait}
 
-private[convospot] object GrpcExecutor {
+private[convospot] object GrpcExecutor extends ActorDebugTrait{
   private implicit val system = ActorSystem("convospot-engine")
   private implicit val shortTimeout = Timeout(Timeouts.SHORT)
 
@@ -85,6 +87,7 @@ private[convospot] object GrpcExecutor {
 
   private def createBot(req: Request) = {
     try {
+      printActors(system)
       val data = req.data.parseJson.convertTo[CreateBot]
       system.actorOf(Props(new BotActor()), data.id)
       val reply = Response(message = s"Bot ${data.id} created success!")
