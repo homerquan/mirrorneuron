@@ -13,12 +13,11 @@ resolvers ++= Seq(
   Resolver.jcenterRepo
 )
 
-resolvers += Resolver.bintrayRepo("lustefaniak", "maven")
-
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.6",
   "com.typesafe.akka" %% "akka-contrib" % "2.5.6",
   "com.typesafe.akka" %% "akka-testkit" % "2.5.6",
+  "com.typesafe.akka" %% "akka-stream" % "2.5.6",
   "com.typesafe.akka" %% "akka-cluster" % "2.5.6",
   "com.typesafe.akka" %% "akka-cluster-sharding" % "2.5.6",
   "io.spray" %% "spray-json" % "1.3.1",
@@ -38,7 +37,6 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2-core" % "4.0.0",
   "io.jvm.uuid" %% "scala-uuid" % "0.2.3",
   "com.github.scullxbones" %% "akka-persistence-mongo-rxmongo" % "2.0.4",
-  "com.blstream.akkaviz" %% "monitoring" % "0.1.7",
   "io.grpc" % "grpc-netty" % com.trueaccord.scalapb.compiler.Version.grpcJavaVersion,
   "com.trueaccord.scalapb" %% "scalapb-runtime-grpc" % com.trueaccord.scalapb.compiler.Version.scalapbVersion
 )

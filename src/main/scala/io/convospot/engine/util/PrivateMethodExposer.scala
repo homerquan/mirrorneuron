@@ -14,6 +14,6 @@ class PrivateMethodCaller(x: AnyRef, methodName: String) {
   }
 }
 
-class PrivateMethodExposer(x: AnyRef) {
+private[convospot] class PrivateMethodExposer(x: AnyRef) {
   def apply(method: scala.Symbol): PrivateMethodCaller = new PrivateMethodCaller(x, method.name)
 }

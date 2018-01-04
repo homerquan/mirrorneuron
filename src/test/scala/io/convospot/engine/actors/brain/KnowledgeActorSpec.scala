@@ -5,6 +5,7 @@ import io.convospot.engine.util.ActorsTestSupport
 import scala.concurrent.duration._
 import akka.testkit.TestProbe
 import akka.actor.Props
+
 class KnowledgeActorSpec extends Specification {
   def is = sequential ^ s2"""
     A knowledge Actor have to
