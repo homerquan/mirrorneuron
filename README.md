@@ -46,6 +46,10 @@ alennlp: ``docker run -p 8000:8000 -d allennlp/allennlp``
 
 * https://www.beyondthelines.net/computing/grpc-in-scala/
 
+## GRPC Stream with AKKA
+
+https://www.beyondthelines.net/computing/grpc-akka-stream/
+
 ## Call GRPC in nodejs
 
 ```
