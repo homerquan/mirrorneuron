@@ -23,15 +23,12 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
   }
 
   private def getAnswer(passage:String, question: String): String = {
-    val json =
-      s"""
-        |{"passage":"$passage","question":"$question"}
-      """.stripMargin
+
     val request = sttp
         .header("Content-Type", "application/json")
         .header("Accept", "application/json")
         .post(uri"http://10.0.1.100:8000/predict/machine-comprehension")
-        .body(json)
+        .body(s"""{"passage":"${passage}","question":"${question}"}""")
 
     implicit val backend = HttpURLConnectionBackend()
     val response = request.send()
