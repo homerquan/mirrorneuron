@@ -1,8 +1,11 @@
 package io.convospot.engine.actors.brain
-import akka.actor.{Actor, ActorContext, ActorLogging}
+
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
+import akka.actor.{Actor, ActorContext, ActorLogging, OneForOneStrategy}
 import io.convospot.engine.util.RedisConnector
 import spray.json._
 import com.softwaremill.sttp._
+import io.convospot.engine.constants.Timeouts
 
 
 private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with ActorLogging{
@@ -20,20 +23,20 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
   }
 
   private def getAnswer(passage:String, question: String): String = {
-    val json =
-      s"""
-        |{"passage":"$passage","question":"$question"}
-      """.stripMargin
+
     val request = sttp
         .header("Content-Type", "application/json")
         .header("Accept", "application/json")
-        .post(uri"http://10.0.1.10:8000/predict/machine-comprehension")
+        .post(uri"http://10.0.1.100:8000/predict/machine-comprehension")
+        .body(s"""{"passage":"${passage}","question":"${question}"}""")
+
     implicit val backend = HttpURLConnectionBackend()
-    val response = request.body(json).send()
+    val response = request.send()
 
     log.info(request.toString)
     log.info(response.toString)
 
+    // TODO: add exception handler
     // response.header(...): Option[String]
     println(response.header("Content-Length"))
 
@@ -41,6 +44,13 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
     response.unsafeBody.parseJson.asJsObject.getFields("best_span_str")(0).toString()
 
   }
+
+  override val supervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
+      case _: ArithmeticException => Resume
+      case _: NullPointerException => Restart
+      case _: Exception => Escalate
+    }
 }
 
 object KnowledgeActor {
