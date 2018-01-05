@@ -5,7 +5,6 @@ import akka.actor.{Actor, ActorContext, ActorLogging, OneForOneStrategy}
 import io.convospot.engine.util.RedisConnector
 import spray.json._
 import com.softwaremill.sttp._
-import com.softwaremill.sttp.circe._
 import io.convospot.engine.constants.Timeouts
 
 
