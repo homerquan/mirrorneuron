@@ -34,6 +34,7 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
     log.info(request.toString)
     log.info(response.toString)
 
+    // TODO: add exception handler
     // response.header(...): Option[String]
     println(response.header("Content-Length"))
 
