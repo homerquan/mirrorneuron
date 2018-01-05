@@ -46,6 +46,7 @@ private[convospot] class SystemRecovery(system:ActorSystem) extends CommonTrait 
     val reply: Response = blockingStub.ask(request)
     val visitors = reply.data.parseJson.convertTo[List[Visitor]]
     visitors.map(visitor => {
+      //TODO: add try and catch here
       var botActor = Await.result(system.actorSelection("/user/" + visitor.bot).resolveOne(), shortTimeout.duration)
       botActor ! CreateVisitor(visitor.id,visitor.bot,visitor.client)
     })
