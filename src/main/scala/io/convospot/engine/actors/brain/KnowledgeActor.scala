@@ -1,8 +1,12 @@
 package io.convospot.engine.actors.brain
-import akka.actor.{Actor, ActorContext, ActorLogging}
+
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
+import akka.actor.{Actor, ActorContext, ActorLogging, OneForOneStrategy}
 import io.convospot.engine.util.RedisConnector
 import spray.json._
 import com.softwaremill.sttp._
+import com.softwaremill.sttp.circe._
+import io.convospot.engine.constants.Timeouts
 
 
 private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with ActorLogging{
@@ -28,8 +32,10 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
         .header("Content-Type", "application/json")
         .header("Accept", "application/json")
         .post(uri"http://10.0.1.100:8000/predict/machine-comprehension")
+        .body(json)
+
     implicit val backend = HttpURLConnectionBackend()
-    val response = request.body(json).send()
+    val response = request.send()
 
     log.info(request.toString)
     log.info(response.toString)
@@ -42,6 +48,13 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
     response.unsafeBody.parseJson.asJsObject.getFields("best_span_str")(0).toString()
 
   }
+
+  override val supervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = Timeouts.MEDIAN) {
+      case _: ArithmeticException => Resume
+      case _: NullPointerException => Restart
+      case _: Exception => Escalate
+    }
 }
 
 object KnowledgeActor {
