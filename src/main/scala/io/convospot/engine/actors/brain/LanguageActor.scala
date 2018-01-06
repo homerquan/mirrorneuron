@@ -13,7 +13,7 @@ private[convospot] class LanguageActor(bot:ActorContext) extends Actor with Acto
 //      if (reply == "")
 //        sender ! Messages.Acknowledge("AI has no answer")
 //      else
-//        sender ! Messages.Utterance(reply, "AI", "VISITOR") //Know nothing is a Acknowledge not utterrance
+//        sender ! Messages.Utterance(reply, "ai", "visitor") //Know nothing is a Acknowledge not utterrance
     case LanguageActor.Message.Learn(conversation: String, reply: String) =>
       context become active(memory += (conversation -> reply))
       //Add this sentence into knowledge

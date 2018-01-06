@@ -52,7 +52,7 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
       //TODO: DEMO ONLY
       val conversation = sender.path.name
-      sender ! ConversationActor.Command.Hear(self, "AI", result.message)
+      sender ! ConversationActor.Command.Hear(self, "ai", result.message)
       //bot.child("outputActor").get ! BotOutputActor.Command.OutputHelperHear(self.path.name, msg, conversation)
       stay
     case Event(msg: HelperActor.Message.Response,_) =>
