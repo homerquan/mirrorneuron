@@ -2,21 +2,22 @@ package io.convospot.engine.actors.brain
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume}
 import akka.actor.{Actor, ActorContext, ActorLogging, OneForOneStrategy}
-import io.convospot.engine.util.RedisConnector
+import io.convospot.engine.constants.GrpcOutputCode.GET_KNOWLEDGE
+import io.convospot.engine.grpc.output.{Request, Response}
+import io.convospot.engine.util.GrpcApiConnector
 import spray.json._
 import com.softwaremill.sttp._
 import io.convospot.engine.constants.Timeouts
 
 
 private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with ActorLogging{
-  val redis=RedisConnector.getRedis
-  val redisPool= RedisConnector.getPool
-  val key = "demo-kb"
 
   def receive = {
     case KnowledgeActor.Command.Ask(message: String) =>
-        val kb = redis.hget(key,"knowledge").get
-        sender ! PolicyActor.Command.AnswerFromKnowledge(getAnswer(kb,message))
+      val request = Request(typeCode = GET_KNOWLEDGE, data = bot.self.path.name)
+      val reply: Response = GrpcApiConnector.blockingStub.ask(request)
+      val kb = reply.data
+      sender ! PolicyActor.Command.AnswerFromKnowledge(getAnswer(kb,message))
     case KnowledgeActor.Command.Learn(message: String) =>
         //redis.hset(key,"knowledge",kb+"\n"+message)
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
