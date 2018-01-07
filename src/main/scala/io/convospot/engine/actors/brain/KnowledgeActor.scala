@@ -19,7 +19,7 @@ private[convospot] class KnowledgeActor(bot:ActorContext) extends Actor with Act
       val kb = reply.data
       sender ! PolicyActor.Command.AnswerFromKnowledge(getAnswer(kb,message))
     case KnowledgeActor.Command.Learn(message: String) =>
-        //redis.hset(key,"knowledge",kb+"\n"+message)
+        //TODO: improve language understanding mode
     case _ => log.error("unsupported message in " + this.getClass.getSimpleName)
   }
 

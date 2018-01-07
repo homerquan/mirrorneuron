@@ -13,6 +13,7 @@ import io.convospot.engine.actors.brain.UserActor.{State,Data,Command}
   */
 private[convospot] class UserActor(bot: ActorContext) extends FSM[UserActor.State, UserActor.Data] with ActorLogging {
 
+  // TODO: Enable user actor (online, offline, message send thought it)
   startWith(State.Offline, Data.Offline())
 
   when(State.Offline) {
