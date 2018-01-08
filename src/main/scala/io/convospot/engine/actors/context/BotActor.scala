@@ -29,9 +29,10 @@ private[convospot] class BotActor extends Actor with ActorTrait with ActorLoggin
     case msg: CreateVisitor => {
       context.actorOf(Props(new VisitorActor(context)),msg.id)
     }
-    case msg: CreateHelper => {
-      context.actorOf(Props(new HelperActor(context)),msg.id)
-    }
+// TODO: need create helper without conversation?
+//    case msg: CreateHelper => {
+//      context.actorOf(Props(new HelperActor(context)),msg.id)
+//    }
     case msg: CreateUser => {
       context.actorOf(Props(new UserActor(context)),msg.id)
     }

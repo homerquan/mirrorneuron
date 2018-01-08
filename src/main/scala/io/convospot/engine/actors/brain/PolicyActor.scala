@@ -20,12 +20,14 @@ import io.convospot.engine.actors.brain.PolicyActor.{Command, Data, State}
 
 case object AskNameMessage
 
-private[convospot] class PolicyActor(bot: ActorContext) extends FSM[PolicyActor.State, PolicyActor.Data] with ActorLogging {
+private[convospot] class PolicyActor(bot: ActorContext, conversation: ActorContext) extends FSM[PolicyActor.State, PolicyActor.Data] with ActorLogging {
 
+  implicit private val timeout = Timeout(Timeouts.MEDIAN)
   val languageActor = context.actorOf(Props(new LanguageActor(bot)), "language_actor")
   val knowledgeActor = context.actorOf(Props(new KnowledgeActor(bot)), "knowledge_actor")
-  implicit val timeout = Timeout(Timeouts.MEDIAN)
   val defaultWaiting = 5
+  val conversationId = conversation.self.path.name
+  val botId = bot.self.path.name
 
   startWith(State.Normal, Data.Normal())
 
@@ -39,7 +41,7 @@ private[convospot] class PolicyActor(bot: ActorContext) extends FSM[PolicyActor.
       // demo knowledge only, Wait for semi auto mode (TODO: temp solution, MVP semi auto only)
       // TODO: add timeout handler
       val requestId = java.util.UUID.randomUUID.toString
-      val request = Request(typeCode = SUGGEST_RESPONSE, data = KnowledgeSuggestion(requestId, text, defaultWaiting).toJson.toString())
+      val request = Request(typeCode = SUGGEST_RESPONSE, data = KnowledgeSuggestion(requestId, text, conversationId, defaultWaiting).toJson.toString())
       val reply: Response = GrpcConsoleApiConnector.blockingStub.ask(request) //TODO: if not ok, handle error
       // wait until console user take action
       // sender ! HelperActor.Command.AnswerFromMachine(text)
@@ -84,6 +86,8 @@ private[convospot] class PolicyActor(bot: ActorContext) extends FSM[PolicyActor.
 }
 
 object PolicyActor {
+
+  def props(bot: ActorContext,conversation: ActorContext) = Props(new PolicyActor(bot,conversation))
 
   sealed trait Command
 

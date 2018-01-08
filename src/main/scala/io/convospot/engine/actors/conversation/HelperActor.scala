@@ -24,9 +24,9 @@ import io.convospot.engine.constants.Timeouts
   *
   * @param bot
   */
-private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.State, HelperActor.Data] with ActorLogging {
+private[convospot] class HelperActor(bot: ActorContext, converation: ActorContext) extends FSM[HelperActor.State, HelperActor.Data] with ActorLogging {
 
-  val machine = context.actorOf(Props(new PolicyActor(bot)), "policy_actor")
+  val machine = context.actorOf(Props(new PolicyActor(bot, converation)), "policy_actor")
   implicit val timeout = Timeout(Timeouts.MEDIAN)
 
   startWith(State.Semi, Data.Semi(Timeouts.MEDIAN, Set.empty[ActorRef]))
@@ -51,9 +51,7 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
       val future = machine ? PolicyActor.Command.Ask(msg.message)
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromMachine]
       //TODO: DEMO ONLY
-      val conversation = sender.path.name
       sender ! ConversationActor.Command.Hear(self, "ai", result.message)
-      //bot.child("outputActor").get ! BotOutputActor.Command.OutputHelperHear(self.path.name, msg, conversation)
       stay
     case Event(msg: HelperActor.Message.Response,_) =>
       log.info(msg.toString)
@@ -91,7 +89,8 @@ private[convospot] class HelperActor(bot: ActorContext) extends FSM[HelperActor.
 }
 
 private[convospot] object HelperActor {
-  def props(bot: ActorContext) = Props(new HelperActor(bot))
+
+  def props(bot: ActorContext, conversation: ActorContext) = Props(new HelperActor(bot,conversation))
 
   sealed trait Message
 

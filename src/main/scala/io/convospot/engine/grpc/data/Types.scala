@@ -21,4 +21,4 @@ final case class Analytics(eid:String,conversation:String, visitor:String,bot:St
 final case class Bot(id:String, client:String)
 final case class Visitor(id:String, bot:String, client:String)
 final case class Conversation(id:String, visitor:String, mode: String, status: String, bot:String, client:String)
-final case class KnowledgeSuggestion(id: String, text: String, delay: Int)
+final case class KnowledgeSuggestion(id: String, text: String, conversation: String, delay: Int)
