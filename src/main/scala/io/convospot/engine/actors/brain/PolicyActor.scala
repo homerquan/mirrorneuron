@@ -25,7 +25,7 @@ private[convospot] class PolicyActor(bot: ActorContext, conversation: ActorConte
   implicit private val timeout = Timeout(Timeouts.MEDIAN)
   val languageActor = context.actorOf(Props(new LanguageActor(bot)), "language_actor")
   val knowledgeActor = context.actorOf(Props(new KnowledgeActor(bot)), "knowledge_actor")
-  val defaultWaiting = 5
+  val defaultWaiting = 10
   val conversationId = conversation.self.path.name
   val botId = bot.self.path.name
 
@@ -37,7 +37,7 @@ private[convospot] class PolicyActor(bot: ActorContext, conversation: ActorConte
       //Using route here
       val future = knowledgeActor ? KnowledgeActor.Command.Ask(msg.message)
       val result = Await.result(future, Timeouts.MEDIAN).asInstanceOf[Command.AnswerFromKnowledge]
-      val text = result.message.stripPrefix(",").stripSuffix(",").trim
+      val text = result.message.stripPrefix("\"").stripSuffix("\"").trim
       // demo knowledge only, Wait for semi auto mode (TODO: temp solution, MVP semi auto only)
       // TODO: add timeout handler
       val requestId = java.util.UUID.randomUUID.toString
